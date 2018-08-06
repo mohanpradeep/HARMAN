@@ -1,0 +1,4911 @@
+// @media only screen and (min-width:992px) and (max-width: 1199px) { for medium device - col-md }
+// @media only screen and (min-width:768px) and (max-width: 991px) { for tab portrait - col-sm  }
+// @media only screen and (max-width: 767px) { for all mobile device - col-xs }
+//Generate font size classes from 2px to 80px for desktop
+@import 'variables';
+@import 'common-styles';
+$class-font: font !default;
+@for $i from 2 through 80 {
+	@if ($i % 2==0) {
+		//Attach class name to font sizes
+		.#{$class-font}-#{$i} {
+			font-size: #{$i}px;
+		}
+	}
+}
+
+@media all and (max-width: 767px) {
+	//Generate font size classes from 2px to 80px with 50% size compared to desktop size for mobile
+	$class-font: font !default;
+	@for $i from 2 through 80 {
+		@if ($i % 2==0) {
+			//Attach class name to font sizes
+			.#{$class-font}-#{$i} {
+				font-size: #{ceil($i * 0.6)}px;
+			}
+		}
+	}
+	body {
+		position: relative;
+		padding-top: 64px;
+	}
+	// LOGO ROW STYLES START 
+	.logo-section {
+		margin-bottom: 40px;
+		.harman-logo {
+			width: 90px;
+			height: auto;
+		}
+		.nyse-search-burger {
+			.hamburger {
+				a {
+					padding: 22px 25px;
+					font-size: 20px;
+				}
+			}
+			.search {
+				a {
+					padding: 22px 25px;
+					font-size: 20px;
+				}
+			}
+			.nyse {
+				display: none;
+				position: absolute;
+				top: 68px;
+				right: 0;
+				width: auto;
+				padding: 8px 15px;
+				text-align: right;
+				.nyse-value {
+					display: inline-block;
+				}
+			}
+		}
+	}
+	#search-modal {
+		.modal-dialog {
+			margin: 0;
+			margin-top: 105px;
+		}
+	}
+	// LOGO ROW STYLES END 
+	/* FOR MAIN HERO BANNER START */
+	#homeCarousel {
+		background-color: $white;
+		.carousel-inner {
+			height: auto;
+		}
+		.carousel-indicators {
+			text-align: center;
+			width: 100%;
+			bottom: -30px;
+			left: 30%;
+		}
+		.carousel-indicators .active {
+			background: $very-dark-blue;
+			border: solid 1px $very-dark-blue;
+		}
+		.carousel-indicators li {
+			background: $white;
+			border: solid 1px $very-dark-blue;
+		}
+		.carousel-inner>.item>a>img,
+		.carousel-inner>.item>img {
+			max-width: 100%;
+		}
+		.carousel-inner {
+			.carousel-contents {
+				.title-box {
+					padding: 0;
+					.content {
+						margin-left: 0px;
+						width: 100%;
+						bottom: -51px;
+						h1 {
+							font-size: 24px;
+							padding-top: 0;
+							padding-bottom: 0;
+						}
+						.cta {
+							a {
+								padding: 15px 25px;
+							}
+						}
+					}
+				}
+				.desc {
+					margin-top: 50px;
+					p {
+						font-size: 14px;
+						padding: 15px;
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+	/* FOR MAIN HERO BANNER END */
+	// SOLUTION SECTION STYLES START
+	.solutions {
+		margin-bottom: 30px;
+		h1 {
+			padding: 0 15px;
+		}
+		.solution-cards {
+			margin-bottom: 30px;
+			.solution-card-bg {
+				display: none;
+				min-height: inherit;
+			}
+			.solution-cont-container {
+				display: block;
+				height: auto;
+				padding: 0;
+				border: none;
+				background: #fff;
+				position: relative;
+				/* &:hover h1,
+                &:hover .cta-txt-link {
+                    color: inherit;
+                }
+                &:hover .desc {
+                    display: inherit;
+                    color: $black;
+                }
+                &:hover {
+                    bottom: 0px;
+                    top: 0px;
+                    background: none;
+                    border: none;
+                }*/
+				h1 {
+					background: $soft-cyan;
+					padding: 15px;
+					color: $white;
+					font-weight: 400;
+				}
+				.desc {
+					padding: 15px;
+					font-size: 16px;
+				}
+				.hline {
+					display: none;
+				}
+				.cta-txt-link {
+					font: {
+						size: 18px;
+						weight: 700;
+					}
+					position:relative;
+					bottom: inherit;
+					padding-left: 0;
+					/*padding-left: 25px 15px;*/
+					padding-top: 0;
+					padding-bottom: 0;
+					margin: inherit;
+					left: 15px;
+					width: 90%;
+					.arrow {
+						display: none;
+					}
+				}
+			}
+			&:hover .solution-cont-container .cta-txt-link {
+				color: inherit;
+			}
+			&:hover .solution-cont-container .desc {
+				display: inherit;
+				color: $black;
+			}
+			&:hover .solution-cont-container {
+				bottom: 0px;
+				top: 0px;
+				background: none;
+				border: none;
+			}
+		}
+	}
+	// SOLUTION SECTION STYLES END
+	// NEWS SECTION STYLES START
+	#news {
+		.c-1 {
+			height: 300px !important;
+		}
+		.c-4 {
+			height: 230px;
+		}
+		.c-5 {
+			height: 70px;
+		}
+		.brand-image {
+			text-align: center;
+		}
+		.main-content .card-content .small-strip .desc {
+			display: block;
+		}
+		.card-content {
+			.sub-title {
+				padding-left: 0px;
+				text-align: center;
+			}
+		}
+		//News Carousel start
+		.news-carousel {
+			height: 100%;
+			#newsCarousel {
+				height: 100%;
+				.carousel-indicators {
+					width: 60%;
+					text-align: center;
+				}
+				.carousel-inner {
+					height: 100%;
+					.item {
+						height: 100%;
+						.carousel-content {
+							padding-left: 15px;
+							padding-right: 15px;
+						}
+					}
+				}
+			}
+		}
+		//News Carousel end
+	}
+	// NEWS SECTION STYLES END
+	// ECOSYSTEM SECTION STYLES START 
+	.ecosystem {
+		margin-bottom: 30px;
+		h1 {
+			padding: 0 15px;
+		}
+		.brands,
+		.partners {
+			h3 {
+				font-size: 18px;
+				padding: 0 15px;
+			}
+			.hline {
+				width: 100%;
+			}
+			.logo-collection {
+				li {
+					min-width: inherit;
+					margin-bottom: 20px;
+					a {
+						width: 90px;
+					}
+				}
+			}
+		}
+	}
+	// ECOSYSTEM SECTION STYLES END
+	// recognition SECTION STYLES START
+	#recognition {
+		margin-bottom: 40px;
+		h1 {
+			padding: 0 15px;
+		}
+		.carousel-indicators {
+			text-align: center;
+			width: 100%;
+			bottom: -40px;
+			margin-left: -50%;
+			li {
+				border: none;
+				background: rgba($dark-greyish-blue, 0.5);
+			}
+			.active {
+				background: $dark-greyish-blue;
+			}
+		}
+		.carousel-inner {
+			.recognition-img {
+				width: 100%;
+				height: 180px;
+			}
+			.carousel-caption {
+				right: 0;
+				top: 70px;
+				height: 110px;
+				padding: 0;
+				.carousel-cont {
+					padding: 10px 15px;
+					font-size: 16px;
+					img {
+						width: 100px;
+						height: auto;
+						position: absolute;
+						top: -50px;
+					}
+				}
+			}
+		}
+		.cta {
+			a {
+				padding: 10px 25px;
+				.arrow {
+					float: right;
+				}
+			}
+		}
+	}
+	//recognition SECTION STYLES END
+	/*ABOUT SECTION STYLES START*/
+	.about-section {
+		margin-top: 30px;
+		margin-bottom: 10px;
+		.section-title {
+			margin-top: 15px;
+			padding-left: 15px;
+		}
+		.about-content {
+			@include columns($count: 1, $gap: 30px);
+			padding-left: 0px;
+			padding-right: 0px;
+			p {
+				line-height: 22px;
+			}
+			.morelink {
+				display: block;
+				padding-top: 15px;
+			}
+		}
+	}
+	/*ABOUT SECTION STYLES END*/
+	// HERITAGE SECTION STYLES START
+	.heritage-section {
+		.c-1 {
+			height: 300px;
+			.desc {
+				top: 40%;
+				padding-left: 0;
+				padding-right: 0;
+				h2 {
+					padding-left: 15px;
+					font-size: 29px;
+					padding-top: 20px;
+					padding-bottom: 20px;
+				}
+				img {
+					margin-top: 10px;
+					margin-bottom: 10px;
+				}
+				p {
+					padding-left: 15px;
+					padding-right: 15px;
+					font-size: 15px;
+					line-height: 28px;
+					font-weight: 300;
+					padding-top: 20px;
+				}
+			}
+			.call-to-action {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				overflow: hidden;
+				padding: 15px 15px 15px 15px;
+			}
+		}
+		.c-2 {
+			height: 300px;
+		}
+		.c-3 {
+			height: 300px;
+		}
+		.c-4 {
+			height: 300px;
+		}
+		.call-to-action {
+			padding-left: 15px;
+		}
+		.desc {
+			padding-left: 15px;
+		}
+		.arrow {
+			float: right;
+		}
+	}
+	// HERITAGE SECTION STYLES END
+	/*FOOTER SECTION START*/
+	footer {
+		padding-left: 15px !important;
+		padding-right: 15px !important;
+		.lang-btn-div {
+			text-align: center;
+			width: 100%;
+			.a_btn {
+				float: none !important;
+			}
+		}
+		.footer-menu li {
+			display: list-item;
+			a {
+				font-size: 16px;
+			}
+		}
+		.social-icons {
+			li {
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+		}
+		// Center text in mobile layout
+		.m-text-center {
+			text-align: center;
+		}
+		.copyright {
+			font-size: 10px;
+		}
+	}
+	/*FOOTER SECTION END*/
+	.solution-types {
+		.border-right-2 {
+			@include border-width-color-radius(0px, $white, (0));
+		}
+		.panel {
+			border-left: none;
+			border-right: none;
+			background-color: $very-light-grey;
+			a {
+				.panel-heading {
+					background-color: $very-light-grey;
+					border: none;
+				}
+				.panel-body {
+					@include border-width-color-radius(0px, #ccc, (4px 4px 4px 4px));
+					.img-bg {
+						height: 200px;
+						@include border-width-color-radius(0px, null, (4px 4px 4px 4px));
+						margin-left: 15px;
+						margin-right: 15px;
+					}
+					.img-bg1 {}
+					.panel-content {
+						@include border-width-color-radius(0px, null, (0px 0px 4px 4px));
+						border-top: none;
+						padding: 15px;
+						p {}
+						.call-to-action {
+							width: 100%;
+							overflow: hidden;
+							p {
+								display: inline;
+								@include linkColor($dark-blue, $dark-blue, null, null);
+							}
+							.arrow {
+								margin-top: -2px;
+								padding-left: 25px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.solutions-hero {
+		position: relative;
+		.hero-bg {
+			height: 150px;
+		}
+		.hero-content {
+			position: relative;
+			width: 100%;
+			left: 0;
+			height: 100%;
+			padding-right: 15px;
+			p {
+				font-size: 14px;
+				padding-top: 10px;
+				transform: none !important;
+				color: $very-dark-grey;
+			}
+		}
+	}
+	// COMPANY OVERVIEW STYLES START
+	.overview-section {
+		h1 {
+			padding-left: 15px;
+		}
+		/*	 .hline {
+            @include horizontal-line($light-grayish-red, 1px);
+            width: 100%;
+            margin: 10px 0 20px 0;
+        }*/
+		h3 {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+		.overview-content {
+			padding-left: 0px;
+			padding-right: 0px;
+			@include columns($count: 1, $gap: 40px);
+			p {
+				font-weight: 300;
+				line-height: 24px;
+			}
+		}
+	}
+	// COMPANY OVERVIEW STYLES END
+	// COMPANY OVERVIEW - VISION & MISSION STYLES START
+	.vision-mission-section {
+		h1 {
+			padding-left: 15px;
+		}
+		.img-bg {
+			height: 200px;
+			.img-bg-content {
+				@include vertical-align();
+				h1 {
+					text-align: left;
+				}
+			}
+		}
+		.desc {
+			margin-top: 0;
+			p {
+				font-size: 16px;
+				padding: 15px 0 15px 0;
+			}
+		}
+	}
+	// COMPANY OVERVIEW - VISION & MISSION STYLES END
+	// COMPANY OVERVIEW - VALUES  STYLES START
+	.values-section {
+		h1 {
+			padding-left: 15px;
+		}
+		.img-bg {
+			height: 330px;
+			@include border-width-color-radius(2px, $white, (4px 4px 4px 4px));
+			overflow: hidden;
+			.content {
+				position: absolute;
+				height: auto;
+				bottom: 0;
+				color: $white;
+				height: auto;
+				padding-left: 15px;
+				padding-top: 20px;
+				padding-bottom: 20px;
+				.vertical-align {
+					top: 0%;
+					-webkit-transform: translateY(0%);
+					-ms-transform: translateY(0%);
+					transform: translateY(0%);
+					h2 {
+						font-size: 24px;
+					}
+					p {
+						margin-bottom: 0;
+						line-height: 24px;
+						font-weight: 300;
+						font-size: 18px;
+					}
+				}
+			}
+		}
+	}
+	// COMPANY OVERVIEW - VALUES  STYLES END
+	// COMPANY OVERVIEW - ABOUT US STYLES START
+	.about-us-section {
+		h1 {
+			padding: 0 15px;
+		}
+		.about-us-bg {
+			height: 350px;
+			padding-left: 15px;
+		}
+		.hero-content-bg {
+			/*@include transparent($white, 0.75);*/
+			height: auto;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			padding-left: 0;
+			.hero-content {
+				padding-left: 0;
+				padding-right: 0;
+				top: 0%;
+				-webkit-transform: translateY(0%);
+				-ms-transform: translateY(0%);
+				transform: translateY(0%);
+				h2 {
+					padding-left: 15px;
+					padding-right: 10px;
+					line-height: 28px;
+					font-weight: 300;
+					margin-top: 10px;
+				}
+				p {
+					font-weight: 300;
+					line-height: 24px;
+					padding-top: 10px;
+					padding-bottom: 10px;
+					padding-left: 15px;
+					padding-right: 15px;
+					background-color: $white;
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	// COMPANY OVERVIEW - ABOUT US STYLES END
+	// LEADERS STYLE START
+	.leadership {
+		margin-top: 50px;
+		.mob-leader-navigation {
+			#mob-leader-navbar {
+				margin-top: 64px;
+				background: $dark-blue;
+				.navbar-header {
+					.navbar-toggle {
+						padding: 7px 15px 0 0;
+						color: $white;
+					}
+					.navbar-brand {
+						padding: 17px 15px 0 15px;
+						color: $white;
+						&:hover {
+							color: $white;
+						}
+					}
+				}
+				#navbarCollapse {
+					a {
+						color: $white;
+						font-size: 18px;
+						span {
+							display: block;
+							font-size: 14px;
+						}
+						&:hover,
+						&:focus {
+							background: $very-dark-blue2;
+							color: $white;
+						}
+					}
+				}
+			}
+		}
+		.leader-cont-desc {
+			padding-left: 0;
+			.tab-content {
+				.leaders {
+					display: block;
+					padding: 0;
+					margin-bottom: 85px;
+					.leader-img-name {
+						margin-bottom: 20px;
+						.leader-img {
+							width: 100%;
+							height: 350px;
+							border-radius: 0;
+						}
+						.leader-name-desig {
+							left: 0px;
+							background: $white;
+							background: rgba(255, 255, 255, 0.9);
+							padding: 15px;
+							h1 {
+								font-size: 24px;
+								margin: 0;
+							}
+							.hline {
+								margin: 10px 0;
+							}
+						}
+					}
+					.about-leader {
+						padding: 0 15px;
+					}
+				}
+			}
+		}
+	}
+	// LEADERS STYLE END
+	// RECOGNITION PAGE STYLES START 
+	//RECOGNITION BANNER STYLES START
+	#reco {
+		margin-bottom: 40px;
+		h1 {
+			padding: 0 15px;
+		}
+		.carousel-indicators {
+			text-align: center;
+			width: 100%;
+			bottom: -40px;
+			margin-left: -50%;
+			li {
+				border: none;
+				background: rgba($dark-greyish-blue, 0.5);
+			}
+			.active {
+				background: $dark-greyish-blue;
+			}
+		}
+		.carousel-inner {
+			.recognition-img {
+				width: 100%;
+				height: 180px;
+			}
+			.carousel-caption {
+				right: 0;
+				top: 70px;
+				height: 110px;
+				padding: 0;
+				.carousel-cont {
+					padding: 10px 15px;
+					font-size: 16px;
+					img {
+						width: 100px;
+						height: auto;
+						position: absolute;
+						top: -50px;
+					}
+				}
+			}
+		}
+		.cta {
+			a {
+				padding: 10px 25px;
+				.arrow {
+					float: right;
+				}
+			}
+		}
+	}
+	//RECOGNITION BANNER STYLES END
+	// RECOGNITION PAGE STYLES END
+	/*LIFETIME AWARDS STYLES START*/
+	.lifetime-awards {
+		h1 {}
+		.main-content {
+			position: relative;
+			@include border-width-color-radius(2px, $white, 4px);
+			overflow: hidden;
+			.img-bg {
+				height: 400px;
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			.content {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				.title {
+					margin: 0 0 5px 0;
+					padding-top: 10px;
+					padding-left: 0px;
+					text-align: center;
+					span {
+						background-color: $white;
+						color: $black;
+						padding: 5px 10px 5px 10px;
+						border-top-left-radius: 4px;
+						border-top-right-radius: 4px;
+					}
+				}
+				.sub-content {
+					padding: 20px 15px 0px 15px;
+					color: $white;
+					.sub-title {
+						font-size: 18px;
+						font-weight: 300;
+						margin: 0;
+						padding-bottom: 20px;
+					}
+					.cta {
+						font-size: 14px;
+						display: block;
+						padding-bottom: 20px;
+						a {
+							@include linkColor($white, $white, null, null);
+							width: 100%;
+							display: block;
+							padding: 0;
+							.arrow {
+								display: none;
+								padding-left: 25px;
+							}
+							.cta-title {
+								font-size: 14px;
+								display: block;
+								background: url(../images/white-arrow.png) no-repeat 100% 0;
+								padding-right: 30px;
+								margin-bottom: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	/*LIFETIME AWARDS STYLES END*/
+	/*other AWARDS STYLES START*/
+	.other-awards {
+		/*@extend .margin-bottom-85;*/
+		h1 {
+			/*@extend .section-titles;*/
+		}
+		.main-content {
+			position: relative;
+			@include border-width-color-radius(2px, $white, 4px);
+			overflow: hidden;
+			.img-bg {
+				height: 300px;
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			.content {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				.title {
+					margin: 0 0 5px 0;
+					padding-top: 10px;
+					padding-left: 20px;
+					span {
+						padding: 5px 10px 5px 10px;
+						border-top-left-radius: 4px;
+						border-top-right-radius: 4px;
+					}
+				}
+				.sub-content {
+					padding: 15px 15px 0px 15px;
+					color: $white;
+					.sub-title {
+						line-height: 24px;
+						font-weight: 300;
+						margin: 0;
+						padding-bottom: 10px;
+					}
+					.cta {
+						display: block;
+						padding-bottom: 10px;
+						font-size: 14px;
+						line-height: 24px;
+						a {
+							width: 100%;
+							display: block;
+							padding: 0 0 10px 0;
+							.arrow {
+								padding-left: 25px;
+							}
+							.cta-title {
+								display: inline;
+							}
+						}
+					}
+				}
+			}
+		}
+		.content-more {
+			height: 45px;
+			.more {
+				text-align: center;
+				padding: 0 !important;
+				height: 100%;
+				width: 100%;
+				display: block;
+				padding: 0 0 10px 0;
+				.tt {
+					p {
+						font-size: 14px;
+						line-height: 24px;
+						display: inline;
+					}
+				}
+			}
+		}
+	}
+	/*other AWARDS STYLES END*/
+	/* MILESTONE STYLES START */
+	#milestone-pg {
+		padding-top: 155px !important;
+		.milestone-container {
+			#mstone2010 .cont-container {
+				background: none !important;
+			}
+			#mstone2000 .cont-container {
+				background: none !important;
+			}
+			#mstone1990 .cont-container {
+				background: none !important;
+			}
+			#mstone1980 .cont-container {
+				background: none !important;
+			}
+			#mstone1970 .cont-container {
+				background: none !important;
+			}
+			#mstone1960 .cont-container {
+				background: none !important;
+			}
+			#mstone2010 .cont-container,
+			#mstone2000 .cont-container,
+			#mstone1990 .cont-container,
+			#mstone1980 .cont-container,
+			#mstone1970 .cont-container,
+			#mstone1960 .cont-container {
+				background: #d8d8d8 !important;
+				/* Old browsers */
+				background: -moz-linear-gradient(left, #d8d8d8 0%, #ffffff 30%, #ffffff 60%, #d8d8d8 100%) !important;
+				/* FF3.6+ */
+				background: -webkit-gradient(linear, left top, right top, color-stop(0%, #d8d8d8), color-stop(30%, #ffffff), color-stop(60%, #ffffff), color-stop(100%, #d8d8d8)) !important;
+				/* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(left, #d8d8d8 0%, #ffffff 30%, #ffffff 60%, #d8d8d8 100%) !important;
+				/* Chrome10+,Safari5.1+ */
+				background: -o-linear-gradient(left, #d8d8d8 0%, #ffffff 30%, #ffffff 60%, #d8d8d8 100%) !important;
+				/* Opera 11.10+ */
+				background: -ms-linear-gradient(left, #d8d8d8 0%, #ffffff 30%, #ffffff 60%, #d8d8d8 100%) !important;
+				/* IE10+ */
+				background: linear-gradient(to right, #d8d8d8 0%, #ffffff 30%, #ffffff 60%, #d8d8d8 100%) !important;
+				/* W3C */
+				/* filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#d8d8d8', endColorstr='#d8d8d8', GradientType=1); */
+				/* IE6-9 */
+			}
+			#milestone-navbar {
+				margin-top: 65px;
+				.menu-section-row {
+					padding: 0;
+					background: $dark-blue;
+					color: $white;
+					.navbar-header {
+						margin-right: 0 !important;
+						margin-left: 0 !important;
+						#milestone-toggle {
+							border: 0;
+							&:hover {
+								background: none;
+							}
+						}
+						.navbar-brand {
+							font-size: 18px;
+							font-weight: normal;
+							margin-left: 15px;
+							color: $white;
+							margin-top: 9px;
+						}
+						.navbar-toggle {
+							&:hover,
+							&:focus {
+								background: $dark-blue;
+								color: $white;
+							}
+						}
+					}
+					#navbarCollapse {
+						border-top: none;
+						background: $dark-blue;
+						color: $white;
+						margin-right: 0 !important;
+						margin-left: 0 !important;
+					}
+					.navbar-nav {
+						margin-left: -15px;
+						li {
+							a {
+								padding: 10px 15px;
+								color: $white;
+								&:hover {
+									background: $very-dark-blue2;
+									color: $white;
+									border-radius: 0;
+								}
+							}
+						}
+						li.active {
+							a {
+								padding: 10px 15px;
+								color: $white;
+							}
+						}
+					}
+				}
+			}
+			.milestone-cont-container {
+				.cont-container {
+					padding: 0 15px;
+					.vline-ball {
+						@include milestone-vline;
+						.vline {
+							height: 30px;
+						}
+					}
+					.miles-content {
+						position: relative;
+						text-align: center;
+						p {
+							font: {
+								weight: 300;
+								size: 16px;
+							}
+							line-height: 28px;
+							&.font-40 {
+								font-size: 22px;
+							}
+						}
+						&.year2015 .award-img,
+						&.year2014 .award-img,
+						&.year2013 .award-img,
+						&.year2012 .award-img,
+						&.year2008 .award-img,
+						&.year2004 .award-img,
+						&.year2004-1 .award-img,
+						&.year2002 .award-img,
+						&.year1999 .award-img,
+						&.year1997 .award-img,
+						&.year1991 .award-img,
+						&.year1989 .award-img,
+						&.year1987 .award-img,
+						&.year1984 .award-img,
+						&.year1983 .award-img,
+						&.year1983-1 .award-img,
+						&.year1975 .award-img,
+						&.year1971 .award-img,
+						&.year1970 .award-img,
+						&.year1958 .award-img,
+						&.year1956 .award-img,
+						&.year1953 .award-img,
+						&.year1949 .award-img,
+						&.year1948 .award-img {
+							position: inherit;
+						}
+						&.year2015 .award-img,
+						&.year2014 .award-img,
+						&.year2013 .award-img,
+						&.year2012 .award-img,
+						&.year2008 .award-img,
+						&.year2004 .award-img,
+						&.year2004-1 .award-img,
+						&.year2002 .award-img,
+						&.year1999 .award-img,
+						&.year1997 .award-img,
+						&.year1991 .award-img,
+						&.year1989 .award-img,
+						&.year1987 .award-img,
+						&.year1984 .award-img,
+						&.year1983 .award-img,
+						&.year1983-1 .award-img,
+						&.year1975 .award-img,
+						&.year1971 .award-img,
+						&.year1970 .award-img,
+						&.year1969 .award-img,
+						&.year1958 .award-img,
+						&.year1956 .award-img,
+						&.year1953 .award-img,
+						&.year1949 .award-img,
+						&.year1948 .award-img,
+						&.year1937 .award-img,
+						&.year1928 .award-img {
+							left: inherit;
+							right: inherit;
+							top: inherit;
+							@include circle-img-border(10px, 100px);
+							margin: 0 auto;
+						}
+					}
+				}
+			}
+		}
+	}
+	/* MILESTONE STYLES END */
+	/* CONNECTED SERVICES STYLES START */
+	.connected-car-section {
+		h1.section-title {
+			padding-left: 15px !important;
+		}
+		.margin-bottom-85 {
+			margin-bottom: 40px;
+		}
+		.conn-car-bg {
+			background-size: cover;
+			height: 350px;
+			.cont-container {
+				height: auto;
+				.desc {
+					font-weight: 300;
+					line-height: 30px;
+					padding: 15px;
+					margin-top: 90px
+				}
+			}
+		}
+		.embed-info {
+			background: url(../images/connected-car/embedded-infotainment.jpg) $light-grayish-blue no-repeat 0 -150px;
+			background-size: contain;
+			position: relative;
+			height: 600px;
+			.desc {
+				padding: 30px 30px 10px 30px;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				top: inherit;
+			}
+		}
+		.telematics {
+			background: url(../images/connected-car/embedded-infotainment.jpg) $light-grayish-blue no-repeat 100% -150px;
+			background-size: contain;
+			position: relative;
+			height: 600px;
+			.desc {
+				padding: 30px 30px 10px 30px;
+				left: 0;
+				top: inherit;
+				bottom: 0;
+			}
+		}
+		.connected-safety {
+			background: url(../images/connected-car/connected-safety.jpg) $light-grayish-blue no-repeat 0 -150px;
+			background-size: contain;
+			position: relative;
+			height: 600px;
+			.desc {
+				padding: 30px 30px 10px 30px;
+				right: 0;
+				top: inherit;
+				bottom: 0;
+			}
+		}
+		.connected-security {
+			background: url(../images/connected-car/connected-security.jpg) $light-grayish-blue no-repeat 100% 0px;
+			background-size: contain;
+			position: relative;
+			height: 600px;
+			.desc {
+				padding: 30px 30px 10px 30px;
+				left: 0;
+				top: inherit;
+				bottom: 0;
+			}
+		}
+		.auto-cloud-services {
+			margin-top: 50px;
+			h3 {
+				padding: 0;
+			}
+			.overview-content {
+				@include columns($count: 1, $gap: 0px);
+				padding: 20px 0 20px 0;
+			}
+		}
+		.abt-connected-car {
+			background: url(../images/connected-car/connected-safety.jpg) $white no-repeat 0 -150px;
+			background-size: contain;
+			position: relative;
+			height: 600px;
+			.desc {
+				padding: 30px 30px 10px 30px;
+				right: 0;
+				top: inherit;
+				bottom: 0;
+			}
+		}
+	}
+	/* CONNECTED SERVICES STYLES END */
+	// CONNECTED-SERVICES STYLES START
+	#conne {
+		padding-bottom: 40px;
+		h1 {
+			padding: 0 15px;
+		}
+		p {
+			display: block;
+			padding: 0 15px;
+		}
+		.carousel-indicators {
+			text-align: center;
+			width: 100%;
+			bottom: -40px;
+			margin-left: -50%;
+			li {
+				border: none;
+				background: rgba($dark-greyish-blue, 0.5);
+			}
+			.active {
+				background: $dark-greyish-blue;
+			}
+		}
+		.carousel-inner {
+			.recognition-img {
+				width: 100%;
+				height: 300px !important;
+			}
+			.carousel-caption {
+				right: 0;
+				top: inherit;
+				height: 300px;
+				padding: 0;
+				.carousel-cont {
+					overflow: hidden;
+					padding: 10px 15px;
+					font-size: 16px;
+					h1 {
+						font-size: 24px;
+						line-height: 24px;
+					}
+					p {
+						font-size: 16px;
+						line-height: 24px;
+					}
+				}
+			}
+		}
+		.cta {
+			a {
+				padding: 10px 14px !important;
+				.arrow {
+					float: right;
+				}
+			}
+		}
+	}
+	//CONNECTED-SERVICES STYLES END
+	/*CONNECTED-SERVICES CAPABILITIES START*/
+	#capabilities {
+		h1 {
+			padding: 0 15px !important;
+		}
+		.cap-down {
+			img {
+				height: 240px !important;
+			}
+			h2 {
+				font-size: 24px !important;
+				margin-top: 0px !important;
+			}
+			p {
+				font-size: 16px !important;
+				line-height: 24px !important;
+			}
+			a {
+				font-size: 16px !important;
+			}
+		}
+		.back-cap {
+			height: auto !important;
+			padding-bottom: 20px;
+			padding-top: 20px;
+		}
+	}
+	/*CONNECTED-SERVICES CAPABILITIES END*/
+	/*CONNECTED-SERVICES INDUSTRIES START*/
+	.industries {
+		h1 {
+			padding: 0 15px !important;
+		}
+		.move-content {
+			padding: 0px 0px !important;
+			.main-content {
+				display: block;
+				.content {
+					background-color: transparent !important;
+					display: block;
+					height: 100%;
+					.on-hover-centered {
+						display: block;
+						height: auto !important;
+						@include vertical-align();
+						position: relative;
+						top: 50%;
+						transform: translateY(-50%);
+						-webkit-transform: translateY(-50%);
+						-mos-transform: translateY(-50%);
+						-o-transform: translateY(-50%);
+						.ind-content {
+							height: auto !important;
+							display: block;
+							margin-bottom: 8px;
+							.title {
+								margin-top: 20px !important;
+								top: 0%;
+								transform: translateY(0%);
+							}
+						}
+						.sub-content {
+							display: block;
+							.cta {
+								border-bottom: 1px solid $white;
+								border-top: 1px solid $white;
+								display: block !important;
+								.cta-title {
+									margin-bottom: 0px;
+									padding-top: 20px;
+									display: block !important;
+									font-size: 16px !important;
+									line-height: 24px;
+								}
+							}
+							.cta-1 {
+								display: block !important;
+								padding-top: 25px;
+								text-align: center;
+							}
+						}
+					}
+				}
+			}
+		}
+		.img-bg {
+			height: 300px !important;
+		}
+	}
+	/*CONNECTED-SERVICES INDUSTRIES END*/
+	/*CONNECTED-SERVICES CONTACT START*/
+	#contact {
+		margin-bottom: 60px !important;
+		h1 {
+			padding: 0 15px;
+		}
+		.contact-text {
+			.img-fix {
+				img {
+					width: auto !important;
+				}
+			}
+			h2 {
+				font-size: 24px !important;
+				padding: 0 15px;
+			}
+			p {
+				font-size: 16px !important;
+				padding: 0 15px;
+			}
+			a {
+				padding: 0 15px;
+				margin-bottom: 25px !important;
+				text-decoration: none;
+				img {
+					height: auto !important;
+					width: auto !important;
+				}
+			}
+			.img-fix img {
+				width: 400px;
+			}
+		}
+		.rc-fix {
+			padding-left: 0px !important;
+			padding-right: 0px !important;
+		}
+		.rc1-fix {
+			padding-right: 0px !important;
+			padding-left: 0px !important;
+		}
+	}
+	/*CONNECTED-SERVICES CONTACT END*/
+	/*CONNECTED-SERVICES ABOUT START*/
+	#con-about {
+		h1 {
+			padding: 0 15px;
+		}
+		.about-fix {
+			padding: 0px !important;
+			.img-bg {
+				height: 250px !important;
+			}
+		}
+		.about-font {
+			h2 {
+				padding: 15px;
+				font-size: 24px !important;
+			}
+			p {
+				margin-top: 0px !important;
+				padding: 15px;
+				font-size: 16px !important;
+			}
+		}
+	}
+	/*CONNECTED-SERVICES ABOUT END*/
+	//CONNECTED-SERVICES NEWS SECTION STYLES START
+	#con-serv-news {
+		h1 {
+			padding-left: 15px !important;
+		}
+		.c-1 {
+			height: 300px !important;
+		}
+		.c-4 {
+			height: 230px;
+		}
+		.c-5 {
+			height: 70px;
+		}
+		.brand-image {
+			text-align: center;
+		}
+		.main-content .card-content .small-strip .desc {
+			display: block;
+		}
+		.card-content {
+			.sub-title {
+				padding-left: 0px;
+				text-align: center;
+			}
+		}
+		//CONNECTED-SERVICES News Carousel start
+		.news-carousel {
+			height: 100%;
+			#newsCarousel {
+				height: 100%;
+				.carousel-indicators {
+					width: 60% !important;
+					text-align: center !important;
+					position: absolute;
+					bottom: 0px!important;
+				}
+				.carousel-inner {
+					height: 100%;
+					.item {
+						height: 100%;
+						.carousel-content {
+							padding-left: 15px;
+							padding-right: 15px;
+							h3 {
+								line-height: 22px !important;
+							}
+						}
+					}
+				}
+			}
+		}
+		//CONNECTED-SERVICES News Carousel end
+	}
+	//CONNECTED-SERVICES NEWS SECTION STYLES END
+	// RESPONSIBILITY HERO STYLES START
+	.responibility-hero {
+		h1 {
+			padding: 0 15px;
+		}
+		.about-us-bg {
+			height: 350px;
+			padding-left: 15px;
+		}
+		.hero-content-bg {
+			height: auto;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			padding-left: 0;
+			.hero-content {
+				padding-left: 0;
+				padding-right: 0;
+				top: 0%;
+				-webkit-transform: translateY(0%);
+				-ms-transform: translateY(0%);
+				transform: translateY(0%);
+				h2 {
+					padding-left: 15px;
+					padding-right: 15px;
+					line-height: 28px;
+					font-weight: 300;
+					margin-top: 10px;
+				}
+				p {
+					color: $very-dark-grey;
+					font-weight: 300;
+					line-height: 24px;
+					padding-top: 25px;
+					padding-bottom: 25px;
+					padding-left: 15px;
+					padding-right: 15px;
+					background-color: $white;
+					margin-bottom: 0;
+					a {
+						@include linkColor($soft-cyan, $very-dark-grey, null, null);
+					}
+				}
+			}
+		}
+	}
+	// RESPONSIBILITY HERO STYLES END
+	/*RESPONSIBILITY-TYPES STYLES START*/
+	.responsibility-types {
+		h1 {
+			/*@extend .section-titles;*/
+		}
+		.main-content {
+			position: relative;
+			@include border-width-color-radius(2px, $white, 4px);
+			overflow: hidden;
+			.img-bg {
+				height: 300px;
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			.content {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				.title {
+					margin: 0 0 5px 0;
+					padding-top: 10px;
+					padding-left: 20px;
+					span {
+						padding: 5px 10px 5px 10px;
+						border-top-left-radius: 4px;
+						border-top-right-radius: 4px;
+					}
+				}
+				.sub-content {
+					padding: 15px 15px 0px 15px;
+					color: $white;
+					.sub-title {
+						line-height: 24px;
+						font-size: 24px;
+						font-weight: 300;
+						margin: 0;
+						padding-bottom: 10px;
+					}
+					p {
+						font-size: 16px;
+						font-weight: 300;
+						line-height: 24px;
+					}
+					.cta {
+						display: block;
+						padding-bottom: 10px;
+						font-size: 14px;
+						line-height: 24px;
+						a {
+							width: 100%;
+							display: block;
+							padding: 0 0 10px 0;
+							.arrow {
+								padding-left: 25px;
+							}
+							.cta-title {
+								display: inline;
+							}
+						}
+					}
+				}
+			}
+		}
+		.content-more {
+			height: 45px;
+			.more {
+				text-align: center;
+				padding: 0 !important;
+				height: 100%;
+				width: 100%;
+				display: block;
+				padding: 0 0 10px 0;
+				.tt {
+					p {
+						font-size: 14px;
+						line-height: 24px;
+						display: inline;
+					}
+				}
+			}
+		}
+	}
+	/*RESPONSIBILITY-TYPES STYLES END*/
+	/* PROFESSIONAL SOLUTIONS STYLES START */
+	.professional-solutions-section {
+		h1 {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		.prof-solutions-bg {
+			background-size: contain;
+			height: 430px;
+			.cont-container {
+				height: 400px;
+				position: relative;
+				.desc {
+					position: absolute;
+					font-weight: 300;
+					line-height: 30px;
+					padding: 20px;
+					bottom: 0;
+				}
+			}
+		}
+		.margin-bottom-85 {
+			margin-bottom: 45px;
+		}
+		.amplifiers,
+		.lighting,
+		.micro-phones-headphones,
+		.mixing-consoles,
+		.signal-processing,
+		.speakers,
+		.video-control,
+		.about-pro-solutions {
+			height: auto;
+			.bg-img {
+				height: 200px;
+				background-size: cover;
+				bottom: 0;
+				.brand-name-row {
+					position: absolute;
+					bottom: 0;
+					.brand-box {
+						width: 750px !important;
+						margin-left: 0px !important;
+						li {
+							a {
+								width: 140px !important;
+								min-height: 150px !important;
+								display: block;
+								text-align: center;
+								margin: 0px auto;
+								padding: 0 10px 10px 10px;
+								span {}
+								img {
+									display: block;
+									text-align: center;
+									margin: 0 auto;
+									margin-top: 10px;
+								}
+							}
+						}
+					}
+				}
+			}
+			.desc {
+				padding: 20px;
+				background: $light-grayish-blue;
+				height: 100%;
+				.cont-bold {
+					font-weight: 300;
+					margin-bottom: 30px;
+					line-height: 36px;
+				}
+				.learn-more {
+					font-weight: 500;
+				}
+			}
+		}
+		.about-pro-solutions {
+			height: auto !important;
+		}
+		.mob-pro-solution-brands {
+			.brand-box {
+				padding: 0;
+				margin: 0;
+				li {
+					list-style: none;
+					display: block;
+					margin-bottom: 5px;
+					background: $dark-blue;
+					a {
+						text-align: center;
+						display: block;
+						padding: 10px;
+						span {
+							color: $white;
+							font-size: 14px;
+							line-height: 14px;
+							display: block;
+							span {
+								display: block;
+							}
+						}
+						img {
+							text-align: center;
+							padding-bottom: 10px;
+						}
+						img.arrow {
+							margin-top: 15px;
+						}
+						&:hover {
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	/* PROFESSIONAL SOLUTIONS STYLES END */
+	/* LIFESTYLE AUDIO STYLES START */
+	.lifestyle-audio-section {
+		h1 {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		.lifestyle-audio-bg {
+			background-size: contain;
+			height: 430px;
+			.cont-container {
+				height: 400px;
+				position: relative;
+				.desc {
+					position: absolute;
+					font-weight: 300;
+					line-height: 30px;
+					padding: 20px;
+					bottom: 0;
+				}
+			}
+		}
+		.margin-bottom-85 {
+			margin-bottom: 45px;
+		}
+		.automotive-brand,
+		.portable-bluetooth,
+		.headphones,
+		.multiroom-systems,
+		.av-receivers,
+		.loudspeakers-soundbars,
+		.luxury-audio,
+		.embedded-audio,
+		.advanced-software,
+		.about-lifestyle-audio {
+			height: auto;
+			.bg-img {
+				height: 200px;
+				background-size: cover;
+				bottom: 0;
+				.brand-name-row {
+					position: absolute;
+					bottom: 0;
+					.brand-box {
+						width: 750px !important;
+						margin-left: 0px !important;
+						li {
+							a {
+								width: 140px !important;
+								min-height: 150px !important;
+								display: block;
+								text-align: center;
+								margin: 0px auto;
+								padding: 0 10px 10px 10px;
+								span {}
+								img {
+									display: block;
+									text-align: center;
+									margin: 0 auto;
+									margin-top: 10px;
+								}
+							}
+						}
+					}
+				}
+			}
+			.desc {
+				padding: 20px;
+				background: $light-grayish-blue;
+				height: 100%;
+				.cont-bold {
+					font-weight: 300;
+					margin-bottom: 30px;
+					line-height: 36px;
+				}
+				.learn-more {
+					font-weight: 500;
+				}
+			}
+		}
+		.about-lifestyle-audio {
+			height: auto !important;
+		}
+		.mob-lifestyle-brands {
+			.brand-box {
+				padding: 0;
+				margin: 0;
+				li {
+					list-style: none;
+					display: block;
+					margin-bottom: 5px;
+					background: $dark-blue;
+					a {
+						text-align: center;
+						display: block;
+						padding: 10px;
+						span {
+							color: $white;
+							font-size: 14px;
+							line-height: 14px;
+							display: block;
+							span {
+								display: block;
+							}
+						}
+						img {
+							text-align: center;
+							padding-bottom: 10px;
+							margin: 0 auto;
+						}
+						img.arrow {
+							margin-top: 15px;
+						}
+						&:hover {
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	/* LIFESTYLE AUDIO STYLES END */
+	/* SUPPLY CHAIN SECTION START */
+	.supplychain-section {
+		.supplychain-hero {
+			h1.section-title {
+				padding-left: 15px !important;
+			}
+			.margin-bottom-85 {
+				margin-bottom: 40px;
+			}
+			.conn-car-bg {
+				background-size: cover;
+				height: 350px;
+				.cont-container {
+					height: 350px;
+					top: 0;
+					-webkit-transform: translateY(0%);
+					-ms-transform: translateY(0%);
+					transform: translateY(0%);
+					.desc {
+						background-color: $white;
+						opacity: 1;
+						position: absolute;
+						bottom: 0;
+						font-weight: 300;
+						line-height: 30px;
+						padding: 15px;
+						margin-top: 90px
+					}
+				}
+			}
+			&.margin-bottom-85 {
+				margin-bottom: 40px;
+			}
+		}
+		.supplychain-cards {
+			.card {
+				min-height: inherit;
+				height: auto;
+			}
+		}
+		// COMPANY OVERVIEW STYLES START
+		.about-chainsupply {
+			h1.section-title {
+				padding-left: 15px;
+			}
+			h3 {
+				padding: 0;
+			}
+			.about-content {
+				padding-left: 0px;
+				padding-right: 0px;
+				@include columns($count: 1, $gap: 40px);
+				p {
+					font-weight: 300;
+					line-height: 28px;
+				}
+			}
+		}
+		// COMPANY OVERVIEW STYLES END
+	}
+	/* SUPPLY CHAIN SECTION END */
+	// SUSTAINABILITY HERO STYLES START
+	.sustainibility-hero {
+		h1 {
+			padding: 0 15px;
+		}
+		.about-us-bg {
+			height: 350px;
+			padding-left: 15px;
+		}
+		.hero-content-bg {
+			height: auto;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			padding-left: 0;
+			.hero-content {
+				padding-left: 0;
+				padding-right: 0;
+				padding-top: 0;
+				padding-bottom: 0;
+				top: 0%;
+				-webkit-transform: translateY(0%);
+				-ms-transform: translateY(0%);
+				transform: translateY(0%);
+				h2 {
+					padding-top: 10px;
+					padding-bottom: 10px;
+					padding-left: 15px;
+					padding-right: 15px;
+					line-height: 28px;
+					font-weight: 300;
+					margin-top: 0px;
+					margin-bottom: 0;
+				}
+				p {
+					color: $very-dark-grey;
+					font-weight: 300;
+					line-height: 24px;
+					padding-top: 25px;
+					padding-bottom: 25px;
+					padding-left: 15px;
+					padding-right: 15px;
+					background-color: $white;
+					margin-bottom: 0;
+					a {
+						@include linkColor($soft-cyan, $very-dark-grey, null, null);
+					}
+				}
+			}
+		}
+	}
+	// SUSTAINABILITY HERO STYLES END
+	// PRODUCTS STYLES START
+	.products-section {
+		h1 {
+			padding-left: 15px;
+		}
+		.img-bg {
+			height: 300px;
+			.img-bg-content {
+				@include vertical-align();
+				h1 {
+					text-align: left;
+				}
+			}
+		}
+		.desc {
+			margin-top: 0;
+			.desc-padding {
+				@include columns($count: 1, $gap: 40px);
+				padding: 15px 0 15px 0;
+				p {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+	// PRODUCTS STYLES END
+	//ABOUT SUSTAINABILITY STYLES START
+	.about-sustainability {
+		h1.section-title {
+			padding-left: 15px;
+		}
+		h3 {
+			padding: 0;
+		}
+		.about-content {
+			padding-left: 0px;
+			padding-right: 0px;
+			@include columns($count: 1, $gap: 40px);
+			p {
+				font-weight: 300;
+				line-height: 28px;
+			}
+		}
+	}
+	//ABOUT SUSTAINABILITY STYLES END
+	//SUSTAINABILITY CARDS STYLES START
+	.sustainability-card {
+		.sustainability-report-cards {
+			.card {
+				min-height: 100px;
+			}
+		}
+	}
+	//SUSTAINABILITY CARDS STYLES END
+	// INNOVATION HERO STYLES START
+	.innovation-hero {
+		h1 {
+			padding: 0 15px;
+		}
+		.about-us-bg {
+			height: 350px;
+			padding-left: 15px;
+		}
+		.hero-content-bg {
+			height: auto;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			padding-left: 0;
+			.hero-content {
+				padding-left: 0;
+				padding-right: 0;
+				padding-top: 0;
+				padding-bottom: 0;
+				top: 0%;
+				-webkit-transform: translateY(0%);
+				-ms-transform: translateY(0%);
+				transform: translateY(0%);
+				h2 {
+					padding-top: 10px;
+					padding-bottom: 10px;
+					padding-left: 15px;
+					padding-right: 15px;
+					line-height: 28px;
+					font-weight: 300;
+					margin-top: 0px;
+					margin-bottom: 0;
+				}
+				p {
+					color: $very-dark-grey;
+					font-weight: 300;
+					line-height: 24px;
+					padding-left: 15px;
+					padding-right: 15px;
+					padding-top: 10px;
+					padding-bottom: 10px;
+					background-color: $white;
+					margin-bottom: 0;
+					a {
+						@include linkColor($soft-cyan, $very-dark-grey, null, null);
+					}
+				}
+				.learn-more {
+					@include linkColor($dark-blue, $very-dark-grey, null, null);
+					p {
+						font-size: 16px;
+						@include linkColor($dark-blue, $very-dark-grey, null, null);
+					}
+				}
+			}
+		}
+	}
+	// INNOVATION HERO STYLES END
+	/*FEATURED ARTICLES STYLES START*/
+	.featured-articles-section {
+		background-color: $very-light-grey;
+		height: auto;
+		.title {
+			font-size: 18px;
+			line-height: 32px;
+		}
+		.media {
+			border-bottom: none;
+			padding-top: 0px;
+			.media-left {
+				display: block;
+				padding-bottom: 15px;
+				.media-object {
+					max-width: 100%;
+					height: auto;
+				}
+			}
+			.media-body {
+				.media-category {
+					margin-top: 0;
+					font-size: 14px;
+				}
+				.media-heading {
+					font-size: 18px;
+					line-height: 24px;
+					padding-bottom: 5px;
+					white-space: normal;
+				}
+				.media-date {
+					margin-top: 0;
+					padding-top: 0;
+					font-size: 14px;
+				}
+				img.arrow {
+					padding-left: 10px;
+				}
+				.call-to-action {
+					p {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+	/*FEATURED ARTICLES STYLES END*/
+	/*POSTS STYLES START*/
+	.post {
+		.post-img {
+			height: 390px;
+		}
+		.post-content {
+			padding: 20px 15px 20px 15px;
+			.title {
+				font-size: 24px;
+				line-height: 32px;
+			}
+			.call-to-action {
+				p {
+					font-size: 16px;
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	/*POSTS STYLES END*/
+	/*FIXED HEIGHT FOR LEFT POSTS START*/
+	.fixed-height {
+		height: auto;
+		overflow: hidden;
+	}
+	/*FIXED HEIGHT FOR LEFT POSTS END*/
+	/*VIEW-MORE-SECTION STYLES START*/
+	.view-more-row {
+		.view-more-card {
+			padding: 15px;
+			font-size: 14px;
+			line-height: 23px;
+			text-align: left;
+			vertical-align: middle;
+			img.arrow {
+				padding-left: 10px;
+			}
+		}
+	}
+	/*VIEW-MORE-SECTION STYLES END*/
+	// HOME LANDING PAGE CAROUSEL HERO STYLES START
+	#myhomeCarousel {
+		.carousel-indicators {
+			bottom: -30px;
+		}
+		.carousel-indicators li {
+			background-color: rgba(128, 130, 133, 0.2);
+			border: none;
+			width: 12px;
+			height: 12px;
+			margin: 0;
+		}
+		.carousel-indicators .active {
+			background-color: #4a4a4a;
+		}
+		.homepage-hero {
+			h1 {
+				padding: 0 15px;
+			}
+			.about-us-bg {
+				height: 350px;
+				padding-left: 15px;
+			}
+			.hero-content-bg {
+				height: auto;
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				padding-left: 0;
+				.hero-content {
+					padding-left: 0;
+					padding-right: 0;
+					padding-top: 0;
+					padding-bottom: 0;
+					top: 0%;
+					-webkit-transform: translateY(0%);
+					-ms-transform: translateY(0%);
+					transform: translateY(0%);
+					h2 {
+						padding-top: 15px;
+						padding-bottom: 15px;
+						padding-left: 15px;
+						padding-right: 15px;
+						line-height: 28px;
+						font-weight: 300;
+						margin-top: 0px;
+						margin-bottom: 0;
+					}
+					p {
+						color: $very-dark-grey;
+						font-weight: 300;
+						line-height: 24px;
+						padding-left: 15px;
+						padding-right: 15px;
+						padding-top: 10px;
+						padding-bottom: 10px;
+						background-color: $white;
+						margin-bottom: 0;
+						a {
+							@include linkColor($soft-cyan, $very-dark-grey, null, null);
+						}
+					}
+					.learn-more {
+						@include linkColor($dark-blue, $very-dark-grey, null, null);
+						p {
+							font-size: 16px;
+							@include linkColor($dark-blue, $very-dark-grey, null, null);
+						}
+					}
+				}
+			}
+		}
+	}
+	// HOME LANDING PAGE CAROUSEL HERO STYLES START
+	// HARMAN INSPIRED BANNER SECTION STYLES START
+	.harman-inspired-banner-section {
+		h1 {
+			padding: 0 15px;
+		}
+		.about-us-bg {
+			height: 350px;
+			padding-left: 15px;
+		}
+		.hero-content-bg {
+			height: auto;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			padding-left: 0;
+			.hero-content {
+				padding-left: 0;
+				padding-right: 0;
+				padding-top: 0;
+				padding-bottom: 0;
+				top: 0%;
+				-webkit-transform: translateY(0%);
+				-ms-transform: translateY(0%);
+				transform: translateY(0%);
+				h2 {
+					padding-top: 10px;
+					padding-bottom: 10px;
+					padding-left: 15px;
+					padding-right: 15px;
+					line-height: 28px;
+					font-weight: 300;
+					margin-top: 0px;
+					margin-bottom: 0;
+				}
+				p {
+					color: $very-dark-grey;
+					font-weight: 300;
+					line-height: 24px;
+					padding-left: 15px;
+					padding-right: 15px;
+					padding-top: 10px;
+					padding-bottom: 10px;
+					background-color: $white;
+					margin-bottom: 0;
+					a {
+						@include linkColor($soft-cyan, $very-dark-grey, null, null);
+					}
+				}
+				.learn-more {
+					@include linkColor($dark-blue, $very-dark-grey, null, null);
+					p {
+						font-size: 16px;
+						@include linkColor($dark-blue, $very-dark-grey, null, null);
+					}
+				}
+			}
+		}
+	}
+	// HARMAN INSPIRED BANNER SECTION STYLES END
+	// ABOUT HARMAN INSPIRED SECTION STYLES START
+	.abt-harman-inspired {
+		h1 {
+			padding: 0 15px;
+		}
+		.abt-harman-inspired-bg {
+			background-size: contain;
+			position: relative;
+			height: 700px;
+			.desc {
+				padding: 15px 15px 15px 15px;
+				right: 0;
+				top: inherit;
+				bottom: 0;
+			}
+		}
+	}
+	// ABOUT HARMAN INSPIRED SECTION STYLES END
+	/*TECHNOLOGY SECTION STYLES START*/
+	.technology-section {
+		h1 {
+			padding: 0 15px;
+		}
+		.img-bg {
+			min-height: inherit;
+			height: 240px;
+		}
+		.tech-content {
+			height: auto;
+			overflow: hidden;
+			padding: 15px;
+			.content {
+				@include columns($count: 1, $gap: 40px);
+				h3 {
+					font-weight: 300;
+					font-size: 24px;
+					line-height: 32px;
+				}
+				p {
+					font-weight: 300;
+					font-size: 16px;
+					line-height: 24px;
+				}
+			}
+		}
+	}
+	/*TECHNOLOGY SECTION STYLES END*/
+	/*HARMAN-INSPIRED PARTNERS SECTION STYLES START*/
+	.harman-inspired-partners {
+		h1 {
+			padding: 0 15px;
+		}
+		.partners {
+			.logo-collection {
+				li {
+					float: left;
+					width: 50%;
+					min-height: 80px;
+					min-width: inherit;
+					a {
+						img {
+							width: 50%;
+						}
+					}
+				}
+			}
+		}
+	}
+	/*HARMAN-INSPIRED PARTNERS SECTION STYLES END*/
+	/*REGION-SECTION STYLES START*/
+	.region-section {
+		background-color: $light-grayish-blue;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		h3 {
+			font-size: 24px;
+		}
+		.region {
+			margin-top: 15px;
+			margin-bottom: 15px;
+			padding: 0;
+			.cta {
+				.flags {}
+				p {
+					.arrow {
+						padding-left: 25px;
+					}
+				}
+			}
+		}
+	}
+	/*REGION-SECTION STYLES END*/
+	/*NEWS-HERO-SECTION STYLES START*/
+	.news-hero-section {
+		.about-us-bg {
+			.hero-content-bg {
+				.hero-content {
+					h2 {
+						background: -webkit-linear-gradient(transparent, $white);
+						/* For Safari 5.1 to 6.0 */
+						background: -o-linear-gradient(transparent, $white);
+						/* For Opera 11.1 to 12.0 */
+						background: -moz-linear-gradient(transparent, $white);
+						/* For Firefox 3.6 to 15 */
+						background: linear-gradient(transparent, $white);
+						/* Standard syntax */
+					}
+					p {}
+					.learn-more {
+						p {}
+						.arrow {}
+					}
+				}
+			}
+		}
+	}
+	/*NEWS-HERO-SECTION STYLES END*/
+	/*FILTER-BY SECTION STYLES START*/
+	.filter-by-section {
+		background-color: $light-grayish-blue;
+		padding-top: 25px;
+		padding-bottom: 25px;
+		h3 {
+			display: block;
+			width: auto;
+			vertical-align: middle;
+			margin: 0 0 10px 0;
+			padding: 0;
+			font-weight: 300;
+			font-size: 24px;
+			line-height: 32px;
+		}
+		.form-group {
+			padding-right: 0px;
+			.form-control {
+				width: 100%;
+				height: 55px;
+				font-size: 18px;
+			}
+		}
+	}
+	/*FILTER-BY SECTION STYLES END*/
+	/*FILTERED NEWS SECTION STYLES START*/
+	.filtered-news-section {
+		.card {
+			padding: 0 0 20px 0;
+			.news-image {}
+			.date {
+				font-size: 14px;
+				line-height: 24px;
+				padding: 0 15px;
+			}
+			.title {
+				font-size: 18px;
+				line-height: 24px;
+				padding: 0 15px;
+			}
+			.cta {
+				font-size: 16px;
+				padding: 0 15px;
+				img.arrow {
+					padding-left: 25px;
+				}
+			}
+		}
+		.view-more-card {
+			padding: 10px;
+			font-size: 14px;
+			line-height: 24px;
+		}
+	}
+	/*FILTERED NEWS SECTION STYLES END*/
+}
+
+@media all and (min-width:768px) and (max-width:991px) {
+	//Generate font size classes from 2px to 80px with 70% size compared to desktop size for mobile
+	$class-font: font !default;
+	@for $i from 2 through 80 {
+		@if ($i % 2==0) {
+			//Attach class name to font sizes
+			.#{$class-font}-#{$i} {
+				font-size: #{ceil($i * 0.8)}px;
+			}
+		}
+	}
+	// FOR MAIN HERO BANNER START
+	#homeCarousel {
+		.carousel-indicators {
+			width: 65%;
+		}
+		.carousel-control.left {
+			left: 86.5%;
+		}
+	}
+	// FOR MAIN HERO BANNER END
+	// SOLUTIONS CARDS STYLES START 
+	.solutions {
+		margin-bottom: 30px;
+		h1 {
+			padding: 0 15px;
+		}
+		.solution-cards {
+			.solution-card-bg {
+				width: 100%;
+				display: block;
+				min-height: 250px;
+			}
+			.solution-cont-container {
+				/* &:hover {
+                    bottom: 0px;
+                    top: 80px;
+                }
+                &:hover h1,
+                &:hover .cta-txt-link {
+                    color: $white;
+                }
+                &:hover .hline,
+                &:hover .desc {
+                    display: none;
+                }
+                &:hover .cta-txt-link .arrow {
+                    display: inline-block;
+                }*/
+				h1 {
+					color: $black;
+					font-weight: 300;
+					margin-bottom: 0;
+					padding-left: 0;
+					@include transition;
+					text-transform: uppercase;
+				}
+				.hline {
+					@include horizontal-line($black, 1px);
+					width: 40%;
+					margin: 20px 0;
+				}
+				.desc {
+					@include linkColor($black, $black, null, null);
+					margin-bottom: 0;
+				}
+				.cta-txt-link {
+					font: {
+						size: 18px;
+						weight: 700;
+					}
+					/*margin: 30px 10px 20px 0;*/
+					position: absolute;
+					bottom: 10px;
+					left: 0px;
+					.arrow {
+						display: none;
+						padding-left: 25px;
+					}
+				}
+			}
+			&:hover .solution-cont-container {
+				bottom: 0px;
+				top: 80px;
+			}
+			&:hover .solution-cont-container h1,
+			&:hover .solution-cont-container .cta-txt-link {
+				color: $white;
+			}
+			&:hover .solution-cont-container .hline,
+			&:hover .solution-cont-container .desc {
+				display: none;
+			}
+			&:hover .solution-cont-container .cta-txt-link .arrow {
+				display: inline-block;
+			}
+		}
+	}
+	// SOLUTIONS CARDS STYLES END
+	// NEWS SECTION STYLES START 
+	#news {
+		.c-1 {
+			height: 300px !important;
+		}
+		.c-4 {
+			height: 230px;
+		}
+		.c-5 {
+			height: 70px;
+		}
+		.brand-image {
+			text-align: center;
+		}
+		.main-content .card-content .small-strip .desc {
+			display: block;
+		}
+		.card-content {
+			.sub-title {
+				padding-left: 0px;
+				text-align: center;
+			}
+		}
+		//News Carousel start
+		.news-carousel {
+			height: 100%;
+			#newsCarousel {
+				height: 100%;
+				.carousel-indicators {
+					width: 60%;
+					text-align: center;
+				}
+				.carousel-inner {
+					height: 100%;
+					.item {
+						height: 100%;
+						.carousel-content {
+							padding-left: 15px;
+							padding-right: 15px;
+						}
+					}
+				}
+			}
+		}
+		//News Carousel end
+	}
+	// NEWS SECTION STYLES END  
+	// ECOSYSTEM SECTION STYLES START 
+	.ecosystem {
+		.brands,
+		.partners {
+			.logo-collection {
+				li {
+					min-width: inherit;
+					margin-bottom: 20px;
+					a {
+						width: 90px;
+					}
+				}
+			}
+		}
+	}
+	// ECOSYSTEM SECTION STYLES END
+	// RECOGNITION SECTION STYLES START
+	#recognition {
+		margin-bottom: 40px;
+		h1 {
+			padding: 0 15px;
+		}
+		.carousel-indicators {
+			width: 65%;
+		}
+		.carousel-control.left {
+			left: 86.5%;
+		}
+		.carousel-inner {
+			.carousel-caption {
+				padding: 0;
+				right: 60%;
+				.carousel-cont {
+					padding: 30px 20px 50px 25px;
+					font-size: 20px;
+				}
+			}
+		}
+	}
+	// RECOGNITION SECTION STYLES END
+	// HERITAGE SECTION STYLES START 
+	.heritage-section {
+		.c-1 {
+			height: 500px;
+			.desc {
+				top: 40%;
+				padding-left: 0;
+				padding-right: 0;
+				h2 {
+					padding-left: 15px;
+					font-size: 39px;
+					padding-top: 0px;
+					padding-bottom: 55px;
+				}
+				img {
+					margin-top: 10px;
+					margin-bottom: 10px;
+				}
+				p {
+					padding-left: 15px;
+					padding-right: 40px;
+					font-size: 20px;
+					line-height: 28px;
+					font-weight: 300;
+					padding-top: 40px;
+				}
+			}
+			.call-to-action {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				overflow: hidden;
+				padding: 15px 15px 15px 15px;
+			}
+		}
+		.c-2 {
+			height: 300px;
+		}
+		.c-3 {
+			height: 300px;
+		}
+		.c-4 {
+			height: 300px;
+		}
+		.call-to-action {
+			padding-left: 15px;
+		}
+		.arrow {
+			float: right;
+		}
+	}
+	// HERITAGE SECTION STYLES END 
+	.solution-types {
+		.border-right-2 {
+			@include border-width-color-radius(2px, $white, (0));
+		}
+		.panel {
+			border: none;
+			a {
+				@include linkColor($very-dark-grey, null, null, null);
+				@include arrow-animation;
+				.panel-heading {
+					border: none;
+					h3 {}
+				}
+				.panel-body {
+					@include border-width-color-radius(0px, #ccc, (4px 4px 4px 4px));
+					overflow: hidden;
+					.img-bg {
+						height: 200px;
+					}
+					.img-bg1 {}
+					.panel-content {
+						@include border-width-color-radius(1px, #ccc, (0px 0px 4px 4px));
+						border-top: none;
+						padding: 15px;
+						p {}
+						.call-to-action {
+							width: 100%;
+							overflow: hidden;
+							p {
+								display: inline;
+								@include linkColor($dark-blue, $dark-blue, null, null);
+							}
+							.arrow {
+								margin-top: -2px;
+								padding-left: 25px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.solutions-hero {
+		position: relative;
+		.hero-bg {
+			height: 150px;
+		}
+		.hero-content {
+			position: relative;
+			width: 100%;
+			left: 0;
+			height: 100%;
+			padding-right: 15px;
+			p {
+				font-size: 14px;
+				padding-top: 10px;
+				transform: none !important;
+				color: $very-dark-grey;
+			}
+		}
+	}
+	// COMPANY OVERVIEW - VISION & MISSION STYLES START
+	.vision-mission-section {
+		h1 {}
+		.img-bg {
+			height: 300px;
+			.img-bg-content {
+				@include vertical-align();
+				h1 {
+					text-align: left;
+				}
+			}
+		}
+		.desc {
+			margin-top: 0;
+			p {
+				font-size: 16px;
+				padding: 15px 0 15px 0;
+			}
+		}
+	}
+	// COMPANY OVERVIEW - VISION & MISSION STYLES END
+	// COMPANY OVERVIEW - ABOUT US STYLES START
+	.about-us-section {
+		.about-us-bg {
+			height: 300px;
+			padding-left: 15px;
+		}
+		.hero-content-bg {
+			/*@include transparent($white, 0.75);*/
+			height: auto;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			padding-left: 0;
+			.hero-content {
+				padding-left: 0;
+				padding-right: 0;
+				top: 0%;
+				-webkit-transform: translateY(0%);
+				-ms-transform: translateY(0%);
+				transform: translateY(0%);
+				h2 {
+					padding-top: 10px;
+					padding-left: 15px;
+					padding-right: 15px;
+					line-height: 32px;
+					font-weight: 300;
+				}
+				p {
+					padding-top: 15px;
+					padding-bottom: 10px;
+					padding-left: 15px;
+					padding-right: 15px;
+					margin-bottom: 0;
+					background-color: $white;
+					font-weight: 300;
+					line-height: 24px;
+				}
+			}
+		}
+	}
+	// COMPANY OVERVIEW - ABOUT US STYLES END
+	// LEADERS STYLE START
+	.leadership {
+		.tab-content {
+			.leaders {
+				padding-left: 30px;
+				.leader-img-name {
+					.leader-img {
+						width: 150px;
+						height: 150px;
+						margin-left: 0;
+					}
+					.leader-name-desig {
+						left: 165px;
+						h1 {
+							font-size: 24px;
+						}
+						.hline {
+							margin: 10px 0;
+						}
+					}
+				}
+			}
+		}
+	}
+	// LEADERS STYLE END
+	// COMPANY OVERVIEW - VALUES  STYLES START
+	.values-section {
+		h1 {
+			padding-left: 15px;
+		}
+		.img-bg {
+			height: 330px;
+			@include border-width-color-radius(2px, $white, (4px 4px 4px 4px));
+			overflow: hidden;
+			.content {
+				position: absolute;
+				height: auto;
+				bottom: 0;
+				color: $white;
+				height: auto;
+				padding-top: 20px;
+				padding-bottom: 20px;
+				.vertical-align {
+					top: 0%;
+					-webkit-transform: translateY(0%);
+					-ms-transform: translateY(0%);
+					transform: translateY(0%);
+					h2 {
+						font-size: 24px;
+					}
+					p {
+						margin-bottom: 0;
+						line-height: 24px;
+						font-weight: 300;
+						font-size: 18px;
+					}
+				}
+			}
+		}
+	}
+	// COMPANY OVERVIEW - VALUES  STYLES END
+	// RECOGNITION PAGE STYLES START 
+	//RECOGNITION BANNER STYLES START
+	#reco {
+		margin-bottom: 40px;
+		h1 {
+			padding: 0 15px;
+		}
+		.carousel-indicators {
+			width: 65%;
+		}
+		.carousel-control.left {
+			left: 86.5%;
+		}
+		.carousel-inner {
+			.carousel-caption {
+				padding: 0;
+				right: 60%;
+				.carousel-cont {
+					padding: 30px 20px 50px 25px;
+					font-size: 20px;
+				}
+			}
+		}
+	}
+	//RECOGNITION BANNER STYLES END
+	// RECOGNITION PAGE STYLES END
+	/*LIFETIME AWARDS STYLES START*/
+	.lifetime-awards {
+		h1 {}
+		.main-content {
+			position: relative;
+			@include border-width-color-radius(2px, $white, 4px);
+			overflow: hidden;
+			.img-bg {
+				height: 400px;
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			.content {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				.title {
+					margin: 0 0 5px 0;
+					padding-top: 10px;
+					padding-left: 0px;
+					text-align: center;
+					span {
+						background-color: $white;
+						color: $black;
+						padding: 5px 10px 5px 10px;
+						border-top-left-radius: 4px;
+						border-top-right-radius: 4px;
+					}
+				}
+				.sub-content {
+					padding: 20px 15px 0px 15px;
+					color: $white;
+					.sub-title {
+						font-size: 18px;
+						font-weight: 300;
+						margin: 0;
+						padding-bottom: 20px;
+						line-height: 26px;
+					}
+					.cta {
+						font-size: 14px;
+						display: block;
+						padding-bottom: 20px;
+						a {
+							@include linkColor($white, $white, null, null);
+							width: 100%;
+							display: block;
+							padding: 0;
+							.arrow {
+								display: none;
+								padding-left: 25px;
+							}
+							.cta-title {
+								font-size: 14px;
+								display: block;
+								background: url(../images/white-arrow.png) no-repeat 100% 0;
+								padding-right: 30px;
+								margin-bottom: 0;
+								line-height: 28px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	/*LIFETIME AWARDS STYLES END*/
+	/*other AWARDS STYLES START*/
+	.other-awards {
+		h1 {}
+		.main-content {
+			position: relative;
+			@include border-width-color-radius(2px, $white, 4px);
+			overflow: hidden;
+			.img-bg {
+				height: 300px;
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			.content {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				.title {
+					margin: 0 0 5px 0;
+					padding-top: 10px;
+					padding-left: 20px;
+					span {
+						color: $black;
+						padding: 5px 10px 5px 10px;
+						border-top-left-radius: 4px;
+						border-top-right-radius: 4px;
+					}
+				}
+				.sub-content {
+					padding: 15px 15px 0px 15px;
+					color: $white;
+					.sub-title {
+						line-height: 24px;
+						font-weight: 300;
+						margin: 0;
+						padding-bottom: 10px;
+					}
+					.cta {
+						display: block;
+						padding-bottom: 10px;
+						font-size: 14px;
+						line-height: 24px;
+						a {
+							@include linkColor($white, $white, null, null);
+							width: 100%;
+							display: block;
+							padding: 0 0 10px 0;
+							.arrow {
+								padding-left: 25px;
+							}
+							.cta-title {
+								display: inline;
+							}
+						}
+					}
+				}
+			}
+		}
+		.content-more {
+			height: 80px;
+			.more {
+				.tt {
+					p {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+	/*other AWARDS STYLES END*/
+	/* MILESTONE STYLES START */
+	.milestone-container {
+		#milestone-navbar {
+			.menu-section-row {
+				padding: 30px 0;
+				.navbar-header {
+					.navbar-brand {
+						font-size: 25px;
+						margin-left: 15px;
+					}
+				}
+				.navbar-nav {
+					margin-left: 15px;
+					li {
+						a {
+							padding: 10px 9px;
+						}
+					}
+					li.active {
+						a {
+							padding: 10px 9px;
+						}
+					}
+				}
+			}
+		}
+		.milestone-cont-container {
+			.cont-container {
+				.miles-content {
+					position: relative;
+					text-align: center;
+					p {
+						font: {
+							weight: 300;
+							size: 22px;
+						}
+						line-height: 35px;
+						&.font-40 {
+							font-size: 30px;
+						}
+					}
+					&.year2015 .award-img,
+					&.year2014 .award-img,
+					&.year2013 .award-img,
+					&.year2012 .award-img,
+					&.year2008 .award-img,
+					&.year2004 .award-img,
+					&.year2004-1 .award-img,
+					&.year2002 .award-img,
+					&.year1999 .award-img,
+					&.year1997 .award-img,
+					&.year1991 .award-img,
+					&.year1989 .award-img,
+					&.year1987 .award-img,
+					&.year1984 .award-img,
+					&.year1983 .award-img,
+					&.year1983-1 .award-img,
+					&.year1975 .award-img,
+					&.year1971 .award-img,
+					&.year1970 .award-img,
+					&.year1958 .award-img,
+					&.year1956 .award-img,
+					&.year1953 .award-img,
+					&.year1949 .award-img,
+					&.year1948 .award-img {
+						position: absolute;
+					}
+					&.year2015 .award-img {
+						left: -170px;
+						top: 60px;
+						@include circle-img-border(15px, 150px);
+					}
+					&.year2014 .award-img {
+						right: -260px;
+						top: -85px;
+						@include circle-img-border(40px, 230px);
+					}
+					&.year2013 .award-img {
+						left: -105px;
+						top: 60px;
+						@include circle-img-border(10px, 90px);
+					}
+					&.year2012 .award-img {
+						right: -50px;
+						top: -25px;
+						@include circle-img-border(15px, 120px);
+					}
+					&.year2008 .award-img {
+						left: -175px;
+						top: 70px;
+						@include circle-img-border(15px, 140px);
+					}
+					&.year2004 .award-img {
+						right: -155px;
+						top: 5px;
+						@include circle-img-border(15px, 120px);
+					}
+					&.year2004-1 .award-img {
+						left: -80px;
+						top: -20px;
+						@include circle-img-border(10px, 80px);
+					}
+					&.year2002 .award-img {
+						left: -225px;
+						top: -55px;
+						@include circle-img-border(30px, 180px);
+					}
+					&.year1999 .award-img {
+						right: -175px;
+						top: 30px;
+						@include circle-img-border(20px, 150px);
+					}
+					&.year1997 .award-img {
+						left: -80px;
+						top: 40px;
+						@include circle-img-border(10px, 60px);
+					}
+					&.year1991 .award-img {
+						right: -200px;
+						top: -5px;
+						@include circle-img-border(25px, 160px);
+					}
+					&.year1989 .award-img {
+						left: -190px;
+						top: 35px;
+						@include circle-img-border(20px, 150px);
+					}
+					&.year1987 .award-img {
+						right: -210px;
+						top: 0px;
+						@include circle-img-border(23px, 170px);
+					}
+					&.year1984 .award-img {
+						left: -150px;
+						top: 20px;
+						@include circle-img-border(18px, 120px);
+					}
+					&.year1983 .award-img {
+						right: -240px;
+						top: -20px;
+						@include circle-img-border(35px, 180px);
+					}
+					&.year1983-1 .award-img {
+						left: -70px;
+						top: 0;
+						@include circle-img-border(10px, 50px);
+					}
+					&.year1975 .award-img {
+						left: -160px;
+						top: 50px;
+						@include circle-img-border(18px, 140px);
+					}
+					&.year1971 .award-img {
+						right: -190px;
+						top: 5px;
+						@include circle-img-border(22px, 160px);
+					}
+					&.year1970 .award-img {
+						left: -130px;
+						top: 30px;
+						@include circle-img-border(13px, 120px);
+					}
+					&.year1958 .award-img {
+						right: -200px;
+						top: 50px;
+						@include circle-img-border(18px, 160px);
+					}
+					&.year1956 .award-img {
+						left: -130px;
+						top: 30px;
+						@include circle-img-border(13px, 120px);
+					}
+					&.year1953 .award-img {
+						right: -130px;
+						top: 10px;
+						@include circle-img-border(13px, 120px);
+					}
+					&.year1949 .award-img {
+						left: -240px;
+						top: 15px;
+						@include circle-img-border(25px, 200px);
+					}
+					&.year1948 .award-img {
+						right: -50px;
+						top: -30px;
+						@include circle-img-border(13px, 120px);
+					}
+					&.year1937 .award-img {
+						left: -130px;
+						top: 30px;
+						@include circle-img-border(20px, 150px);
+					}
+					&.year1928 .award-img {
+						left: -130px;
+						top: 30px;
+						@include circle-img-border(20px, 150px);
+					}
+				}
+			}
+		}
+	}
+	/* MILESTONE STYLES END */
+	/* CONNECTED SERVICES STYLES START */
+	.connected-car-section {
+		h1.section-title {
+			padding-left: 15px;
+		}
+		.margin-bottom-85 {
+			margin-bottom: 40px;
+		}
+		.conn-car-bg {
+			background-size: contain;
+			height: 500px;
+			.cont-container {
+				height: 400px;
+				.desc {
+					font-weight: 300;
+					line-height: 30px;
+					padding: 40px;
+					margin-top: 280px
+				}
+			}
+		}
+		.embed-info {
+			background: url(../images/connected-car/embedded-infotainment.jpg) $light-grayish-blue no-repeat 0 -150px;
+			background-size: contain;
+			position: relative;
+			height: 600px;
+			.desc {
+				padding: 30px 30px 10px 30px;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				top: inherit;
+			}
+		}
+		.telematics {
+			background: url(../images/connected-car/embedded-infotainment.jpg) $light-grayish-blue no-repeat 100% -150px;
+			background-size: contain;
+			position: relative;
+			height: 600px;
+			.desc {
+				padding: 30px 30px 10px 30px;
+				left: 0;
+				top: inherit;
+				bottom: 0;
+			}
+		}
+		.connected-safety {
+			background: url(../images/connected-car/connected-safety.jpg) $light-grayish-blue no-repeat 0 -250px;
+			background-size: contain;
+			position: relative;
+			height: 600px;
+			.desc {
+				padding: 30px 30px 10px 30px;
+				right: 0;
+				top: inherit;
+				bottom: 0;
+			}
+		}
+		.connected-security {
+			background: url(../images/connected-car/connected-security.jpg) $light-grayish-blue no-repeat 100% -200px;
+			background-size: contain;
+			position: relative;
+			height: 600px;
+			.desc {
+				padding: 30px 30px 10px 30px;
+				left: 0;
+				top: inherit;
+				bottom: 0;
+			}
+		}
+		.abt-connected-car {
+			background: url(../images/connected-car/connected-safety.jpg) $white no-repeat 0 -150px;
+			background-size: contain;
+			position: relative;
+			height: 600px;
+			.desc {
+				padding: 30px 30px 10px 30px;
+				right: 0;
+				top: inherit;
+				bottom: 0;
+			}
+		}
+	}
+	/* CONNECTED SERVICES STYLES END */
+	#conne {
+		padding-bottom: 40px;
+		h1 {
+			padding: 0px;
+		}
+		p {
+			padding: 0 15px;
+		}
+		.carousel-indicators {
+			width: 65%;
+		}
+		.carousel-control.left {
+			left: 86.5%;
+		}
+		.carousel-inner {
+			.recognition-img {
+				width: 100%;
+				height: 320px !important;
+			}
+			.carousel-caption {
+				height: 320px;
+				padding: 0;
+				right: 60%;
+				.carousel-cont {
+					padding: 0px 20px 50px 25px;
+					font-size: 20px;
+					h1 {
+						font-size: 24px;
+						line-height: 24px;
+					}
+					p {
+						font-size: 16px;
+						line-height: 24px;
+					}
+				}
+			}
+		}
+		.cta {
+			a {
+				padding-left: 32px;
+				.arrow {
+					padding-left: 10px;
+				}
+				&:hover .arrow {
+					padding-left: 15px;
+				}
+			}
+		}
+	}
+	// CONNECTED-SERVICES STYLES END
+	/*CONNECTED-SERVICES CONTACT START*/
+	#contact {
+		margin-bottom: 60px !important;
+		h1 {
+			padding: 0px;
+		}
+		.contact-text {
+			.img-fix {
+				img {
+					width: auto !important;
+				}
+			}
+			h2 {
+				font-size: 24px !important;
+				padding: 0 15px;
+			}
+			p {
+				font-size: 16px !important;
+				padding: 0 15px;
+			}
+			a {
+				padding: 0 15px;
+				margin-bottom: 25px !important;
+				text-decoration: none;
+				img {
+					height: auto !important;
+					width: auto !important;
+				}
+			}
+			.img-fix img {
+				width: 400px;
+			}
+		}
+		.rc-fix {
+			padding-left: 0px !important;
+			padding-right: 15px !important;
+		}
+		.rc1-fix {
+			padding-right: 0px !important;
+			padding-left: 15px !important;
+		}
+	}
+	/*CONNECTED-SERVICES CONTACT END*/
+	/*CONNECTED-SERVICES ABOUT START*/
+	#con-about {
+		h1 {
+			padding: 0px;
+		}
+		.about-fix {
+			padding: 0px !important;
+			.img-bg {
+				height: 250px !important;
+			}
+		}
+		.about-font {
+			h2 {
+				padding: 15px;
+				font-size: 24px !important;
+			}
+			p {
+				margin-top: 0px !important;
+				padding: 15px;
+				font-size: 16px !important;
+			}
+		}
+	}
+	/*CONNECTED-SERVICES ABOUT END*/
+	/*RESPONSIBILITY HERO STYLES START*/
+	.responibility-hero {
+		.about-us-bg {
+			height: 300px;
+			padding-left: 15px;
+		}
+		.hero-content-bg {
+			height: auto;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			padding-left: 0;
+			.hero-content {
+				padding-left: 0;
+				padding-right: 0;
+				top: 0%;
+				-webkit-transform: translateY(0%);
+				-ms-transform: translateY(0%);
+				transform: translateY(0%);
+				h2 {
+					padding-top: 10px;
+					padding-left: 15px;
+					padding-right: 15px;
+					line-height: 32px;
+					font-size: 24px;
+					font-weight: 300;
+				}
+				p {
+					padding-top: 25px;
+					padding-bottom: 25px;
+					padding-left: 15px;
+					padding-right: 15px;
+					margin-bottom: 0;
+					background-color: $white;
+					font-weight: 300;
+					font-size: 16px;
+					line-height: 24px;
+					color: $very-dark-grey;
+					a {
+						@include linkColor($soft-cyan, $very-dark-grey, null, null);
+					}
+				}
+			}
+		}
+	}
+	/*RESPONSIBILITY HERO STYLES END*/
+	/* RESPONSIBILITY TYPE STYLES START */
+	.responsibility-types {
+		h1 {}
+		.main-content {
+			position: relative;
+			@include border-width-color-radius(2px, $white, 4px);
+			overflow: hidden;
+			.img-bg {
+				height: 300px;
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			.content {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				.title {
+					margin: 0 0 5px 0;
+					padding-top: 10px;
+					padding-left: 20px;
+					span {
+						color: $black;
+						padding: 5px 10px 5px 10px;
+						border-top-left-radius: 4px;
+						border-top-right-radius: 4px;
+					}
+				}
+				.sub-content {
+					padding: 15px 15px 0px 15px;
+					color: $white;
+					.sub-title {
+						line-height: 24px;
+						font-size: 24px;
+						font-weight: 300;
+						margin: 0;
+						padding-bottom: 10px;
+					}
+					p {
+						font-size: 16px;
+						line-height: 24px;
+						font-weight: 300;
+					}
+					.cta {
+						display: block;
+						padding-bottom: 10px;
+						font-size: 14px;
+						line-height: 24px;
+						a {
+							@include linkColor($white, $white, null, null);
+							width: 100%;
+							display: block;
+							padding: 0 0 10px 0;
+							.arrow {
+								padding-left: 25px;
+							}
+							.cta-title {
+								display: inline;
+							}
+						}
+					}
+				}
+			}
+		}
+		.content-more {
+			height: 80px;
+			.more {
+				.tt {
+					p {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+	/* RESPONSIBILITY TYPE STYLES END */
+	/* PROFESSIONAL SOLUTIONS STYLES START */
+	.professional-solutions-section {
+		.prof-solutions-bg {
+			background-size: contain;
+			height: 430px;
+			.cont-container {
+				height: 400px;
+				position: relative;
+				.desc {
+					position: absolute;
+					font-weight: 300;
+					line-height: 30px;
+					padding: 20px 40px;
+					bottom: 0;
+				}
+			}
+		}
+		.margin-bottom-85 {
+			margin-bottom: 45px;
+		}
+		.amplifiers,
+		.lighting,
+		.micro-phones-headphones,
+		.mixing-consoles,
+		.signal-processing,
+		.speakers,
+		.video-control,
+		.about-pro-solutions {
+			height: auto;
+			.bg-img {
+				height: 300px;
+				background-size: cover;
+				bottom: 0;
+				.brand-name-row {
+					position: absolute;
+					bottom: 0;
+					.brand-box {
+						width: 750px !important;
+						margin-left: 0px !important;
+						li {
+							a {
+								width: 140px !important;
+								min-height: 150px !important;
+								display: block;
+								text-align: center;
+								margin: 0px auto;
+								padding: 0 10px 10px 10px;
+								span {}
+								img {
+									display: block;
+									text-align: center;
+									margin: 0 auto;
+									margin-top: 10px;
+								}
+							}
+						}
+					}
+				}
+			}
+			.desc {
+				padding: 40px;
+				background: $light-grayish-blue;
+				height: 100%;
+				.cont-bold {
+					font-weight: 300;
+					margin-bottom: 30px;
+					line-height: 36px;
+				}
+				.learn-more {
+					font-weight: 500;
+				}
+			}
+		}
+		.about-pro-solutions {
+			height: auto !important;
+		}
+	}
+	/* PROFESSIONAL SOLUTIONS STYLES END */
+	/* LIFESTYLE AUDIO STYLES START */
+	.lifestyle-audio-section {
+		.lifestyle-audio-bg {
+			background-size: contain;
+			height: 430px;
+			.cont-container {
+				height: 400px;
+				position: relative;
+				.desc {
+					position: absolute;
+					font-weight: 300;
+					line-height: 30px;
+					padding: 20px 40px;
+					bottom: 0;
+				}
+			}
+		}
+		.margin-bottom-85 {
+			margin-bottom: 45px;
+		}
+		.automotive-brand,
+		.portable-bluetooth,
+		.headphones,
+		.multiroom-systems,
+		.av-receivers,
+		.loudspeakers-soundbars,
+		.luxury-audio,
+		.embedded-audio,
+		.advanced-software,
+		.about-lifestyle-audio {
+			height: auto;
+			.bg-img {
+				height: 300px;
+				background-size: cover;
+				bottom: 0;
+				.brand-name-row {
+					position: absolute;
+					bottom: -6px;
+					.brand-box {
+						width: 750px !important;
+						margin-left: 0px !important;
+						li {
+							a {
+								width: 140px !important;
+								min-height: auto !important;
+								display: block;
+								text-align: center;
+								margin: 0px auto;
+								padding: 0;
+								span {}
+								img {
+									display: block;
+									text-align: center;
+									margin: 0 auto;
+									margin-top: 10px;
+								}
+							}
+						}
+					}
+				}
+			}
+			.desc {
+				padding: 40px;
+				background: $light-grayish-blue;
+				height: 100%;
+				.cont-bold {
+					font-weight: 300;
+					margin-bottom: 30px;
+					line-height: 36px;
+				}
+				.learn-more {
+					font-weight: 500;
+				}
+			}
+		}
+		.about-lifestyle-audio {
+			height: auto !important;
+			.bg-img {
+				background-position: 0 -100px;
+			}
+		}
+	}
+	/* LIFESTYLE AUDIO STYLES END */
+	/* SUPPLY CHAIN STYLES START  */
+	.supplychain-section {
+		.supplychain-hero {
+			h1.section-title {
+				padding-left: 15px;
+			}
+			.margin-bottom-85 {
+				margin-bottom: 40px;
+			}
+			.conn-car-bg {
+				background-size: contain;
+				height: 500px;
+				.cont-container {
+					height: 500px;
+					top: 0;
+					-webkit-transform: translateY(0%);
+					-ms-transform: translateY(0%);
+					transform: translateY(0%);
+					.desc {
+						background-color: $white;
+						opacity: 1;
+						position: absolute;
+						bottom: 0;
+						font-weight: 300;
+						line-height: 30px;
+						padding: 40px;
+						margin-top: 280px
+					}
+				}
+			}
+			&.margin-bottom-85 {
+				margin-bottom: 40px;
+			}
+		}
+		.supplychain-cards {
+			.card {
+				min-height: 260px;
+			}
+		}
+	}
+	/* SUPPLY CHAIN STYLES END  */
+	/*SUSTAINIBILITY HERO STYLES START*/
+	.sustainibility-hero {
+		.about-us-bg {
+			height: 300px;
+			padding-left: 15px;
+		}
+		.hero-content-bg {
+			height: auto;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			padding-left: 0;
+			.hero-content {
+				padding-left: 0;
+				padding-right: 0;
+				padding-top: 0;
+				padding-bottom: 0;
+				top: 0%;
+				-webkit-transform: translateY(0%);
+				-ms-transform: translateY(0%);
+				transform: translateY(0%);
+				h2 {
+					padding-top: 10px;
+					padding-bottom: 10px;
+					padding-left: 15px;
+					padding-right: 15px;
+					line-height: 32px;
+					font-size: 24px;
+					font-weight: 300;
+					margin-bottom: 0;
+				}
+				p {
+					padding-top: 25px;
+					padding-bottom: 25px;
+					padding-left: 15px;
+					padding-right: 15px;
+					margin-bottom: 0;
+					background-color: $white;
+					font-weight: 300;
+					font-size: 16px;
+					line-height: 24px;
+					color: $very-dark-grey;
+					a {
+						@include linkColor($soft-cyan, $very-dark-grey, null, null);
+					}
+				}
+			}
+		}
+	}
+	/*SUSTAINIBILITY HERO STYLES END*/
+	// PRODUCTS STYLES START
+	.products-section {
+		h1 {}
+		.img-bg {
+			height: 300px;
+			.img-bg-content {
+				@include vertical-align();
+				h1 {
+					text-align: left;
+				}
+			}
+		}
+		.desc {
+			margin-top: 0;
+			.desc-padding {
+				padding: 15px 0 15px 0;
+				padding: 15px 0 15px 0;
+				p {
+					padding: 15px 0 15px 0;
+					font-size: 16px;
+				}
+			}
+		}
+	}
+	// PRODUCTS STYLES END
+	/*INNOVATION HERO STYLES START*/
+	.innovation-hero {
+		.about-us-bg {
+			height: 300px;
+			padding-left: 15px;
+		}
+		.hero-content-bg {
+			height: auto;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			padding-left: 0;
+			.hero-content {
+				padding-left: 0;
+				padding-right: 0;
+				padding-top: 0;
+				padding-bottom: 0;
+				top: 0%;
+				-webkit-transform: translateY(0%);
+				-ms-transform: translateY(0%);
+				transform: translateY(0%);
+				h2 {
+					padding-top: 10px;
+					padding-bottom: 10px;
+					padding-left: 15px;
+					padding-right: 15px;
+					line-height: 32px;
+					font-size: 24px;
+					font-weight: 300;
+					margin-bottom: 0;
+				}
+				p {
+					padding-top: 10px;
+					padding-bottom: 10px;
+					padding-left: 15px;
+					padding-right: 15px;
+					margin-bottom: 0;
+					background-color: $white;
+					font-weight: 300;
+					font-size: 16px;
+					line-height: 24px;
+					color: $very-dark-grey;
+					a {
+						@include linkColor($soft-cyan, $very-dark-grey, null, null);
+					}
+				}
+				.learn-more {
+					@include linkColor($dark-blue, $very-dark-grey, null, null);
+					p {
+						@include linkColor($dark-blue, $very-dark-grey, null, null);
+					}
+				}
+			}
+		}
+	}
+	/*INNOVATION HERO STYLES END*/
+	/*FIXED HEIGHT FOR LEFT POSTS START*/
+	.fixed-height {
+		height: auto;
+		overflow: hidden;
+	}
+	/*FIXED HEIGHT FOR LEFT POSTS END*/
+	// HOME LANDING PAGE CAROUSEL HERO STYLES START
+	#myhomeCarousel {
+		.carousel-indicators {
+			bottom: -30px;
+		}
+		.carousel-indicators li {
+			background-color: rgba(128, 130, 133, 0.2);
+			border: none;
+			width: 12px;
+			height: 12px;
+			margin: 0;
+		}
+		.carousel-indicators .active {
+			background-color: #4a4a4a;
+		}
+		.homepage-hero {
+			.about-us-bg {
+				height: 350px;
+				padding-left: 15px;
+			}
+			.hero-content-bg {
+				height: auto;
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				padding-left: 0;
+				.hero-content {
+					padding-left: 0;
+					padding-right: 0;
+					padding-top: 0;
+					padding-bottom: 0;
+					top: 0%;
+					-webkit-transform: translateY(0%);
+					-ms-transform: translateY(0%);
+					transform: translateY(0%);
+					h2 {
+						padding-top: 15px;
+						padding-bottom: 15px;
+						padding-left: 15px;
+						padding-right: 15px;
+						line-height: 32px;
+						font-size: 24px;
+						font-weight: 300;
+						margin-bottom: 0;
+					}
+					p {
+						padding-top: 10px;
+						padding-bottom: 10px;
+						padding-left: 15px;
+						padding-right: 15px;
+						margin-bottom: 0;
+						background-color: $white;
+						font-weight: 300;
+						font-size: 16px;
+						line-height: 24px;
+						color: $very-dark-grey;
+						a {
+							@include linkColor($soft-cyan, $very-dark-grey, null, null);
+						}
+					}
+					.learn-more {
+						@include linkColor($dark-blue, $very-dark-grey, null, null);
+						p {
+							@include linkColor($dark-blue, $very-dark-grey, null, null);
+						}
+					}
+				}
+			}
+		}
+	}
+	// HOME LANDING PAGE CAROUSEL HERO STYLES END
+	/*HARMAN INSPIRED BANNER SECTION STYLES START*/
+	.innovation-hero {
+		.about-us-bg {
+			height: 300px;
+			padding-left: 15px;
+		}
+		.hero-content-bg {
+			height: auto;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			padding-left: 0;
+			.hero-content {
+				padding-left: 0;
+				padding-right: 0;
+				padding-top: 0;
+				padding-bottom: 0;
+				top: 0%;
+				-webkit-transform: translateY(0%);
+				-ms-transform: translateY(0%);
+				transform: translateY(0%);
+				h2 {
+					padding-top: 10px;
+					padding-bottom: 10px;
+					padding-left: 15px;
+					padding-right: 15px;
+					line-height: 32px;
+					font-size: 24px;
+					font-weight: 300;
+					margin-bottom: 0;
+				}
+				p {
+					padding-top: 10px;
+					padding-bottom: 10px;
+					padding-left: 15px;
+					padding-right: 15px;
+					margin-bottom: 0;
+					background-color: $white;
+					font-weight: 300;
+					font-size: 16px;
+					line-height: 24px;
+					color: $very-dark-grey;
+					a {
+						@include linkColor($soft-cyan, $very-dark-grey, null, null);
+					}
+				}
+				.learn-more {
+					@include linkColor($dark-blue, $very-dark-grey, null, null);
+					p {
+						@include linkColor($dark-blue, $very-dark-grey, null, null);
+					}
+				}
+			}
+		}
+	}
+	/*HARMAN INSPIRED BANNER SECTION STYLES END*/
+	/*ABOUT CONNECTED CAR STYLES START*/
+	.abt-harman-inspired {
+		.abt-harman-inspired-bg {
+			background-size: contain;
+			position: relative;
+			height: 600px;
+			.desc {
+				padding: 30px 30px 10px 30px;
+				right: 0;
+				top: inherit;
+				bottom: 0;
+			}
+		}
+	}
+	/*ABOUT CONNECTED CAR STYLES END*/
+	/*TECHNOLOGY SECTION STYLES START*/
+	.technology-section {
+		h1 {}
+		.img-bg {
+			min-height: inherit;
+			height: 240px;
+		}
+		.tech-content {
+			height: auto;
+			overflow: hidden;
+			padding: 15px;
+			.content {
+				@include columns($count: 1, $gap: 40px);
+				h3 {
+					font-weight: 300;
+					font-size: 24px;
+					line-height: 32px;
+				}
+				p {
+					font-weight: 300;
+					font-size: 16px;
+					line-height: 24px;
+				}
+			}
+		}
+	}
+	/*TECHNOLOGY SECTION STYLES END*/
+	/*NEWS-HERO-SECTION STYLES START*/
+	.news-hero-section {
+		.about-us-bg {
+			.hero-content-bg {
+				.hero-content {
+					h2 {
+						background: -webkit-linear-gradient(transparent, $white);
+						/* For Safari 5.1 to 6.0 */
+						background: -o-linear-gradient(transparent, $white);
+						/* For Opera 11.1 to 12.0 */
+						background: -moz-linear-gradient(transparent, $white);
+						/* For Firefox 3.6 to 15 */
+						background: linear-gradient(transparent, $white);
+						/* Standard syntax */
+					}
+					p {}
+					.learn-more {
+						p {}
+						.arrow {}
+					}
+				}
+			}
+		}
+	}
+	/*NEWS-HERO-SECTION STYLES END*/
+	/*FILTER-BY SECTION STYLES START*/
+	.filter-by-section {
+		background-color: $light-grayish-blue;
+		padding-top: 40px;
+		padding-bottom: 40px;
+		h3 {
+			padding: 0 15px 0 15px;
+			font-size: 36px;
+		}
+		.form-group {
+			padding-right: 15px;
+			.form-control {
+				width: 250px;
+				height: 55px;
+			}
+		}
+	}
+	/*FILTER-BY SECTION STYLES END*/
+	/*FILTERED NEWS SECTION STYLES START*/
+	.filtered-news-section {
+		.card {
+			padding: 0 0 20px 0;
+			.news-image {}
+			.date {
+				font-size: 14px;
+				line-height: 24px;
+				padding: 0 15px;
+			}
+			.title {
+				font-size: 18px;
+				line-height: 24px;
+				padding: 0 15px;
+			}
+			.cta {
+				font-size: 16px;
+				padding: 0 15px;
+				img.arrow {
+					padding-left: 25px;
+				}
+			}
+		}
+		.view-more-card {
+			padding: 10px;
+			font-size: 14px;
+			line-height: 24px;
+		}
+	}
+	/*FILTERED NEWS SECTION STYLES END*/
+}
+
+@media only screen and (min-width:992px) and (max-width: 1199px) {
+	//    MAIN BANNER STYLES START 
+	#homeCarousel {
+		.carousel-control.left {
+			left: 90%;
+		}
+		.carousel-indicators {
+			width: 69%;
+		}
+		.content {
+			h1 {
+				font-size: 40px;
+			}
+		}
+	}
+	//    MAIN BANNER STYLES END
+	// ECOSYSTEM SECTION STYLES START 
+	.ecosystem {
+		.brands,
+		.partners {
+			.logo-collection {
+				li {
+					min-width: inherit;
+					margin-bottom: 20px;
+					a {
+						width: 90px;
+					}
+				}
+			}
+		}
+	}
+	// ECOSYSTEM SECTION STYLES END 
+	// RECOGNITION CAROUSEL START 
+	#recognition {
+		margin-bottom: 40px;
+		h1 {
+			padding: 0 15px;
+		}
+		.carousel-indicators {
+			width: 68%;
+		}
+		.carousel-control.left {
+			left: 90%;
+		}
+		.carousel-inner {
+			.carousel-caption {
+				padding: 0;
+				right: 60%;
+				.carousel-cont {
+					font-size: 30px;
+				}
+			}
+		}
+	}
+	// RECOGNITION CAROUSEL END
+	// RECOGNITION PAGE STYLES START 
+	//RECOGNITION BANNER STYLES START
+	#reco {
+		margin-bottom: 40px;
+		h1 {
+			padding: 0 15px;
+		}
+		.carousel-indicators {
+			width: 68%;
+		}
+		.carousel-control.left {
+			left: 90%;
+		}
+		.carousel-inner {
+			.carousel-caption {
+				padding: 0;
+				right: 60%;
+				.carousel-cont {
+					font-size: 30px;
+				}
+			}
+		}
+	}
+	//RECOGNITION BANNER STYLES END
+	// RECOGNITION PAGE STYLES END
+	/* MILESTONE STYLES START */
+	.milestone-container {
+		#milestone-navbar {
+			.menu-section-row {
+				.navbar-header {
+					.navbar-brand {
+						font-size: 40px;
+					}
+				}
+				.navbar-nav {
+					margin-left: 35px;
+					li {
+						a {
+							padding: 10px 15px;
+						}
+					}
+					li.active {
+						a {
+							padding: 10px 15px;
+						}
+					}
+				}
+			}
+		}
+		.milestone-cont-container {
+			.cont-container {
+				.miles-content {
+					position: relative;
+					text-align: center;
+					p {
+						font: {
+							weight: 300;
+							size: 22px;
+						}
+						line-height: 35px;
+						&.font-40 {
+							font-size: 30px;
+						}
+					}
+					&.year2015 .award-img,
+					&.year2014 .award-img,
+					&.year2013 .award-img,
+					&.year2012 .award-img,
+					&.year2008 .award-img,
+					&.year2004 .award-img,
+					&.year2004-1 .award-img,
+					&.year2002 .award-img,
+					&.year1999 .award-img,
+					&.year1997 .award-img,
+					&.year1991 .award-img,
+					&.year1989 .award-img,
+					&.year1987 .award-img,
+					&.year1984 .award-img,
+					&.year1983 .award-img,
+					&.year1983-1 .award-img,
+					&.year1975 .award-img,
+					&.year1971 .award-img,
+					&.year1970 .award-img,
+					&.year1958 .award-img,
+					&.year1956 .award-img,
+					&.year1953 .award-img,
+					&.year1949 .award-img,
+					&.year1948 .award-img {
+						position: absolute;
+					}
+					&.year2015 .award-img {
+						left: -170px;
+						top: 60px;
+						@include circle-img-border(15px, 150px);
+					}
+					&.year2014 .award-img {
+						right: -260px;
+						top: -85px;
+						@include circle-img-border(40px, 230px);
+					}
+					&.year2013 .award-img {
+						left: -105px;
+						top: 60px;
+						@include circle-img-border(10px, 90px);
+					}
+					&.year2012 .award-img {
+						right: -50px;
+						top: -25px;
+						@include circle-img-border(15px, 120px);
+					}
+					&.year2008 .award-img {
+						left: -175px;
+						top: 70px;
+						@include circle-img-border(15px, 140px);
+					}
+					&.year2004 .award-img {
+						right: -155px;
+						top: 5px;
+						@include circle-img-border(15px, 120px);
+					}
+					&.year2004-1 .award-img {
+						left: -65px;
+						top: -20px;
+						@include circle-img-border(10px, 80px);
+					}
+					&.year2002 .award-img {
+						left: -240px;
+						top: -55px;
+						@include circle-img-border(40px, 200px);
+					}
+					&.year1999 .award-img {
+						right: -150px;
+						top: 30px;
+						@include circle-img-border(20px, 150px);
+					}
+					&.year1997 .award-img {
+						left: -40px;
+						top: 40px;
+						@include circle-img-border(10px, 60px);
+					}
+					&.year1991 .award-img {
+						right: -225px;
+						top: -55px;
+						@include circle-img-border(25px, 170px);
+					}
+					&.year1989 .award-img {
+						left: -190px;
+						top: 35px;
+						@include circle-img-border(20px, 150px);
+					}
+					&.year1987 .award-img {
+						right: -210px;
+						top: 0px;
+						@include circle-img-border(23px, 170px);
+					}
+					&.year1984 .award-img {
+						left: -150px;
+						top: 20px;
+						@include circle-img-border(18px, 120px);
+					}
+					&.year1983 .award-img {
+						right: -280px;
+						top: -50px;
+						@include circle-img-border(35px, 230px);
+					}
+					&.year1983-1 .award-img {
+						left: -70px;
+						top: 0;
+						@include circle-img-border(10px, 50px);
+					}
+					&.year1975 .award-img {
+						left: -160px;
+						top: 50px;
+						@include circle-img-border(18px, 140px);
+					}
+					&.year1971 .award-img {
+						right: -190px;
+						top: 5px;
+						@include circle-img-border(22px, 160px);
+					}
+					&.year1970 .award-img {
+						left: -130px;
+						top: 30px;
+						@include circle-img-border(13px, 120px);
+					}
+					&.year1958 .award-img {
+						right: -200px;
+						top: 50px;
+						@include circle-img-border(18px, 160px);
+					}
+					&.year1956 .award-img {
+						left: -130px;
+						top: 30px;
+						@include circle-img-border(13px, 120px);
+					}
+					&.year1953 .award-img {
+						right: -130px;
+						top: 10px;
+						@include circle-img-border(13px, 120px);
+					}
+					&.year1949 .award-img {
+						left: -240px;
+						top: 15px;
+						@include circle-img-border(25px, 200px);
+					}
+					&.year1948 .award-img {
+						right: -50px;
+						top: -30px;
+						@include circle-img-border(13px, 120px);
+					}
+					&.year1937 .award-img {
+						left: -130px;
+						top: 30px;
+						@include circle-img-border(20px, 150px);
+					}
+					&.year1928 .award-img {
+						left: -130px;
+						top: 30px;
+						@include circle-img-border(20px, 150px);
+					}
+				}
+			}
+		}
+	}
+	/* MILESTONE STYLES END */
+	/* CONNECTED CAR SECTION START */
+	.connected-car-section {
+		h1.section-title {
+			padding-left: 15px;
+		}
+		.embed-info {
+			background: url(../images/connected-car/embedded-infotainment.jpg) $light-grayish-blue no-repeat -50px -50px;
+		}
+		.telematics {
+			background: url(../images/connected-car/embedded-infotainment.jpg) $light-grayish-blue no-repeat 100% -30px;
+		}
+		.connected-safety {
+			background: url(../images/connected-car/connected-safety.jpg) $light-grayish-blue no-repeat -150px -50px;
+		}
+		.connected-security {
+			background: url(../images/connected-car/connected-security.jpg) $light-grayish-blue no-repeat 100% -50px;
+		}
+		.abt-connected-car {
+			background: url(../images/connected-car/connected-safety.jpg) $white no-repeat -150px 0;
+		}
+	}
+	/* CONNECTED CAR SECTION END */
+	//  CONNECTED SERVICES CAROUSEL START 
+	#conne {
+		margin-bottom: 40px;
+		h1 {
+			padding: 0 15px;
+		}
+		.carousel-indicators {
+			width: 68%;
+		}
+		.carousel-control.left {
+			left: 90%;
+		}
+		.carousel-inner {
+			.carousel-caption {
+				padding: 0;
+				right: 60%;
+				.carousel-cont {
+					font-size: 30px;
+				}
+			}
+		}
+	}
+	// CONNECTED SERVICES CAROUSEL END
+	/* PROFESSIONAL SOLUTIONS STYLES START */
+	.professional-solutions-section {
+		.amplifiers,
+		.lighting,
+		.micro-phones-headphones,
+		.mixing-consoles,
+		.signal-processing,
+		.speakers,
+		.video-control,
+		.about-pro-solutions {
+			height: 550px;
+			.bg-img {
+				background-size: cover;
+				.brand-name-row {
+					position: absolute;
+					.brand-box {
+						width: 485px !important;
+						margin-left: 0px !important;
+						li {
+							&:last-child {
+								a {
+									width: 116px !important;
+								}
+							}
+							a {
+								width: 114px !important;
+								min-height: 150px !important;
+								display: block;
+								text-align: center;
+								margin: 0px auto;
+								padding: 0 10px 10px 10px;
+								span {}
+								img {
+									display: block;
+									text-align: center;
+									margin: 0 auto;
+									margin-top: 10px;
+								}
+							}
+						}
+					}
+				}
+			}
+			.desc {
+				padding: 40px;
+				background: $light-grayish-blue;
+				height: 100%;
+				.cont-bold {
+					font-weight: 300;
+					margin-bottom: 30px;
+					line-height: 36px;
+				}
+				.learn-more {
+					font-weight: 500;
+				}
+			}
+		}
+		.about-pro-solutions {
+			height: 750px !important;
+		}
+	}
+	/* PROFESSIONAL SOLUTIONS STYLES END */
+	/* LIFESTYLE AUDIO STYLES START */
+	.lifestyle-audio-section {
+		.automotive-brand,
+		.portable-bluetooth,
+		.headphones,
+		.multiroom-systems,
+		.av-receivers,
+		.loudspeakers-soundbars,
+		.luxury-audio,
+		.embedded-audio,
+		.advanced-software,
+		.about-lifestyle-audio {
+			height: 550px;
+			.bg-img {
+				background-size: cover;
+				.brand-name-row {
+					position: absolute;
+					.brand-box {
+						width: 485px !important;
+						margin-left: 0px !important;
+						li {
+							&:last-child {
+								a {
+									width: 116px !important;
+								}
+							}
+							a {
+								width: 114px !important;
+								min-height: 150px !important;
+								display: block;
+								text-align: center;
+								margin: 0px auto;
+								padding: 0 0 10px 0;
+								span {}
+								img {
+									display: block;
+									text-align: center;
+									margin: 0 auto;
+									margin-top: 10px;
+								}
+							}
+						}
+					}
+				}
+			}
+			.desc {
+				padding: 40px;
+				background: $light-grayish-blue;
+				height: 100%;
+				.cont-bold {
+					font-weight: 300;
+					margin-bottom: 30px;
+					line-height: 36px;
+				}
+				.learn-more {
+					font-weight: 500;
+				}
+			}
+		}
+		.about-lifestyle-audio {
+			height: 800px !important;
+			.bg-img {
+				background-position: 0 0;
+			}
+		}
+	}
+	/* LIFESTYLE AUDIO STYLES END */
+	/* SUPPLY CHAIN STYLES START  */
+	.supplychain-section {
+		.supplychain-cards {
+			.card {
+				min-height: 400px;
+			}
+		}
+	}
+	/* SUPPLY CHAIN STYLES END  */
+}
+
+
+/* BELOW TAB LAND AND PORTRAIT - HAMBURGER START  */
+
+@media (max-width: 1024px) {
+	body {
+		padding-top: 9px;
+	}
+	.megamenu-content-section {
+		display: none;
+	}
+	.harman-megamenu {
+		position: relative;
+		.formegamenu {
+			position: relative;
+		}
+		.harman-navbar {
+			background: $white;
+			border: none;
+			position: absolute;
+			right: -3px;
+			top: -79px;
+			z-index: 9999;
+			margin-bottom: 0;
+			margin-right: 3px;
+			background: transparent;
+			.container-fluid {
+				padding-left: 0;
+				padding-right: 0;
+				#navbar {
+					background: $dark-blue;
+					width: 320px;
+					max-height: inherit;
+					height: 100%;
+					float: right;
+					.navbar-nav {
+						margin-left: 0px;
+						margin-right: 0;
+						li {
+							a {
+								i {
+									float: right;
+								}
+							}
+						}
+					}
+				}
+				li {
+					a {
+						color: $white;
+					}
+					&.open {
+						a {
+							color: $white;
+						}
+					}
+				}
+				li.dropdown {
+					display: inline;
+					&.full-width {
+						position: relative;
+					}
+					&.open {
+						a.dropdown-toggle {
+							background: transparent;
+							color: $white;
+						}
+					}
+					ul.dropdown-menu {
+						background: $very-dark-blue;
+						color: $white;
+						position: inherit;
+						top: inherit;
+						margin-bottom: 15px;
+						border-bottom: none !important;
+						li {
+							position: relative;
+							.megamenu-close {
+								display: none;
+							}
+							.container {
+								width: inherit;
+							}
+						}
+						/* vertical tab navigation styles start */
+						.tabs-left > .nav-tabs {
+							border-bottom: 0;
+						}
+						.tab-content > .tab-pane {
+							display: none;
+						}
+						.tab-content > .active {
+							display: block;
+						}
+						.tabs-left > .nav-tabs > li {
+							float: none;
+							cursor: pointer;
+						}
+						.tabs-left > .nav-tabs > li > a {
+							min-width: inherit;
+							margin-right: 0;
+							margin-bottom: 3px;
+							cursor: pointer;
+						}
+						.tabs-left > .nav-tabs {
+							float: left;
+						}
+						.tabs-left > .nav-tabs > li > a {
+							margin-right: -1px;
+						}
+						.tabs-left > .nav-tabs > li > a:hover,
+						.tabs-left > .nav-tabs > li > a:focus {
+							border: transparent transparent transparent transparent;
+						}
+						.tabs-left > .nav-tabs .active > a,
+						.tabs-left > .nav-tabs .active > a:hover,
+						.tabs-left > .nav-tabs .active > a:focus {
+							border: transparent transparent transparent transparent;
+							*border-right-color: #ffffff;
+						}
+						.nav-tabs {
+							padding: 10px 0 10px 0;
+							width: 99%;
+							li {
+								&.active {
+									a {
+										background: inherit;
+									}
+								}
+								a {
+									color: $white;
+									@include border-width-color-radius(0px, null, 0);
+									font-size: inherit;
+									padding-left: 25px;
+									&:hover {
+										color: $white;
+										background: $very-dark-blue2 !important;
+									}
+								}
+							}
+						}
+						.tab-content {
+							margin-left: 470px;
+							.submenu-img-desc {
+								.submenu-desc {
+									padding-top: 30px;
+									img.menus-img {
+										text-align: center;
+										margin: 0 auto;
+										margin-bottom: 15px;
+										display: block;
+									}
+									p {
+										margin: 10px 85px 0 85px;
+										&.title {
+											font-size: 18px;
+											font-weight: 400;
+											margin-bottom: 10px;
+										}
+									}
+									.explore {
+										padding: 20px 85px 20px 85px;
+										display: block;
+										@include arrow-animation;
+										.arrow {
+											padding-left: 25px;
+										}
+										&:hover {
+											text-decoration: none;
+										}
+									}
+								}
+							}
+						}
+						/* vertical tab navigation styles end */
+					}
+				}
+			}
+		}
+	}
+	.megamenu-close {
+		display: none;
+	}
+	.navbar-header {
+		float: none;
+		.hamburger {
+			float: right;
+			a {
+				@include linkColor($white, $white, $dark-blue, $dark-blue);
+				padding: 26px 25px 25px 25px;
+				font-size: 28px;
+				&:hover {
+					background: darken($dark-blue, 10%);
+				}
+			}
+		}
+	}
+	.navbar-left,
+	.navbar-right {
+		float: none !important;
+	}
+	.navbar-right {
+		margin-top: 0;
+		background: $dark-blue;
+	}
+	.navbar-toggle {
+		display: block;
+	}
+	.navbar-collapse {
+		border-top: 1px solid transparent;
+		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+	}
+	.navbar-fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
+	}
+	.navbar-collapse.collapse {
+		display: none!important;
+	}
+	.navbar-nav {
+		float: none!important;
+		margin-top: 7.5px;
+	}
+	.navbar-nav>li {
+		float: none;
+	}
+	.navbar-nav>li>a {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	.collapse.in {
+		display: block !important;
+	}
+}
+
+@media all and (max-width: 767px) {
+	.harman-megamenu {
+		.harman-navbar {
+			right: 12px;
+		}
+		.navbar-header {
+			.hamburger {
+				a {
+					padding: 32px 25px 19px 25px;
+				}
+			}
+		}
+	}
+}
+
+@media all and (max-width: 1024px) {
+	.logo-section {
+		.nyse-search-burger {
+			margin-right: 73px;
+			.hamburger {
+				.desktop-hamburger {
+					display: none;
+				}
+			}
+		}
+	}
+	.stickyheader {
+		&.fixtop {
+			margin-top: 60px;
+		}
+	}
+}
+
+@media all and (min-width: 1025px) {
+	.hamburger {
+		.mobile-hamburger {
+			display: none !important;
+		}
+	}
+	.logo-section {
+		.nyse-search-burger {
+			margin-right: 0px;
+			.hamburger {
+				.mobile-hamburger {}
+			}
+		}
+	}
+}
+
+@media all and (min-width: 1025px) and (max-width: 1199px) {
+	.harman-megamenu {
+		.navbar-collapse {
+			li {
+				font-size: 14px;
+			}
+			.submenu-desc {
+				img.menus-img {
+					width: 400px;
+					height: auto;
+				}
+			}
+		}
+	}
+}
+
+
+/* BELOW TAB LAND AND PORTRAIT - HAMBURGER END  */

@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Harman</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/harman-styles.css">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- LOGO SECTION START-->
+    <div class="container logo-section navbar-fixed-top padding-0">
+        <div class="row for-megamenu">
+            <!-- LOGO SECTION START -->
+            <div class="col-xs-5 padding-left-0"><img class="harman-logo" src="assets/images/harman-logo.png" alt="Harman" title="Harman"></div>
+            <!-- LOGO SECTION END -->
+
+            <!-- SEARCH, HAMBURGER & VALUE START-->
+            <div class="col-xs-7 padding-right-0">
+                <div class="nyse-search-burger clearfix pull-right">
+                    <div class="pull-right hamburger">
+                        <a href="javascript:void(0)" class="fa fa-reorder desktop-hamburger"></a>
+                    </div>
+                    <div class="pull-right search">
+                        <a href="#" class="fa fa-search search" data-toggle="modal" data-target="#search-modal"></a>
+                    </div>
+                    <div class="pull-right nyse">NYSE <span class="nyse-value">$100.84 <span class="currency">USD</span> <span class="market">+1.63%</span></span>
+                    </div>
+                </div>
+            </div>
+            <!-- SEARCH, HAMBURGER & VALUE END-->
+        </div>
+
+
+        <!-- MEGA MENU SECTION START -->
+        <div class="harman-megamenu">
+            <div class="container padding-0 formegamenu">
+                <!-- MENU START -->
+                <!-- Static navbar -->
+                <nav class="navbar navbar-default harman-navbar">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <!--
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+-->
+                            <div class="hamburger">
+                                <a href="javascript:void(0)" class="fa fa-reorder mobile-hamburger" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"></a>
+                            </div>
+                            <!-- <a class="navbar-brand" href="#">Project name</a>-->
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse left-mainmenu">
+                            <ul class="nav navbar-nav mainmenu">
+                                <!-- COMPANY MAIN MENU START -->
+                                <li class="full-width dropdown">
+                                    <a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">COMPANY <i class="fa fa-angle-down"></i></a>
+                                    <!-- SUB MENU START -->
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                            <span style="cursor:pointer; z-index:999;" class="megamenu-close"><img src="assets/images/megamenu-close.png" alt="Close" title="Close"></span>
+                                            <!-- VERTICAL TAB NAVIGATION START -->
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-md-12 padding-0">
+                                                        <!-- tabs left -->
+                                                        <div class="tabbable tabs-left">
+                                                            <ul class="nav nav-tabs" id="company-sublinks">
+                                                                <li onclick="window.location.href = 'company-overiew.html'" class="active"><a data-target="#overview" class="company-overview" data-toggle="tab">OVERVIEW</a></a>
+                                                                </li>
+                                                                <li onclick="window.location.href = 'leadership.html'"><a data-target="#leadership" class="company-leader" data-toggle="tab">LEADERSHIP</a></li>
+                                                                <li onclick="window.location.href = 'recognition.html'"><a data-target="#recognition" class="company-recognition" data-toggle="tab">RECOGNITION</a></li>
+                                                                <li onclick="window.location.href = 'milestone.html'"><a data-target="#milestones" class="company-milestone" data-toggle="tab">MILESTONES</a></li>
+                                                            </ul>
+                                                            <div class="tab-content megamenu-content-section">
+                                                                <div class="tab-pane active submenu-img-desc" id="overview">
+                                                                    <div class="submenu-desc">
+                                                                        <img src="assets/images/main-menu/company-overview.jpg" title="Overview" alt="Overview" class="menus-img">
+                                                                        <p class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur esse ducimus nobis, doloremque temporibus molestiae.</p>
+                                                                        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur esse ducimus nobis, doloremque temporibus molestiae.</p>
+                                                                        <a href="#" class="explore">Explore <img src="assets/images/blue-arrow.png" class="arrow"></a>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="tab-pane submenu-img-desc" id="leadership">
+                                                                    <div class="submenu-desc">
+                                                                        <img src="assets/images/main-menu/leadership.jpg" title="Overview" alt="Overview" class="menus-img">
+                                                                        <p class="title">Consectetur adipisicing elit. Consequuntur esse ducimus nobis, doloremque temporibus molestiae.</p>
+                                                                        <p class="desc">Lorem ipsum dolor elit. Consequuntur esse ducimus nobis, doloremque temporibus molestiae.</p>
+                                                                        <a href="#" class="explore">Explore <img src="assets/images/blue-arrow.png" class="arrow"></a>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="tab-pane submenu-img-desc" id="recognition">
+                                                                    <div class="submenu-desc">
+                                                                        <img src="assets/images/main-menu/recognition.jpg" title="Overview" alt="Overview" class="menus-img">
+                                                                        <p class="title">Sit amet consectetur consequuntur esse ducimus nobis, doloremque temporibus molestiae.</p>
+                                                                        <p class="desc">Lorem ipsum dolor sit amet, consectetur ad nobis, doloremque temporibus molestiae.</p>
+                                                                        <a href="#" class="explore">Explore <img src="assets/images/blue-arrow.png" class="arrow"></a>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="tab-pane submenu-img-desc" id="milestones">
+                                                                    <div class="submenu-desc">
+                                                                        <img src="assets/images/main-menu/milestones.jpg" title="Overview" alt="Overview" class="menus-img">
+                                                                        <p class="title">Lorem onsequuntur esse ducimus nobis, doloremque temporibus molestiae.</p>
+                                                                        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur temporibus molestiae.</p>
+                                                                        <a href="#" class="explore">Explore <img src="assets/images/blue-arrow.png" class="arrow"></a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- /tabs -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- VERTICAL TAB NAVIGATION END -->
+                                        </li>
+                                    </ul>
+
+                                    <!-- SUB MENU END -->
+                                </li>
+                                <!-- COMPANY MAIN MENU END -->
+
+
+
+                                <!-- SOLUTIONS MAIN MENU START -->
+                                <li class="full-width dropdown">
+                                    <a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SOLUTIONS <i class="fa fa-angle-down"></i></a>
+                                    <!-- SUB MENU START -->
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                            <span style="cursor:pointer; z-index:999;" class="megamenu-close"><img src="assets/images/megamenu-close.png" alt="Close" title="Close"></span>
+                                            <!-- VERTICAL TAB NAVIGATION START -->
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-md-12 padding-0">
+                                                        <!-- tabs left -->
+                                                        <div class="tabbable tabs-left">
+                                                            <ul class="nav nav-tabs" id="solutions-submenu">
+                                                                <li onclick="window.location.href = 'solutions.html'" class="active"><a data-target="#solutions-overview" data-toggle="tab">OVERVIEW</a></li>
+                                                                <li onclick="window.location.href = 'connected-car.html'"><a data-target="#connected-car" data-toggle="tab">CONNECTED CAR</a></li>
+                                                                <li onclick="window.location.href = 'lifestyle-audio.html'"><a data-target="#lifestyle-audio" data-toggle="tab">LIFESTYLE AUDIO</a></li>
+                                                                <li onclick="window.location.href = 'professional-solutions.html'"><a data-target="#pro-solutions" data-toggle="tab">PROFESSIONAL SOLUTIONS</a></li>
+                                                                <li onclick="window.location.href = 'connected-services.html'"><a data-target="#connected-services" data-toggle="tab">CONNECTED SERVICES</a></li>
+                                                            </ul>
+                                                            <div class="tab-content megamenu-content-section">
+                                                                <div class="tab-pane active submenu-img-desc" id="solutions-overview">
+                                                                    <div class="submenu-desc">
+                                                                        <img src="assets/images/main-menu/company-overview.jpg" title="Overview" alt="Overview" class="menus-img">
+                                                                        <p class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur esse ducimus nobis, doloremque temporibus molestiae.</p>
+                                                                        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur esse ducimus nobis, doloremque temporibus molestiae.</p>
+                                                                        <a href="#" class="explore">Explore <img src="assets/images/blue-arrow.png" class="arrow"></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="tab-pane submenu-img-desc" id="connected-car">
+                                                                    <div class="submenu-desc">
+                                                                        <img src="assets/images/main-menu/leadership.jpg" title="Overview" alt="Overview" class="menus-img">
+                                                                        <p class="title">Consectetur adipisicing elit. Consequuntur esse ducimus nobis, doloremque temporibus molestiae.</p>
+                                                                        <p class="desc">Lorem ipsum dolor elit. Consequuntur esse ducimus nobis, doloremque temporibus molestiae.</p>
+                                                                        <a href="#" class="explore">Explore <img src="assets/images/blue-arrow.png" class="arrow"></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="tab-pane submenu-img-desc" id="lifestyle-audio">
+                                                                    <div class="submenu-desc">
+                                                                        <img src="assets/images/main-menu/recognition.jpg" title="Overview" alt="Overview" class="menus-img">
+                                                                        <p class="title">Sit amet consectetur consequuntur esse ducimus nobis, doloremque temporibus molestiae.</p>
+                                                                        <p class="desc">Lorem ipsum dolor sit amet, consectetur ad nobis, doloremque temporibus molestiae.</p>
+                                                                        <a href="#" class="explore">Explore <img src="assets/images/blue-arrow.png" class="arrow"></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="tab-pane submenu-img-desc" id="pro-solutions">
+                                                                    <div class="submenu-desc">
+                                                                        <img src="assets/images/main-menu/milestones.jpg" title="Overview" alt="Overview" class="menus-img">
+                                                                        <p class="title">Lorem onsequuntur esse ducimus nobis, doloremque temporibus molestiae.</p>
+                                                                        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur temporibus molestiae.</p>
+                                                                        <a href="#" class="explore">Explore <img src="assets/images/blue-arrow.png" class="arrow"></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="tab-pane submenu-img-desc" id="connected-services">
+                                                                    <div class="submenu-desc">
+                                                                        <img src="assets/images/main-menu/milestones.jpg" title="Overview" alt="Overview" class="menus-img">
+                                                                        <p class="title">Lorem onsequuntur esse ducimus nobis, doloremque temporibus molestiae.</p>
+                                                                        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur temporibus molestiae.</p>
+                                                                        <a href="#" class="explore">Explore <img src="assets/images/blue-arrow.png" class="arrow"></a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- /tabs -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- VERTICAL TAB NAVIGATION END -->
+                                        </li>
+                                    </ul>
+
+                                    <!-- SUB MENU END -->
+                                </li>
+                                <!-- SOLUTIONS MAIN MENU END -->
+
+
+
+                                <!-- RESPONSIBILITY MAIN MENU START -->
+                                <li class="full-width dropdown">
+                                    <a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">RESPONSIBILITY <i class="fa fa-angle-down"></i></a>
+                                    <!-- SUB MENU START -->
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                            <span style="cursor:pointer; z-index:999;" class="megamenu-close"><img src="assets/images/megamenu-close.png" alt="Close" title="Close"></span>
+                                            <!-- VERTICAL TAB NAVIGATION START -->
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-md-12 padding-0">
+                                                        <!-- tabs left -->
+                                                        <div class="tabbable tabs-left">
+                                                            <ul class="nav nav-tabs" id="responsibility-submenu">
+                                                                <li onclick="window.location.href = 'responsibility.html'" class="active"><a data-target="#responsibility-overview" data-toggle="tab">OVERVIEW</a></li>
+                                                                <li><a data-target="#harman-inspired" data-toggle="tab">HARMAN INSPIRED</a></li>
+                                                                <li onclick="window.location.href = 'sustainability.html'"><a data-target="#sustainability" data-toggle="tab">SUSTAINABILITY</a></li>
+                                                                <li onclick="window.location.href = 'supply-chain.html'"><a data-target="#supply-chain" data-toggle="tab">SUPPLY CHAIN</a></li>
+                                                            </ul>
+                                                            <div class="tab-content megamenu-content-section">
+                                                                <div class="tab-pane active submenu-img-desc" id="responsibility-overview">
+                                                                    <div class="submenu-desc">
+                                                                        <img src="assets/images/main-menu/company-overview.jpg" title="Overview" alt="Overview" class="menus-img">
+                                                                        <p class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur esse ducimus nobis, doloremque temporibus molestiae.</p>
+                                                                        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur esse ducimus nobis, doloremque temporibus molestiae.</p>
+                                                                        <a href="#" class="explore">Explore <img src="assets/images/blue-arrow.png" class="arrow"></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="tab-pane submenu-img-desc" id="harman-inspired">
+                                                                    <div class="submenu-desc">
+                                                                        <img src="assets/images/main-menu/leadership.jpg" title="Overview" alt="Overview" class="menus-img">
+                                                                        <p class="title">Consectetur adipisicing elit. Consequuntur esse ducimus nobis, doloremque temporibus molestiae.</p>
+                                                                        <p class="desc">Lorem ipsum dolor elit. Consequuntur esse ducimus nobis, doloremque temporibus molestiae.</p>
+                                                                        <a href="#" class="explore">Explore <img src="assets/images/blue-arrow.png" class="arrow"></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="tab-pane submenu-img-desc" id="sustainability">
+                                                                    <div class="submenu-desc">
+                                                                        <img src="assets/images/main-menu/recognition.jpg" title="Overview" alt="Overview" class="menus-img">
+                                                                        <p class="title">Sit amet consectetur consequuntur esse ducimus nobis, doloremque temporibus molestiae.</p>
+                                                                        <p class="desc">Lorem ipsum dolor sit amet, consectetur ad nobis, doloremque temporibus molestiae.</p>
+                                                                        <a href="#" class="explore">Explore <img src="assets/images/blue-arrow.png" class="arrow"></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="tab-pane submenu-img-desc" id="supply-chain">
+                                                                    <div class="submenu-desc">
+                                                                        <img src="assets/images/main-menu/milestones.jpg" title="Overview" alt="Overview" class="menus-img">
+                                                                        <p class="title">Lorem onsequuntur esse ducimus nobis, doloremque temporibus molestiae.</p>
+                                                                        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur temporibus molestiae.</p>
+                                                                        <a href="#" class="explore">Explore <img src="assets/images/blue-arrow.png" class="arrow"></a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- /tabs -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- VERTICAL TAB NAVIGATION END -->
+                                        </li>
+                                    </ul>
+
+                                    <!-- SUB MENU END -->
+                                </li>
+                                <!-- RESPONSIBILITY MAIN MENU END -->
+
+
+                                <!-- INNOVATION MAIN MENU START -->
+                                <li class="full-width dropdown">
+                                    <a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">INNOVATION <i class="fa fa-angle-down"></i></a>
+                                    <!-- SUB MENU START -->
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                            <span style="cursor:pointer; z-index:999;" class="megamenu-close"><img src="assets/images/megamenu-close.png" alt="Close" title="Close"></span>
+                                            <!-- VERTICAL TAB NAVIGATION START -->
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-md-12 padding-0">
+                                                        <!-- tabs left -->
+                                                        <div class="tabbable tabs-left">
+                                                            <ul class="nav nav-tabs" id="innovation-submenu">
+                                                                <li onclick="window.location.href = 'innovation.html'" class="active"><a data-target="#innovation-overview" data-toggle="tab">OVERVIEW</a></li>
+                                                                <li><a data-target="#blog" data-toggle="tab">BLOG</a></li>
+                                                            </ul>
+                                                            <div class="tab-content megamenu-content-section">
+                                                                <div class="tab-pane active submenu-img-desc" id="innovation-overview">
+                                                                    <div class="submenu-desc">
+                                                                        <img src="assets/images/main-menu/company-overview.jpg" title="Overview" alt="Overview" class="menus-img">
+                                                                        <p class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur esse ducimus nobis, doloremque temporibus molestiae.</p>
+                                                                        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur esse ducimus nobis, doloremque temporibus molestiae.</p>
+                                                                        <a href="#" class="explore">Explore <img src="assets/images/blue-arrow.png" class="arrow"></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="tab-pane submenu-img-desc" id="blog">
+                                                                    <div class="submenu-desc">
+                                                                        <img src="assets/images/main-menu/leadership.jpg" title="Overview" alt="Overview" class="menus-img">
+                                                                        <p class="title">Consectetur adipisicing elit. Consequuntur esse ducimus nobis, doloremque temporibus molestiae.</p>
+                                                                        <p class="desc">Lorem ipsum dolor elit. Consequuntur esse ducimus nobis, doloremque temporibus molestiae.</p>
+                                                                        <a href="#" class="explore">Explore <img src="assets/images/blue-arrow.png" class="arrow"></a>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                        <!-- /tabs -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- VERTICAL TAB NAVIGATION END -->
+                                        </li>
+                                    </ul>
+
+                                    <!-- SUB MENU END -->
+                                </li>
+                                <!-- INNOVATION MAIN MENU END -->
+
+
+                                <li><a href="#">NEWS</a></li>
+                                <li><a href="#">CONTACT</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="#">INVESTORS</a></li>
+                                <li><a href="#">CAREERS</a></li>
+                                <li><a href="#">STORE</a></li>
+                            </ul>
+                        </div>
+                        <!--/.nav-collapse -->
+                    </div>
+                    <!--/.container-fluid -->
+                </nav>
+                <!-- MENU END -->
+            </div>
+        </div>
+        <!-- MEGA MENU SECTION END -->
+
+
+    </div>
+    <!-- LOGO SECTION END-->
+
+    <!--STICKY HEADER STARTS-->
+    <div class="container stickyheader fixtop navbar-fixed-top" id="harmansticky">
+        <h2 id="fix-head">            
+      <span id="headerTitle" class="font-26"></span>
+      
+      
+      <span class="sticky-navigation">
+      <span id="sectionNavPrev" class="sticky-span" data-prev="0" onclick="go2Prev(this)"><img src="assets/images/white-up-arrow.png"></span>    
+      <span id="sectionNavNext" class="sticky-span" data-next="0" onclick="go2Next(this)"><img src="assets/images/white-down-arrow.png"> </span>
+      
+      
+       <span class="dropdown st-drop">
+        <span id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <span id="sectionCount" class="font-16"></span>
+            
+        </span>
+        <ul class="dropdown-menu menu" aria-labelledby="dropdownMenu1" id="ddMenu" >
+<!--
+           <li class="st-li">SOLUTIONS</li>
+            <li class="st-li">NEWS & VIEWS</li>
+             <li class="st-li">ECOSYSTEM</li>
+             <li class="st-li">RECOGNITION</li>
+            <li class="st-li">ABOUT</li>
+-->
+        </ul>
+       </span>      
+       </span>
+       <!-- <span id="sectionCount" style="float:right;font-size:16px;padding:8px;"></span>-->
+       
+    </h2>
+
+    </div>
+    <!--STICKY HEADER ENDS-->
+
+    <!--HOME LANDING PAGE CAROUSEL START-->
+    <div class="container">
+        <div class="row">
+            <div id="myhomeCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myhomeCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myhomeCarousel" data-slide-to="1"></li>
+                    <li data-target="#myhomeCarousel" data-slide-to="2"></li>
+                    <li data-target="#myhomeCarousel" data-slide-to="3"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <!--Item 1-->
+                    <div class="item active">
+
+                        <div class="homepage-hero">
+<!--
+                            <div class="col-xs-12 padding-0">
+                                <h1 class="section-title"></h1>
+                            </div>
+-->
+                            <div class="row">
+                                <div class="col-xs-12 about-us-bg">
+                                    <div class="col-xs-12 col-md-6 hero-content-bg">
+                                        <div class="hero-content">
+                                            <h2>EXPERIENCE THE CONNECTED CAR</h2>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit, sed do eiusmod tempor incidi dunt ut labore et dolore magna. EXPLORE</p>
+                                            <a href="#" class="learn-more">
+                                                <p>EXPLORE<img src="assets/images/white-arrow.png" class="arrow hidden-xs hidden-sm"><img src="assets/images/blue-arrow.png" class="arrow hidden-md hidden-lg"></p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Item 2-->
+                    <div class="item">
+
+                        <div class="homepage-hero">
+<!--
+                            <div class="col-xs-12 padding-0">
+                                <h1 class="section-title"></h1>
+                            </div>
+-->
+                            <div class="row">
+                                <div class="col-xs-12 about-us-bg">
+                                    <div class="col-xs-12 col-md-6 hero-content-bg">
+                                        <div class="hero-content">
+                                            <h2>EXPERIENCE THE CONNECTED CAR</h2>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit, sed do eiusmod tempor incidi dunt ut labore et dolore magna. EXPLORE</p>
+                                            <a href="#" class="learn-more">
+                                                <p>EXPLORE<img src="assets/images/white-arrow.png" class="arrow hidden-xs hidden-sm"><img src="assets/images/blue-arrow.png" class="arrow hidden-md hidden-lg"></p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Item 3-->
+                    <div class="item">
+
+                        <div class="homepage-hero">
+<!--
+                            <div class="col-xs-12 padding-0">
+                                <h1 class="section-title"></h1>
+                            </div>
+-->
+                            <div class="row">
+                                <div class="col-xs-12 about-us-bg">
+                                    <div class="col-xs-12 col-md-6 hero-content-bg">
+                                        <div class="hero-content">
+                                            <h2>EXPERIENCE THE CONNECTED CAR</h2>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit, sed do eiusmod tempor incidi dunt ut labore et dolore magna. EXPLORE</p>
+                                            <a href="#" class="learn-more">
+                                                <p>EXPLORE<img src="assets/images/white-arrow.png" class="arrow hidden-xs hidden-sm"><img src="assets/images/blue-arrow.png" class="arrow hidden-md hidden-lg"></p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Item 4-->
+                    <div class="item">
+
+                        <div class="homepage-hero">
+<!--
+                            <div class="col-xs-12 padding-0">
+                                <h1 class="section-title"></h1>
+                            </div>
+-->
+                            <div class="row">
+                                <div class="col-xs-12 about-us-bg">
+                                    <div class="col-xs-12 col-md-6 hero-content-bg">
+                                        <div class="hero-content">
+                                            <h2>EXPERIENCE THE CONNECTED CAR</h2>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit, sed do eiusmod tempor incidi dunt ut labore et dolore magna. EXPLORE</p>
+                                            <a href="#" class="learn-more">
+                                                <p>EXPLORE<img src="assets/images/white-arrow.png" class="arrow hidden-xs hidden-sm"><img src="assets/images/blue-arrow.png" class="arrow hidden-md hidden-lg"></p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control hidden-xs hidden-sm hidden-md hidden-lg" href="#myhomeCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control hidden-xs hidden-sm hidden-md hidden-lg" href="#myhomeCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--HOME LANDING PAGE CAROUSEL END-->
+
+
+    <!-- SOLUTION SECTION START -->
+    <div class="container solutions margin-top-30 scroll" id="solution-section" data-title="SOLUTIONS">
+        <div class="row">
+            <div class="col-lg-12 padding-0">
+                <h1>SOLUTIONS</h1>
+            </div>
+        </div>
+
+        <div class="row cards-row">
+            <!-- CONNECTED CAR START -->
+            <a href="#" data-sr="wait 1s, ease-in-out 10px">
+                <div class="col-md-3 col-sm-6 col-xs-12 solution-cards padding-0">
+                    <div class="solution-card-bg card1"></div>
+                    <div class="solution-cont-container">
+                        <h1>Connected Car</h1>
+                        <div class="hline"></div>
+                        <p class="desc">Navigation, multimedia, telematics, connectivity, safety &amp; security systems.</p>
+                        <p class="cta-txt-link">EXPLORE <img class="arrow" src="assets/images/white-arrow.png"></p>
+                    </div>
+                </div>
+            </a>
+            <!-- CONNECTED CAR END -->
+
+
+            <!-- LIFESTYLE AUDIO START -->
+            <a href="#" data-sr="wait 1.2s, ease-in-out 20px">
+                <div class="col-md-3 col-sm-6 col-xs-12 solution-cards padding-0">
+                    <div class="solution-card-bg card2"></div>
+                    <div class="solution-cont-container">
+                        <h1>Lifestyle Audio</h1>
+                        <div class="hline"></div>
+                        <p class="desc">Premium branded audio products for use at home, work, in the car, and on the go.</p>
+                        <p class="cta-txt-link">EXPLORE <img class="arrow" src="assets/images/white-arrow.png"></p>
+                    </div>
+                </div>
+            </a>
+            <!-- LIFESTYLE AUDIO END -->
+
+
+            <!-- PROFESSIONAL SOLUTIONS START -->
+            <a href="#" data-sr="wait 1.4s, ease-in-out 30px">
+                <div class="col-md-3 col-sm-6 col-xs-12 solution-cards padding-0">
+                    <div class="solution-card-bg card3"></div>
+                    <div class="solution-cont-container">
+                        <h1>Professional Solutions</h1>
+                        <div class="hline"></div>
+                        <p class="desc">Integrated audio, video, lighting and control solutions.</p>
+                        <p class="cta-txt-link">EXPLORE <img class="arrow" src="assets/images/white-arrow.png"></p>
+                    </div>
+                </div>
+            </a>
+            <!-- PROFESSIONAL SOLUTIONS END -->
+
+
+            <!-- CONNECTED SERVICES START -->
+            <a href="#" data-sr="wait 1.6s, ease-in-out 40px">
+                <div class="col-md-3 col-sm-6 col-xs-12 solution-cards padding-0">
+                    <div class="solution-card-bg card4"></div>
+                    <div class="solution-cont-container">
+                        <h1>Connected Services</h1>
+                        <div class="hline"></div>
+                        <p class="desc">Cloud, mobility &amp; analytics solutions that enable a connected world.</p>
+                        <p class="cta-txt-link">EXPLORE <img class="arrow" src="assets/images/white-arrow.png"></p>
+                    </div>
+                </div>
+            </a>
+            <!-- CONNECTED SERVICES END -->
+        </div>
+    </div>
+    <!-- SOLUTION SECTION END -->
+
+
+
+    <!--NEWS & VIEWS SECTION STARTS-->
+    <div class="container scroll" id="news" data-title="NEWS &amp; VIEWS">
+        <div class="row">
+            <div class="col-xs-12 padding-0">
+                <h1 class="section-title">NEWS &amp; VIEWS</h1>
+            </div>
+        </div>
+        <div class="row heritage-section">
+
+            <!--left part-->
+            <div class="col-xs-12 col-sm-12 col-md-6">
+                <div class="row">
+                    <a href="#">
+                        <div class="col-xs-12 col-sm-12 col-md-12 main-content c-1 padding-0" style="background: url(assets/images/news/news1.png) #00a4e3 no-repeat center center; background-size: cover">
+                            <div class="card-content">
+                                <h5 class="sub-title"><span>LIFESTYLE AUDIO</span></h5>
+                                <div class="small-strip">
+                                    <div class="desc">
+                                        <h3>HARMAN Partners With TIDAL to Stream High Quality Audio HArman Kardon Systems</h3>
+                                        <small class="date">September 03, 2015</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!--right part-->
+            <div class="col-xs-12 col-sm-12 col-md-6">
+                <div class="row">
+                    <!--<a href="#">-->
+                    <div class="col-xs-12 col-sm-12 col-md-12 main-content c-2 padding-0" style="background: url(assets/images/) #00a4e3 no-repeat center center; background-size: cover">
+                        <div class="news-carousel">
+                            <div id="newsCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#newsCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#newsCarousel" data-slide-to="1"></li>
+                                    <li data-target="#newsCarousel" data-slide-to="2"></li>
+                                </ol>
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <div class="carousel-content">
+                                            <p class="brand-image"><i class="fa fa-twitter fa-2x"></i></p>
+                                            <h3>Thanks to the <a href="#">@Harman</a> team for showing us the stunning new <a href="#">@StuderAudio</a> Vista 1 Black Edition at <a href="#">@IBCShow</a> <a href="#">#avtweeps</a></h3>
+                                            <small>AV MAGAZINE</small>
+                                            <br>
+                                            <small>CEO - XYZ Company</small>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="carousel-content">
+                                            <p class="brand-image"><i class="fa fa-twitter fa-2x"></i></p>
+                                            <h3>Thanks to the <a href="#">@Harman</a> team for showing us the stunning new <a href="#">@StuderAudio</a> Vista 1 Black Edition at <a href="#">@IBCShow</a> <a href="#">#avtweeps</a></h3>
+                                            <small>AV MAGAZINE</small>
+                                            <br>
+                                            <small>CEO - XYZ Company</small>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="carousel-content">
+                                            <p class="brand-image"><i class="fa fa-twitter fa-2x"></i></p>
+                                            <h3>Thanks to the <a href="#">@Harman</a> team for showing us the stunning new <a href="#">@StuderAudio</a> Vista 1 Black Edition at <a href="#">@IBCShow</a> <a href="#">#avtweeps</a></h3>
+                                            <small>AV MAGAZINE</small>
+                                            <br>
+                                            <small>CEO - XYZ Company</small>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--</a>-->
+                </div>
+                <div class="row">
+                    <a href="#">
+                        <div class="col-xs-12 col-sm-6 col-md-6 main-content c-3 padding-0" style="background: url(assets/images/news/news3.png) #00a4e3 no-repeat center center; background-size: cover">
+                            <div class="card-content">
+                                <h5 class="sub-title"><span>PROFESSIONAL SOLUTIONS</span></h5>
+                                <div class="small-strip">
+                                    <div class="desc">
+                                        <h3>Snoop, Slash, Linkin Park, and Hans Zimmer Have a Message About the Quality of Your Audio</h3>
+                                        <small class="date">September 03, 2015</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="col-xs-12 col-sm-6 col-md-6 padding-0 clearfix">
+                        <div class="col-xs-12 col-md-12 main-content c-5 padding-0">
+                            <div class="call-to-action">
+                                <a href="#">ALL NEWS<img src="assets/images/white-arrow.png" class=" arrow img-responsive">
+								</a>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="col-xs-12 col-md-12 main-content c-4 padding-0" style="background: url(assets/images/news/news3.png) #00a4e3 no-repeat center center; background-size: cover">
+                                <div class="card-content">
+                                    <h5 class="sub-title"><span>CONNECTED SERVICES</span></h5>
+                                    <div class="small-strip">
+                                        <div class="desc">
+                                            <h3>Transform Healthcare through software driven “CONNECTED” ecosystem</h3>
+                                            <small class="date">September 03, 2015</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--NEWS & VIEWS SECTION ENDS-->
+
+
+
+
+
+    <!--    ECO SYSTEM SECTION START -->
+    <div class="container ecosystem scroll" data-title="ECOSYSTEM" id="ecosystem-section">
+        <div class="row">
+            <div class="col-lg-12 padding-0">
+                <h1>ECOSYSTEM</h1>
+            </div>
+        </div>
+
+
+        <div class="row padding-top-15">
+            <!-- BRANDS COLUMN START -->
+            <div class="col-md-8 col-xs-12 brands padding-0">
+                <h3>BRANDS</h3>
+                <div class="hline"></div>
+
+                <ul class="list-inline logo-collection">
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/brands/AKG.png" alt="AKG" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/brands/HarmanKardon.png" alt="HarmanKardon" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/brands/Infinity.png" alt="Infinity" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/brands/BSS.png" alt="BSS" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/brands/DigiTech.png" alt="DigiTech" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/brands/Lexicon.png" alt="Lexicon" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/brands/JBL.png" alt="jbl-professional" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/brands/mark_levinson.png" alt="mark_levinson" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/brands/Revel.png" alt="Revel" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/brands/dbx.png" alt="DBX" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/brands/Crown.png" alt="Crown" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/brands/AMX.png" alt="AMX" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/brands/Martin.png" alt="Martin" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/brands/soundcraft.png" alt="soundcraft" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/brands/stunder.png" alt="Studer" class="img-responsive"></a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- BRANDS COLUMN END -->
+
+
+            <!-- PARTNERS COLUMN START -->
+            <div class="col-md-4 col-xs-12 partners padding-0">
+                <h3>PARTNERS</h3>
+                <div class="hline"></div>
+                <ul class="list-inline logo-collection">
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/partners/Logo_audi.png" alt="Audi" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/partners/Logo_BMW.png" alt="BMW" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/partners/Logo_chrysler.png" alt="chrysler" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/partners/Logo_harley.png" alt="Harley" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/partners/Logo_mercedes.png" alt="Harley" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/partners/Logo_vw.png" alt="VW" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/partners/Logo_toyota.png" alt="toyota" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/partners/Logo_fiat.png" alt="Fiat" class="img-responsive"></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- PARTNERS COLUMN END -->
+        </div>
+
+    </div>
+    <!--    ECO SYSTEM SECTION END -->
+
+
+    <!-- RECOGNITION SECTION START -->
+    <div class="container scroll" id="recognition-section" data-title="RECOGNITION">
+        <div class="row">
+            <div class="col-lg-12 padding-0">
+                <h1 data-animation="animated bounceInLeft">RECOGNITION</h1>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div id="home-recognition" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#home-recognition" data-slide-to="0" class="active"></li>
+                    <li data-target="#home-recognition" data-slide-to="1"></li>
+                    <li data-target="#home-recognition" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img class="recognition-img" src="assets/images/awards/award7.jpg" alt="Recognition">
+                        <div class="carousel-caption" data-animation="animated slideInUp">
+                            <div class="carousel-cont">
+                                <img src="assets/images/awards/lexicon.png" alt="Lexicon" title="Lexicon"> WINS PRESTIGIOUS 2014 TECHNICAL GRAMMY<sup>&reg;</sup> AWARD
+                            </div>
+                            <div class="cta">
+                                <a href="#">LEARN MORE <img class="arrow" src="assets/images/white-arrow.png"></a></div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img class="recognition-img" src="assets/images/awards/award5.jpg" alt="Recognition">
+                        <div class="carousel-caption" data-animation="animated slideInUp">
+                            <div class="carousel-cont">
+                                <img src="assets/images/awards/lexicon.png" alt="Lexicon" title="Lexicon"> WINS PRESTIGIOUS 2014 TECHNICAL GRAMMY<sup>&reg;</sup> AWARD
+                            </div>
+                            <div class="cta">
+                                <a href="#">LEARN MORE <img class="arrow" src="assets/images/white-arrow.png"></a></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img class="recognition-img" src="assets/images/awards/award6.jpg" alt="Recognition">
+                        <div class="carousel-caption" data-animation="animated slideInUp">
+                            <div class="carousel-cont">
+                                <img src="assets/images/awards/lexicon.png" alt="Lexicon" title="Lexicon"> WINS PRESTIGIOUS 2014 TECHNICAL GRAMMY<sup>&reg;</sup> AWARD
+                            </div>
+                            <div class="cta">
+                                <a href="#">LEARN MORE <img class="arrow" src="assets/images/white-arrow.png"></a></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control hidden-xs" href="#home-recognition" data-slide="prev">
+                    <span class="icon-prev"></span>
+                </a>
+                <a class="right carousel-control hidden-xs" href="#home-recognition" data-slide="next">
+                    <span class="icon-next"></span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <!-- RECOGNITION SECTION END -->
+
+
+
+    <!--ABOUT SECTION STARTS-->
+    <div class="container about-section scroll" data-title="ABOUT" id="about-section">
+        <div class="row">
+            <div class="col-xs-12 padding-0">
+                <h1 class="section-title">ABOUT</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="about-content">
+                    <div class="comment more">
+                        <p>HARMAN (harman.com) designs and engineers connected products and solutions for consumers, automakers, and enterprises worldwide, including audio, visual and infotainment systems; enterprise automation solutions; and software services. With leading brands including AKG®, Harman Kardon®, Infinity®, JBL®, Lexicon®, Mark Levinson® and Revel®, HARMAN is admired by audiophiles, musicians and the entertainment venues where they perform around the world.</p>
+                        <p>HARMAN also is a technology and integration services leader for the Automotive, Mobile, Telecommunications and Enterprise markets.</p>
+                        <p>More than 25 million automobiles on the road today are equipped with HARMAN audio and infotainment systems.</p>
+                        <p>The Company’s software solutions power billions of mobile devices and systems that are connected, integrated, personalized, adaptive and secure across all platforms, from the work and home to car and mobile.</p>
+                        <p>HARMAN has a workforce of approximately 25,000 people across the Americas, Europe, and Asia and reported sales of $5.9 billion during the last 12 months ended March 31, 2015.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--ABOUT SECTION ENDS-->
+
+
+
+    <!--HERITAGE SECTION STARTS-->
+    <div class="container scroll" data-title="MILESTONES" id="milestone-section">
+        <div class="row heritage-section">
+            <!--left part-->
+            <div class="col-xs-12 col-sm-12 col-md-6 main-content c-1">
+                <a href="#">
+                    <div class="card-content">
+                        <div class="desc">
+                            <h2>MILESTONES</h2>
+                            <img src="assets/images/heritage/group.png" class="img-responsive">
+                            <p>JBL powers first of three Woodstocks</p>
+                        </div>
+                        <div class="call-to-action">
+                            <p>LEARN MORE</p><img src="assets/images/white-arrow.png" class="arrow">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!--right part-->
+            <div class="col-xs-12 col-sm-12 col-md-6">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 main-content c-2 nopadding" style="background: url(assets/images/heritage/about-harman-inspired.png) #00a4e3 no-repeat center center; background-size: cover">
+                        <a href="#">
+                            <div class="card-content">
+                                <div class="desc">
+                                    <h2>HARMAN INSPIRED</h2>
+                                    <p>Nulla tincidunt malesuada dapibus. Cras vulputate nisl sed urna posuere elementum.</p>
+                                </div>
+                                <div class="call-to-action">
+                                    <p>LEARN MORE</p><img src="assets/images/white-arrow.png" class="arrow">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6 main-content c-3 nopadding" style="background: url(assets/images/heritage/sustainability-thumbnail.png) #00a4e3 no-repeat center center; background-size: cover">
+                        <a href="#">
+                            <div class="card-content">
+                                <div class="desc">
+                                    <!--<h2>HARMAN INSPIRED</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis leo ac ante tincidunt tempus.</p>-->
+                                </div>
+                                <div class="call-to-action">
+                                    <p>SUSTAINIBILITY</p>
+                                    <img src="assets/images/white-arrow.png" class=" arrow img-responsive">
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 main-content c-4 nopadding" style="background: url(assets/images/heritage/people-mgmt-thumbnai.png) #00a4e3 no-repeat center center; background-size: cover">
+                        <a href="#">
+                            <div class="card-content">
+                                <div class="desc">
+                                    <!--<h2>HARMAN INSPIRED</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis leo ac ante tincidunt tempus.</p>-->
+                                </div>
+                                <div class="call-to-action">
+                                    <p>PEOPLE MANAGEMENT</p><img src="assets/images/white-arrow.png" class=" arrow img-responsive">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--HERITAGE SECTION ENDS-->
+
+
+
+
+    <!--  FOOTER START -->
+    <footer class="container">
+        <div class="row">
+
+            <div class="col-xs-12">
+                <!--SELECT LANGUAGE START-->
+                <div class="lang-btn-div">
+                    <a class="btn btn-default a_btn  pull-left" href="#" role="button"><img src="assets/images/flags/USA.png" class="country-flag"></a>
+                </div>
+                <!--SELECT LANGUAGE END-->
+                <!--FOOTER MENU START-->
+                <ul class="text-right footer-menu list-inline m-text-center">
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Developer Community</a></li>
+                </ul>
+                <!--FOOTER MENU END-->
+            </div>
+            <div class="col-xs-12 col-sm-6 col-sm-push-6 col-md-6 col-md-push-6 padding-top-15">
+                <!--SOCIAL ICONS START-->
+                <div class="hline hidden-sm hidden-md hidden-lg"></div>
+                <ul class="text-right social-icons list-inline m-text-center">
+                    <li><a href="#"><i class="fa fa-facebook fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fa fa-pinterest fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus fa-2x"></i></a></li>
+                </ul>
+                <div class="hline hidden-sm hidden-md hidden-lg"></div>
+                <!--SOCIAL ICONS END-->
+            </div>
+            <div class="col-xs-12 col-sm-6 col-sm-pull-6 col-md-6 col-md-pull-6 padding-top-15">
+                <!--LOCATIONS START-->
+                <ul class="locations list-inline m-text-center">
+                    <li class="regional-sites">REGIONAL SITES</li>
+                    <li><a href="#">China</a></li>
+                    <li><a href="#">India</a></li>
+                    <li><a href="#">Russia</a></li>
+                    <li><a href="#">Hungary</a></li>
+                    <li><a href="#">South Korea</a></li>
+                    <li><a href="#">Japan</a></li>
+                    <li><a href="#">Brazil</a></li>
+                </ul>
+                <!--LOCATIONS END-->
+            </div>
+            <!--PRIVACY AND COPYRIGHT INFORMATION START-->
+            <div class="col-xs-12 m-text-center">
+                <small class="copyright">&copy; 2016 HARMAN International. All Rights Reserved. <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> </small>
+            </div>
+            <!--PRIVACY AND COPYRIGHT INFORMATION END-->
+        </div>
+    </footer>
+    <!--  FOOTER END -->
+
+
+
+
+    <!--FULL SCREEN MODAL WINDOW FOR SEARCH START -->
+    <div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <input type="text" class="form-control ip-search-box hasclear" placeholder="Search">
+                    <span class="clearer fa fa-times cleartxt-icon"></span>
+                </div>
+                <!--
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+-->
+            </div>
+        </div>
+    </div>
+    <!--FULL SCREEN MODAL WINDOW FOR SEARCH END -->
+
+
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- JQUERY UI  -->
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- MODERNIZR JAVASCRIPT-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <!-- CAROUSEL ANIMATION JAVASCRIPT-->
+    <script src="assets/js/carousel-animation.js"></script>
+    <!-- CAROUSEL SWIPE JAVASCRIPT-->
+    <script src="assets/js/carousel-swipe.js"></script>
+    <!-- SCROLL REVEAL JAVASCRIPT-->
+    <script src="assets/js/scrollReveal.min.js"></script>
+    <!--     MEGAMENU HOVER ANIMATION JAVASCRIPT-->
+    <script src="assets/js/bootstrap-hover-dropdown.js"></script>
+    <script src="assets/js/common.js"></script>
+
+
+    <script>
+        $("#news .main-content").mouseover(function() {
+            $(".desc", this).stop().slideToggle(800, "easeOutQuint");
+        });
+        $("#news .main-content").mouseout(function() {
+            $(".desc", this).stop().slideToggle(600, "easeInQuint");
+        });
+
+    </script>
+</body>
+
+</html>

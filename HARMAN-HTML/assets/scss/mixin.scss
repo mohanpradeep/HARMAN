@@ -1,0 +1,325 @@
+/* BORDER RADIUS */
+
+@mixin border-radius($radius: 5px) {
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin border-radius2($top-left, $top-right, $bottom-left, $bottom-right) {
+	border-top-left-radius: $top-left;
+	border-top-right-radius: $top-right;
+	border-bottom-left-radius: $bottom-left;
+	border-bottom-right-radius: $bottom-right;
+} //@include border-radius(4px, 4px, 4px, 4px);
+
+/* COLUMNS */
+
+@mixin columns($count: 3, $gap: 10) {
+    -webkit-column-count: $count;
+    -moz-column-count: $count;
+    column-count: $count;
+    -webkit-column-gap: $gap;
+    -moz-column-gap: $gap;
+    column-gap: $gap;
+}
+
+/* TEXT SHADOW */
+
+@mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0, 0, 0, 0.4)) {
+    text-shadow: $x $y $blur $color;
+}
+
+/* TRANSITION */
+
+@mixin transition($what: all, $length: $animation-time, $easing: ease-in-out) {
+    -moz-transition: $what $length $easing;
+    -o-transition: $what $length $easing;
+    -webkit-transition: $what $length $easing;
+    -ms-transition: $what $length $easing;
+    transition: $what $length $easing;
+}
+@mixin bg-opacity($color, $opacity: 0.3) {
+    background: $color;
+    /* The Fallback */
+    background: rgba($color, $opacity);
+} //@include bg-opacity(#333, 0.5);
+
+/* BACGROUND TRANSPARENT */
+
+.transparent-background {
+    background-color: transparent;
+    zoom: 1;
+}
+@mixin transparent($color, $alpha) {
+    $rgba: rgba($color, $alpha);
+    $ie-hex-str: ie-hex-str($rgba);
+    @extend .transparent-background;
+    background-color: $rgba;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str}, endColorstr=#{$ie-hex-str});
+} //@include transparent($very-dark-blue, 0.5);
+
+
+.img-transition{
+    opacity: 0.6;
+    transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+}
+.img-transition:hover{
+    opacity: 1.0;
+    transition: opacity .55s ease-in-out;
+    -moz-transition: opacity .55s ease-in-out;
+    -webkit-transition: opacity .55s ease-in-out;
+}
+
+
+/* LINK COLOR SETTING */
+
+// $color: anchor normal color, $hcolor : hover state, $bgcolor: normal background color, $hbgcolor : hover bgcolor
+// linkColor($color, $hcolor, null)  - if you give null will get default bg color 
+@mixin linkColor($color, $hcolor, $bgcolor, $hbgcolor) {
+    color: $color;
+    @include transition;
+    background: $bgcolor;
+    &:hover {
+        color: $hcolor;
+        background: $hbgcolor;
+        text-decoration: none;
+    }
+    &:active {
+        color: $hcolor;
+        background: $hbgcolor;
+        text-decoration: none;
+    }
+    &:focus {
+        color: $hcolor;
+        background: $hbgcolor;
+        text-decoration: none;
+    }
+   
+} // a{@include linkColor($black, $white, $white, $very-dark-blue);} 
+
+/* PADDING & MARGIN */
+
+.nopadding {
+    padding: 0;
+}
+
+.pad-rgt-15 {
+    padding-right: 15px;
+}
+.pad-lft-15 {
+    padding-left: 15px;
+}
+.pos-relative {
+    position: relative;
+    height: 100%;
+}
+
+/* SECTION TITLE STYLE */
+
+.section-titles {
+    font-size: $section-title;
+    color: $dark-grayish-blue;
+    padding-left: 0px;
+    letter-spacing: -2px;
+    margin-top: 44px;
+    margin-bottom: 20px;
+    font: {
+        family: $base-font-family;
+        weight: 300;
+    }
+}
+
+//$color: font color, $fsize: font size, $fweight: font weight,$
+@mixin section-title2($color, $fsize, $fweight) {
+	color: $color;
+	font-size: $fsize;
+	font-weight: $fweight;
+} //@include section-title(#333, 40px, 200);
+
+/* ARROW ANIMATION */
+
+@mixin arrow-animation {
+    &:hover .arrow {
+        padding-left: 30px;
+    }
+    .arrow{
+        @include transition;
+    }
+}
+
+
+//Border width, color and radius
+@mixin border($bwidth, $bcolor, $bradius) {
+	border: $bwidth solid $bcolor;
+	-webkit-border-radius: $bradius;
+	-moz-border-radius: $bradius;
+	-o-border-radius: $bradius;
+	border-radius: $bradius;
+} // @include border(4px, #fff, 2px);
+
+
+
+
+//padding-top: 40px
+.pad-top-40 {
+	padding-top: 40px;
+}
+
+//padding-bottom: 40px
+.pad-bottom-40 {
+	padding-bottom: 40px;
+}
+
+.pad-top-40 {
+	padding-top: 40px;
+}
+
+//padding-top: 20px
+.pad-top-20 {
+	padding-bottom: 20px;
+}
+
+//padding-bottom: 20px
+.pad-bottom-20 {
+	padding-bottom: 20px;
+}
+
+.pad-left-20 {
+	padding-left: 20px;
+}
+
+.pad-right-20 {
+	padding-right: 20px;
+}
+
+//Padding of 15px on all 4 sides
+.pad-15 {
+	padding: 15px;
+}
+
+//Padding of 10px on all 4 sides
+.pad-5 {
+	padding: 5px;
+}
+
+.pad-left-0 {
+	padding-left: $no-pad-left;
+}
+
+//Height 100%
+.height-100 {
+	height: 100%;
+}
+
+//Height 50%
+.height-50 {
+	height: 50%;
+}
+
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/* FORM ELEMENT */
+
+@mixin header-search-txtbox {
+    background: none;
+    border-radius: 0;
+    outline: none;
+    border: none;
+    border-bottom: solid 1px $very-dark-blue;
+    color: $black;
+    box-shadow: none;
+    font: {
+        family: $base-font-family;
+        size: 18px;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+
+
+
+//Slide In Up Transition Start
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+}
+//Slide In Up Transition END
+
+
+//Slide in Down Transition START
+@-webkit-keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+}
+
+//Slide in Down Transition End

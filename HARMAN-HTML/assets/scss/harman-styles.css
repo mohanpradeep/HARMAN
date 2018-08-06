@@ -1,0 +1,136 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700,900,500);
+/* COLOR VARIABLES */
+/* BORDER RADIUS */
+/* COLUMNS */
+/* TEXT SHADOW */
+/* TRANSITION */
+/* LINK COLOR SETTING */
+/* PADDING */
+.nopadding, #mainmenu, #mainmenu .navbar-default .menuitems, #mainmenu .navbar-default .menuitems #navbar {
+  padding: 0; }
+
+.pad-rgt-15, #mainmenu .navbar-default .menuitems .rgtside-mainmenu {
+  padding-right: 15px; }
+
+/* FORM ELEMENT */
+html,
+body {
+  height: 100%; }
+
+html {
+  background: #ffffff; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000; }
+
+.logo-search-row {
+  border-bottom: solid 1px #efeeec; }
+  .logo-search-row .harman-logo {
+    padding: 10px 0; }
+  .logo-search-row .nyse-search {
+    padding-right: 0px;
+    font-size: 16px; }
+    .logo-search-row .nyse-search .nyse-details {
+      background: #f7f7f6;
+      padding: 31px 15px 20px 15px;
+      display: inline-block; }
+      .logo-search-row .nyse-search .nyse-details .nyse {
+        color: #a5a19c; }
+      .logo-search-row .nyse-search .nyse-details .value {
+        font-weight: 500; }
+      .logo-search-row .nyse-search .nyse-details .value-up-down {
+        color: #00a254;
+        font-weight: 500; }
+    .logo-search-row .nyse-search .search-box {
+      background: #63d0df;
+      padding: 19px 25px;
+      text-align: center;
+      color: #ffffff;
+      display: block;
+      float: right;
+      font-size: 25px; }
+
+#mainmenu {
+  position: relative; }
+  #mainmenu .navbar-default {
+    border: none;
+    background: none;
+    margin-bottom: 0; }
+    #mainmenu .navbar-default .menuitems .lftside-mainmenu {
+      font-weight: 500; }
+      #mainmenu .navbar-default .menuitems .lftside-mainmenu li.active {
+        background: #014060; }
+        #mainmenu .navbar-default .menuitems .lftside-mainmenu li.active a {
+          background: none;
+          color: #ffffff; }
+      #mainmenu .navbar-default .menuitems .lftside-mainmenu a {
+        color: #000000;
+        background: #ffffff; }
+        #mainmenu .navbar-default .menuitems .lftside-mainmenu a:hover {
+          color: #ffffff;
+          background: #014060;
+          -moz-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
+          -webkit-transition: all 0.3s ease-in-out;
+          -ms-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out; }
+        #mainmenu .navbar-default .menuitems .lftside-mainmenu a:active {
+          color: #000000;
+          background: #014060; }
+        #mainmenu .navbar-default .menuitems .lftside-mainmenu a:focus {
+          color: #ffffff;
+          background: #014060; }
+    #mainmenu .navbar-default .menuitems .rgtside-mainmenu {
+      font-weight: 400; }
+      #mainmenu .navbar-default .menuitems .rgtside-mainmenu li.active {
+        background: #014060; }
+        #mainmenu .navbar-default .menuitems .rgtside-mainmenu li.active a {
+          background: none;
+          color: #ffffff; }
+      #mainmenu .navbar-default .menuitems .rgtside-mainmenu a {
+        color: #000000;
+        background: #ffffff; }
+        #mainmenu .navbar-default .menuitems .rgtside-mainmenu a:hover {
+          color: #ffffff;
+          background: #014060;
+          -moz-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
+          -webkit-transition: all 0.3s ease-in-out;
+          -ms-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out; }
+        #mainmenu .navbar-default .menuitems .rgtside-mainmenu a:active {
+          color: #000000;
+          background: #014060; }
+        #mainmenu .navbar-default .menuitems .rgtside-mainmenu a:focus {
+          color: #ffffff;
+          background: #014060; }
+  #mainmenu .search-container {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0;
+    display: block;
+    padding: 15px;
+    background: #ffffff;
+    /* The Fallback */
+    background: rgba(255, 255, 255, 0.95); }
+    #mainmenu .search-container .form-group {
+      width: 100%; }
+      #mainmenu .search-container .form-group .header-iptxtbox {
+        background: none;
+        border-radius: 0;
+        outline: none;
+        border: none;
+        border-bottom: solid 1px #014060;
+        color: #000000;
+        box-shadow: none;
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        width: 100%; }
+        #mainmenu .search-container .form-group .header-iptxtbox:focus {
+          outline: none; }
+
+/*# sourceMappingURL=harman-styles.css.map */

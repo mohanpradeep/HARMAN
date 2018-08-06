@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Harman</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/harman-styles.css">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .padding-0 {
+            padding: 0px;
+        }
+        
+        .margin-0 {
+            margin: 0px;
+        }
+        
+        i {
+            float: right;
+            padding: 0 10px;
+        }
+        
+        #mainmenu {
+            z-index: 999;
+            margin-top: 79px;
+        }
+        
+        #newmenu {
+            z-index: 999;
+        }
+        
+        #fix-head {
+            display: none;
+        }
+        
+        .fixtop {
+            margin-top: 79px;
+            background-color: #006499;
+            top: 50px;
+            color: white;
+            padding-left: 20px;
+            z-index: 2;
+        }
+        
+        .flip {
+            top: 0px !important;
+        }
+        
+        li {
+            color: black;
+        }
+        
+        .menu {
+            min-width: 118px;
+            margin-left: -45%;
+        }
+        
+        @media all and (max-width: 767px) {
+            #fix-head {
+                display: none;
+            }
+            #mainmenu {
+                margin-top: 65px;
+            }
+            .fixtop {
+                margin-top: 65px;
+                background-color: #006499;
+                top: 0px;
+                color: white;
+                padding-left: 20px;
+                z-index: 2;
+            }
+        }
+        
+        @media all and (min-width: 768px) and (max-width: 991px) {
+            #mainmenu {
+                width: 150px;
+                margin-top: 79px;
+                display: inline-block;
+                float: right;
+            }
+            .fixtop {
+                margin-top: 79px;
+                background-color: #006499;
+                top: 0px;
+                color: white;
+                padding-left: 20px;
+                z-index: 2;
+            }
+        }
+        
+        @media only screen and (min-width: 992px) and (max-width: 1199px) {
+            #mainmenu {
+                width: 150px;
+                margin-top: 79px;
+                display: inline-block;
+                float: right;
+            }
+            .fixtop {
+                margin-top: 79px;
+                background-color: #006499;
+                top: 0px;
+                color: white;
+                padding-left: 20px;
+                z-index: 2;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- LOGO SECTION START-->
+    <div class="container logo-section navbar-fixed-top">
+        <div class="row">
+            <!-- LOGO SECTION START -->
+            <div class="col-xs-5 padding-left-0"><img class="harman-logo" src="assets/images/harman-logo.png" alt="Harman" title="Harman"></div>
+            <!-- LOGO SECTION END -->
+
+            <!-- SEARCH, HAMBURGER & VALUE START-->
+            <div class="col-xs-7 padding-right-0">
+                <div class="nyse-search-burger clearfix pull-right">
+                    <div class="pull-right hamburger navbar-default" id="flip">
+                        <a class="fa fa-reorder"></a>
+
+                    </div>
+
+                    <div class="pull-right search">
+                        <a href="#" class="fa fa-search search" data-toggle="modal" data-target="#search-modal"></a>
+                    </div>
+                    <div class="pull-right nyse">NYSE <span class="nyse-value">$100.84 <span class="currency">USD</span> <span class="market">+1.63%</span></span>
+                    </div>
+                </div>
+            </div>
+            <!-- SEARCH, HAMBURGER & VALUE END-->
+        </div>
+
+    </div>
+    <!-- LOGO SECTION END-->
+
+    <!-- MAIN MENU SECTION START -->
+
+    <div class="container navbar-fixed-top" id="newmenu">
+        <div class="row">
+            <div id="mainmenu">
+                <div class="col-xs-12 padding-0">
+                    <!-- Static navbar -->
+                    <nav class="navbar-default moblnav">
+                        <div class="container-fluid menuitems">
+                            <!--  <div class="navbar-header">
+                       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <img src="assets/images/hamburger.jpg">
+                        </button>
+                    </div>-->
+                            <div id="navbar">
+                                <ul class="nav navbar-nav harman-mainmenu lftside-mainmenu">
+                                    <!-- COMPANY MAIN MENU START -->
+                                    <li class="full-width dropdown">
+                                        <a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">COMPANY</a>
+                                        <!-- SUB MENU START -->
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li>
+                                                <div class="col-md-4 submenu-links-col">
+                                                    <ul class="submenu-links list-unstyled" id="company-submenu">
+                                                        <li data-img="assets/images/main-menu/company-submenu1.jpg" data-content="<strong>Lorem ipsum dolor</b> sit amet, consectetur adipisicing elit."><a href="#" class="company-submenu1">Experience Harman</a></li>
+                                                        <li data-img="assets/images/main-menu/company-submenu2.jpg" data-content="<strong>Quia aliquam, sapiente sit</strong>, voluptatibus a ipsa, sequi ullam nostrum, accusamus similique provident fuga eligendi maiores natus."><a href="#" class="company-submenu2">Corporate Leadership</a></li>
+                                                        <li data-img="assets/images/main-menu/company-submenu3.jpg" data-content="<strong>Ipsum, consectetur iste.</strong> In aperiam libero ad magnam itaque quae, consectetur non, voluptatibus incidunt iusto id, adipisci atque praesentium deserunt sunt inventore."><a href="#" class="company-submenu3">Mission</a></li>
+                                                        <li data-img="assets/images/main-menu/company-submenu4.jpg" data-content="sint maxime eum possimus <strong>quidem culpa id, modi pariatur</strong> consequuntur libero?"><a href="#" class="company-submenu3">Trophy Case</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-2 submenu-img-col hidden-xs">
+                                                    <img id="company-image" data-original="assets/images/main-menu/company.jpg" src="assets/images/main-menu/company.jpg" alt="Harman" title="Harman" class="img-responsive">
+                                                </div>
+                                                <div class="col-md-6 submenu-desc-col hidden-xs">
+                                                    <p class="content company-submenu-content" data-originalcont="<strong>Company</strong><br>Lifestyle Audio that best meet consumer needs by combining premium audio technlogy with industry-first features for more seamless and personalized listening experiences in the home, one the go and for all everyday activities.">
+                                                        <strong>Company</strong>
+                                                        <br>Lifestyle Audio that best meet consumer needs by combining premium audio technlogy with industry-first features for more seamless and personalized listening experiences in the home, one the go and for all everyday activities.</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+
+                                        <!-- SUB MENU END -->
+                                    </li>
+                                    <!-- COMPANY MAIN MENU END -->
+
+                                    <!-- SOLUTIONS MAIN MENU START -->
+                                    <li class="full-width dropdown">
+                                        <a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SOLUTIONS</a>
+                                        <!-- SUB MENU START -->
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li>
+                                                <div class="col-md-4 submenu-links-col">
+                                                    <ul class="submenu-links list-unstyled" id="solution-submenu">
+                                                        <li data-img="assets/images/main-menu/solution-submenu4.jpg" data-content="<strong>Lorem ipsum dolor</b> sit amet, consectetur adipisicing elit."><a href="#">Connected Car</a></li>
+                                                        <li data-img="assets/images/main-menu/solution-submenu3.jpg" data-content="<strong>Ipsum, consectetur iste.</strong> In aperiam libero ad magnam itaque quae, consectetur non, voluptatibus incidunt iusto id, adipisci atque praesentium deserunt sunt inventore."><a href="#">Lifestyle Audio</a></li>
+                                                        <li data-img="assets/images/main-menu/solution-submenu2.jpg" data-content="<strong>Quia aliquam, sapiente sit</strong>, voluptatibus a ipsa, sequi ullam nostrum, accusamus similique provident fuga eligendi maiores natus."><a href="#">Professional Solutions</a></li>
+                                                        <li data-img="assets/images/main-menu/solution-submenu1.jpg" data-content="sint maxime eum possimus <strong>quidem culpa id, modi pariatur</strong> consequuntur libero?"><a href="#">Connected Services</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-2 submenu-img-col hidden-xs">
+                                                    <img id="solution-image" data-original="assets/images/main-menu/solution.jpg" src="assets/images/main-menu/solution.jpg" alt="Harman" title="Harman" class="img-responsive">
+                                                </div>
+                                                <div class="col-md-6 submenu-desc-col hidden-xs">
+                                                    <p class="content solution-submenu-content" data-originalcont="<strong>Solutions</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, distinctio magnam? Necessitatibus cupiditate fugiat possimus temporibus porro, iure, esse aperiam dolor fugit quos ratione similique sapiente, at eligendi voluptate nobis?">
+                                                        <strong>Solutions</strong>
+                                                        <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, distinctio magnam? Necessitatibus cupiditate fugiat possimus temporibus porro, iure, esse aperiam dolor fugit quos ratione similique sapiente, at eligendi voluptate nobis?</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <!-- SUB MENU END -->
+                                    </li>
+                                    <!-- SOLUTIONS MAIN MENU END -->
+
+
+                                    <!-- CSR MAIN MENU START -->
+                                    <li><a href="#">CSR</a></li>
+                                    <!-- CSR MAIN MENU END -->
+
+
+                                    <!-- INNOVATION MAIN MENU START -->
+                                    <li><a href="#">INNOVATION</a></li>
+                                    <!-- INNOVATION MAIN MENU END -->
+                                    <li><a href="#">NEWS</a></li>
+                                    <li><a href="#">CONTACT</a></li>
+                                </ul>
+                                <ul class="nav navbar-nav navbar-right harman-mainmenu rgtside-mainmenu">
+                                    <li><a href="./">Investors</a></li>
+                                    <li><a href="./">Blog</a></li>
+                                    <li><a href="./">Career</a></li>
+                                    <li><a href="./">Shop Online</a></li>
+                                </ul>
+                            </div>
+                            <!--/.nav-collapse -->
+                        </div>
+                        <!--/.container-fluid -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MAIN MENU SECTION END -->
+    <div class="container fixtop  navbar-fixed-top">
+
+        <h2 id="fix-head">            
+      <span id="headerTitle" style="font-size:26px;"></span>
+      <span id="sectionNavPrev" data-prev="0" style="text-align:right;" onclick="go2Prev(this)"> <i class="fa fa-angle-down"></i></span>
+       <span class="dropdown" style="float:right;">
+        <span id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <span id="sectionCount" style="font-size:16px;"></span>
+            <span class="caret"></span>
+        </span>
+        <ul class="dropdown-menu menu" aria-labelledby="dropdownMenu1" id="ddMenu" >
+           <li>hsszdcjzsh</li>
+            <li>ghgc</li>
+        </ul>
+       </span>       
+       <!-- <span id="sectionCount" style="float:right;font-size:16px;padding:8px;"></span>-->
+       <span id="sectionNavNext" data-next="0" style="text-align:right;" onclick="go2Next(this)"><i class="fa fa-angle-up"></i></span>    
+    </h2>
+
+    </div>
+
+    <!-- HERO CAROSUEL START -->
+    <div class="container" id="scroll-div">
+        <div class="row">
+            <div class="col-sm-12 col-xs-12 padding-0">
+
+                <!-- Carousel -->
+                <div id="homeCarousel" class="carousel slide">
+                    <!-- Menu -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#homeCarousel" data-slide-to="1"></li>
+                        <li data-target="#homeCarousel" data-slide-to="2"></li>
+                        <!-- <li data-target="#homeCarousel" data-slide-to="3"></li>-->
+                    </ol>
+
+                    <!-- Items  -->
+                    <div class="carousel-inner" role="listbox" id="sample">
+                        <!-- ITEM 1 START -->
+                        <div class="item active">
+                            <img src="assets/images/hero-banner/banner1.jpg" alt="image 1">
+                            <div class="carousel-contents">
+                                <div class="title-box col-sm-6">
+                                    <div class="content">
+                                        <h1 class="font-48">EXPERIENCE THE CONNECTED CAR</h1>
+                                        <div class="cta">
+                                            <a href="#">LEARN MORE <img class="arrow" src="assets/images/white-arrow.png"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="desc col-sm-6">
+                                    <p class="font-18">Lorem ipsum dolor sit amet, consectetur adip iscing elit, sed do eiusmod tempor incidi dunt ut labore et dolore magna.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ITEM 1 END -->
+
+
+                        <!-- ITEM 2 START -->
+                        <div class="item">
+                            <img src="assets/images/hero-banner/banner2.jpg" alt="image 1">
+                            <div class="carousel-contents">
+                                <div class="title-box col-sm-6">
+                                    <div class="content">
+                                        <h1 class="font-48">EXPERIENCE THE CONNECTED CAR</h1>
+                                        <div class="cta">
+                                            <a href="#">LEARN MORE <img class="arrow" src="assets/images/white-arrow.png"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="desc col-sm-6">
+                                    <p class="font-18">Lorem ipsum dolor sit amet, consectetur adip iscing elit, sed do eiusmod tempor incidi dunt ut labore et dolore magna.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ITEM 2 END -->
+
+
+                        <!-- ITEM 3 START -->
+                        <div class="item">
+                            <img src="assets/images/hero-banner/banner3.jpg" alt="image 1">
+                            <div class="carousel-contents">
+                                <div class="title-box col-sm-6">
+                                    <div class="content">
+                                        <h1 class="font-48">EXPERIENCE THE CONNECTED CAR</h1>
+                                        <div class="cta">
+                                            <a href="#">LEARN MORE <img class="arrow" src="assets/images/white-arrow.png"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="desc col-sm-6">
+                                    <p class="font-18">Lorem ipsum dolor sit amet, consectetur adip iscing elit, sed do eiusmod tempor incidi dunt ut labore et dolore magna.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ITEM 3 END -->
+
+
+                        <!-- ITEM 4 START -->
+                        <!--
+                        <div class="item">
+                            <video autoplay height="415" width="1170" style="width:100%;">
+                                <source src="assets/videos/lh-website-video.mp4" type="video/mp4">
+                                <source src="assets/videos/lh-website-video.ogv" type="video/ogv"> Your browser does not support HTML5 video.
+                            </video>
+                            <div class="carousel-contents">
+                                <div class="title-box col-sm-6">
+                                    <div class="content">
+                                        <h1 class="font-48">EXPERIENCE THE CONNECTED CAR</h1>
+                                        <div class="cta">
+                                            <a href="#">LEARN MORE <img class="arrow" src="assets/images/white-arrow.png"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="desc col-sm-6">
+                                    <p class="font-18">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque inventore ullam.</p>
+                                </div>
+                            </div>
+                        </div>
+-->
+                        <!-- ITEM 4 END -->
+
+
+
+
+                    </div>
+                    <!-- Controls -->
+                    <a class="left carousel-control hidden-xs" href="#homeCarousel" data-slide="prev">
+                        <span class="icon-prev"></span>
+                    </a>
+                    <a class="right carousel-control hidden-xs" href="#homeCarousel" data-slide="next">
+                        <span class="icon-next"></span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- HERO CAROSUEL END -->
+
+
+
+    <!-- SOLUTION SECTION START -->
+
+
+    <div class="container solutions margin-top-30 scroll padding-0" data-title="SOLUTIONS">
+
+        <div class="search-products" data-title="About us">
+
+            <div class="col-lg-12 padding-0">
+
+                <h1 data-sr="wait 0.5s, ease-in-out 10px">SOLUTIONS</h1>
+            </div>
+        </div>
+
+        <div class="row cards-row margin-0">
+            <!-- CONNECTED CAR START -->
+            <a href="#" data-sr="wait 1s, ease-in-out 10px">
+                <div class="col-md-3 col-sm-6 col-xs-12 solution-cards padding-0">
+                    <div class="solution-card-bg card1"></div>
+                    <div class="solution-cont-container">
+                        <h1>Connected Car</h1>
+                        <div class="hline"></div>
+                        <p class="desc">Navigation, multimedia, telematics, connectivity, safety &amp; security systems.</p>
+                        <p class="cta-txt-link">Explore <img class="arrow" src="assets/images/white-arrow.png"></p>
+                    </div>
+                </div>
+            </a>
+            <!-- CONNECTED CAR END -->
+
+
+            <!-- LIFESTYLE AUDIO START -->
+            <a href="#" data-sr="wait 1.2s, ease-in-out 20px">
+                <div class="col-md-3 col-sm-6 col-xs-12 solution-cards padding-0">
+                    <div class="solution-card-bg card2"></div>
+                    <div class="solution-cont-container">
+                        <h1>Lifestyle Audio</h1>
+                        <div class="hline"></div>
+                        <p class="desc">Cloud, mobility &amp; analytics solutions that enable a connected world.</p>
+                        <p class="cta-txt-link">Explore <img class="arrow" src="assets/images/white-arrow.png"></p>
+                    </div>
+                </div>
+            </a>
+            <!-- LIFESTYLE AUDIO END -->
+
+
+            <!-- PROFESSIONAL SOLUTIONS START -->
+            <a href="#" data-sr="wait 1.4s, ease-in-out 30px">
+                <div class="col-md-3 col-sm-6 col-xs-12 solution-cards padding-0">
+                    <div class="solution-card-bg card3"></div>
+                    <div class="solution-cont-container">
+                        <h1>Professional Solutions</h1>
+                        <div class="hline"></div>
+                        <p class="desc">Integrated audio, video, lighting and control solutions.</p>
+                        <p class="cta-txt-link">Explore <img class="arrow" src="assets/images/white-arrow.png"></p>
+                    </div>
+                </div>
+            </a>
+            <!-- PROFESSIONAL SOLUTIONS END -->
+
+
+            <!-- CONNECTED SERVICES START -->
+            <a href="#" data-sr="wait 1.6s, ease-in-out 40px">
+                <div class="col-md-3 col-sm-6 col-xs-12 solution-cards padding-0">
+                    <div class="solution-card-bg card4"></div>
+                    <div class="solution-cont-container">
+                        <h1>Connected Services</h1>
+                        <div class="hline"></div>
+                        <p class="desc">Cloud, mobility &amp; analytics solutions that enable a connected world.</p>
+                        <p class="cta-txt-link">Explore <img class="arrow" src="assets/images/white-arrow.png"></p>
+                    </div>
+                </div>
+            </a>
+            <!-- CONNECTED SERVICES END -->
+        </div>
+    </div>
+
+    <!-- SOLUTION SECTION END -->
+
+
+
+    <!--NEWS & VIEWS SECTION STARTS-->
+
+    <div class="container scroll" id="news" data-title="NEWS &amp; VIEWS">
+        <div class="solutnfix">
+            <div class="col-xs-12 padding-0">
+
+                <h1 class="section-title news1">NEWS &amp; VIEWS</h1>
+            </div>
+        </div>
+        <div class="row heritage-section">
+
+            <!--left part-->
+            <div class="col-xs-12 col-sm-12 col-md-6">
+                <div class="row">
+                    <a href="#">
+                        <div class="col-xs-12 col-sm-12 col-md-12 main-content c-1 padding-0" style="background: url(assets/images/news/news1.png) #00a4e3 no-repeat center center; background-size: cover">
+                            <div class="card-content">
+                                <h5 class="sub-title"><span>LIFESTYLE AUDIO</span></h5>
+                                <div class="small-strip">
+                                    <div class="desc">
+                                        <h3>HARMAN Partners With TIDAL to Stream High Quality Audio HArman Kardon Systems</h3>
+                                        <small class="date">September 03, 2015</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!--right part-->
+            <div class="col-xs-12 col-sm-12 col-md-6">
+                <div class="row">
+                    <!--<a href="#">-->
+                    <div class="col-xs-12 col-sm-12 col-md-12 main-content c-2 padding-0" style="background: url(assets/images/) #00a4e3 no-repeat center center; background-size: cover">
+                        <div class="news-carousel">
+                            <div id="newsCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#newsCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#newsCarousel" data-slide-to="1"></li>
+                                    <li data-target="#newsCarousel" data-slide-to="2"></li>
+                                </ol>
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <div class="carousel-content">
+                                            <p class="brand-image"><i class="fa fa-twitter fa-2x"></i></p>
+                                            <h3>Thanks to the <a href="#">@Harman</a> team for showing us the stunning new <a href="#">@StuderAudio</a> Vista 1 Black Edition at <a href="#">@IBCShow</a> <a href="#">#avtweeps</a></h3>
+                                            <small>AV MAGAZINE</small>
+                                            <br>
+                                            <small>CEO - XYZ Company</small>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="carousel-content">
+                                            <p class="brand-image"><i class="fa fa-twitter fa-2x"></i></p>
+                                            <h3>Thanks to the <a href="#">@Harman</a> team for showing us the stunning new <a href="#">@StuderAudio</a> Vista 1 Black Edition at <a href="#">@IBCShow</a> <a href="#">#avtweeps</a></h3>
+                                            <small>AV MAGAZINE</small>
+                                            <br>
+                                            <small>CEO - XYZ Company</small>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="carousel-content">
+                                            <p class="brand-image"><i class="fa fa-twitter fa-2x"></i></p>
+                                            <h3>Thanks to the <a href="#">@Harman</a> team for showing us the stunning new <a href="#">@StuderAudio</a> Vista 1 Black Edition at <a href="#">@IBCShow</a> <a href="#">#avtweeps</a></h3>
+                                            <small>AV MAGAZINE</small>
+                                            <br>
+                                            <small>CEO - XYZ Company</small>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--</a>-->
+                </div>
+                <div class="row">
+                    <a href="#">
+                        <div class="col-xs-12 col-sm-6 col-md-6 main-content c-3 padding-0" style="background: url(assets/images/news/news3.png) #00a4e3 no-repeat center center; background-size: cover">
+                            <div class="card-content">
+                                <h5 class="sub-title"><span>PROFESSIONAL SOLUTIONS</span></h5>
+                                <div class="small-strip">
+                                    <div class="desc">
+                                        <h3>Snoop, Slash, Linkin Park, and Hans Zimmer Have a Message About the Quality of Your Audio</h3>
+                                        <small class="date">September 03, 2015</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="col-xs-12 col-sm-6 col-md-6 padding-0 clearfix">
+                        <div class="col-xs-12 col-md-12 main-content c-5 padding-0">
+                            <div class="call-to-action">
+                                <a href="#">ALL NEWS<img src="assets/images/white-arrow.png" class=" arrow img-responsive">
+								</a>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="col-xs-12 col-md-12 main-content c-4 padding-0" style="background: url(assets/images/news/news3.png) #00a4e3 no-repeat center center; background-size: cover">
+                                <div class="card-content">
+                                    <h5 class="sub-title"><span>CONNECTED SERVICES</span></h5>
+                                    <div class="small-strip">
+                                        <div class="desc">
+                                            <h3>Transform Healthcare through software driven “CONNECTED” ecosystem</h3>
+                                            <small class="date">September 03, 2015</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--NEWS & VIEWS SECTION ENDS-->
+
+
+
+
+
+    <!--    ECO SYSTEM SECTION START -->
+
+    <div class="container ecosystem scroll" data-title="ECOSYSTEM">
+        <div class="solutnfix">
+            <div class="col-lg-12 padding-0">
+                <h1>ECOSYSTEM</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- BRANDS COLUMN START -->
+            <div class="col-md-8 col-xs-12 brands padding-0">
+                <h3>BRANDS</h3>
+                <div class="hline"></div>
+
+                <ul class="list-inline logo-collection">
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/brands/AKG.png" alt="AKG" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/brands/HarmanKardon.png" alt="HarmanKardon" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/brands/Infinity.png" alt="Infinity" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/brands/BSS.png" alt="BSS" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/brands/DigiTech.png" alt="DigiTech" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/brands/Lexicon.png" alt="Lexicon" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/brands/JBL-pro.png" alt="JBL-pro" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/brands/jbl-professional.png" alt="jbl-professional" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/brands/mark_levinson.png" alt="mark_levinson" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/brands/Revel.png" alt="Revel" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/brands/dbx.png" alt="DBX" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/brands/Crown.png" alt="Crown" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/brands/AMX.png" alt="AMX" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/brands/Martin.png" alt="Martin" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/brands/soundcraft.png" alt="soundcraft" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/brands/Studer.png" alt="Studer" class="img-responsive"></a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- BRANDS COLUMN END -->
+
+
+            <!-- PARTNERS COLUMN START -->
+            <div class="col-md-4 col-xs-12 partners padding-0">
+                <h3>PARTNERS</h3>
+                <div class="hline"></div>
+                <ul class="list-inline logo-collection">
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/partners/audi.png" alt="Audi" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/partners/BMW.png" alt="BMW" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/partners/chrysler.png" alt="chrysler" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/partners/harley.png" alt="Harley" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/partners/mercedes.png" alt="Harley" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/partners/vw.png" alt="VW" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/partners/toyota.png" alt="toyota" class="img-responsive"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="assets/images/partners/fiat.png" alt="Fiat" class="img-responsive"></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- PARTNERS COLUMN END -->
+        </div>
+
+    </div>
+
+    <!--    ECO SYSTEM SECTION END -->
+
+
+    <!-- RECOGNITION SECTION START -->
+
+    <div class="container scroll" data-title="RECOGNITION" id="recognition">
+        <div class="row">
+            <div class="col-lg-12 padding-0">
+                <h1 data-animation="animated bounceInLeft">RECOGNITION</h1>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div id="home-recognition" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#home-recognition" data-slide-to="0" class="active"></li>
+                    <li data-target="#home-recognition" data-slide-to="1"></li>
+                    <li data-target="#home-recognition" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img class="recognition-img" src="assets/images/awards/award7.jpg" alt="Recognition">
+                        <div class="carousel-caption" data-animation="animated slideInUp">
+                            <div class="carousel-cont">
+                                <img src="assets/images/awards/lexicon.png" alt="Lexicon" title="Lexicon"> WINS PRESTIGIOUS 2014 TECHNICAL GRAMMY<sup>&reg;</sup> AWARD
+                            </div>
+                            <div class="cta">
+                                <a href="#">LEARN MORE <img class="arrow" src="assets/images/white-arrow.png"></a></div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img class="recognition-img" src="assets/images/awards/award5.jpg" alt="Recognition">
+                        <div class="carousel-caption" data-animation="animated slideInUp">
+                            <div class="carousel-cont">
+                                <img src="assets/images/awards/lexicon.png" alt="Lexicon" title="Lexicon"> WINS PRESTIGIOUS 2014 TECHNICAL GRAMMY<sup>&reg;</sup> AWARD
+                            </div>
+                            <div class="cta">
+                                <a href="#">LEARN MORE <img class="arrow" src="assets/images/white-arrow.png"></a></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img class="recognition-img" src="assets/images/awards/award6.jpg" alt="Recognition">
+                        <div class="carousel-caption" data-animation="animated slideInUp">
+                            <div class="carousel-cont">
+                                <img src="assets/images/awards/lexicon.png" alt="Lexicon" title="Lexicon"> WINS PRESTIGIOUS 2014 TECHNICAL GRAMMY<sup>&reg;</sup> AWARD
+                            </div>
+                            <div class="cta">
+                                <a href="#">LEARN MORE <img class="arrow" src="assets/images/white-arrow.png"></a></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control hidden-xs" href="#home-recognition" data-slide="prev">
+                    <span class="icon-prev"></span>
+                </a>
+                <a class="right carousel-control hidden-xs" href="#home-recognition" data-slide="next">
+                    <span class="icon-next"></span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <!-- RECOGNITION SECTION END -->
+
+
+
+    <!--ABOUT SECTION STARTS-->
+
+    <div class="container about-section scroll" data-title="ABOUT">
+        <div class="row">
+            <div class="col-xs-12 padding-0">
+                <h1 class="section-title">ABOUT</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="about-content">
+                    <div class="comment more">
+                        <p>HARMAN (harman.com) designs and engineers connected prducts and solutions for consumers.</p>
+                        <p>second HARMAN also is a technology and integation sewites leader for the Automotive Mobile. Telecommunications and Enteranse markets.</p>
+                        <p>More than 25 million automobiles on the road today are equipped with HARMAN audio and infotainment systems.</p>
+                        <p>The Company‘s softwa'e solutions powes billions oimobile devites and systems that are tonnected. integated. aersonalized. adaptive and secu*e atross all platforms. tom the work and home to tar and mobile.</p>
+                        <p>HARMAN has a workforce of aaproximately 25,000 people acsoss the Americas, Euroae, and Asia and resorted sales oi$S.9 billion during the last ll months ended March 21, 2015.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--ABOUT SECTION ENDS-->
+
+
+
+    <!--HERITAGE SECTION STARTS-->
+    <div class="container">
+        <div class="row heritage-section">
+            <!--left part-->
+            <div class="col-xs-12 col-sm-12 col-md-6 main-content c-1" style="background: url(assets/images/heritage/heritage.jpg) #00a4e3 no-repeat center center; background-size: cover">
+
+            </div>
+            <!--right part-->
+            <div class="col-xs-12 col-sm-12 col-md-6">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 main-content c-2 nopadding" style="background: url(assets/images/heritage/about-harman-inspired.png) #00a4e3 no-repeat center center; background-size: cover">
+                        <a href="#">
+                            <div class="card-content">
+                                <div class="desc">
+                                    <h2>HARMAN INSPIRED</h2>
+                                    <p>Nulla tincidunt malesuada dapibus. Cras vulputate nisl sed urna posuere elementum.</p>
+                                </div>
+                                <div class="call-to-action">
+                                    <p>LEARN MORE</p><img src="assets/images/white-arrow.png" class="arrow">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6 main-content c-3 nopadding" style="background: url(assets/images/heritage/sustainability-thumbnail.png) #00a4e3 no-repeat center center; background-size: cover">
+                        <a href="#">
+                            <div class="card-content">
+                                <div class="desc">
+                                    <!--<h2>HARMAN INSPIRED</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis leo ac ante tincidunt tempus.</p>-->
+                                </div>
+                                <div class="call-to-action">
+                                    <p>SUSTAINIBILITY</p>
+                                    <img src="assets/images/white-arrow.png" class=" arrow img-responsive">
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 main-content c-4 nopadding" style="background: url(assets/images/heritage/people-mgmt-thumbnai.png) #00a4e3 no-repeat center center; background-size: cover">
+                        <a href="#">
+                            <div class="card-content">
+                                <div class="desc">
+                                    <!--<h2>HARMAN INSPIRED</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis leo ac ante tincidunt tempus.</p>-->
+                                </div>
+                                <div class="call-to-action">
+                                    <p>PEOPLE MANAGEMENT</p><img src="assets/images/white-arrow.png" class=" arrow img-responsive">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--HERITAGE SECTION ENDS-->
+
+
+
+
+    <!--  FOOTER START -->
+    <footer class="container">
+        <div class="row">
+
+            <div class="col-xs-12">
+                <!--SELECT LANGUAGE START-->
+                <div class="lang-btn-div">
+                    <a class="btn btn-default a_btn  pull-left" href="#" role="button"><img src="assets/images/flags/USA.png" class="country-flag"></a>
+                </div>
+                <!--SELECT LANGUAGE END-->
+                <!--FOOTER MENU START-->
+                <ul class="text-right footer-menu list-inline m-text-center">
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Developer Community</a></li>
+                </ul>
+                <!--FOOTER MENU END-->
+            </div>
+            <div class="col-xs-12 col-sm-6 col-sm-push-6 col-md-6 col-md-push-6 padding-top-15">
+                <!--SOCIAL ICONS START-->
+                <div class="hline hidden-sm hidden-md hidden-lg"></div>
+                <ul class="text-right social-icons list-inline m-text-center">
+                    <li><a href="#"><i class="fa fa-facebook fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fa fa-pinterest fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus fa-2x"></i></a></li>
+                </ul>
+                <div class="hline hidden-sm hidden-md hidden-lg"></div>
+                <!--SOCIAL ICONS END-->
+            </div>
+            <div class="col-xs-12 col-sm-6 col-sm-pull-6 col-md-6 col-md-pull-6 padding-top-15">
+                <!--LOCATIONS START-->
+                <ul class="locations list-inline m-text-center">
+                    <li class="regional-sites">REGIONAL SITES</li>
+                    <li><a href="#">China</a></li>
+                    <li><a href="#">India</a></li>
+                    <li><a href="#">Russia</a></li>
+                    <li><a href="#">Hungary</a></li>
+                    <li><a href="#">South Korea</a></li>
+                    <li><a href="#">Japan</a></li>
+                    <li><a href="#">Brazil</a></li>
+                </ul>
+                <!--LOCATIONS END-->
+            </div>
+            <!--PRIVACY AND COPYRIGHT INFORMATION START-->
+            <div class="col-xs-12 m-text-center">
+                <small class="copyright">&copy; 2016 HARMAN International. All Rights Reserved. <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> </small>
+            </div>
+            <!--PRIVACY AND COPYRIGHT INFORMATION END-->
+        </div>
+    </footer>
+    <!--  FOOTER END -->
+
+
+
+
+    <!--FULL SCREEN MODAL WINDOW FOR SEARCH START -->
+    <div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <input type="text" class="form-control ip-search-box hasclear" placeholder="Search">
+                    <span class="clearer fa fa-times cleartxt-icon"></span>
+                </div>
+                <!--
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+-->
+            </div>
+        </div>
+    </div>
+    <!--FULL SCREEN MODAL WINDOW FOR SEARCH END -->
+
+
+
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- MODERNIZR JAVASCRIPT-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <!-- CAROUSEL ANIMATION JAVASCRIPT-->
+    <script src="assets/js/carousel-animation.js"></script>
+    <!-- CAROUSEL SWIPE JAVASCRIPT-->
+    <script src="assets/js/carousel-swipe.js"></script>
+    <!-- SCROLL REVEAL JAVASCRIPT-->
+    <script src="assets/js/scrollReveal.min.js"></script>
+    <script src="assets/js/bootstrap-hover-dropdown.js"></script>
+    <script src="assets/js/common.js"></script>
+    <script language="JavaScript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script>
+        function go2Next(ele) {
+            console.log("HI" + $(ele).attr("data-next") + $(ele).height())
+            var scrollSize = $(".scroll:eq(" + $(ele).attr("data-next") + ")").offset().top //- $(ele).height()
+            console.log("NextScrollSize=" + scrollSize)
+            $('html, body').animate({
+                scrollTop: scrollSize
+            }, 1000);
+            $("#headerTitle").text($(ele).attr("data-title"));
+            var nextEle = parseInt($(ele).attr("data-next")) + 1
+            $(ele).attr("data-next", nextEle)
+            console.log("H--->" + nextEle)
+
+        }
+
+        function go2Prev(ele) {
+            console.log("HI" + $(ele).attr("data-prev"))
+            var scrollSize = $(".scroll:eq(" + $(ele).attr("data-prev") + ")").offset().top //- $(ele).height()
+            console.log("PrevScrollSize=" + scrollSize)
+            $('html, body').animate({
+                scrollTop: scrollSize
+            }, 1000);
+            $("#headerTitle").text($(ele).attr("data-title"));
+            var nextEle = parseInt($(ele).attr("data-prev")) - 1
+            $(ele).attr("data-prev", nextEle)
+
+        }
+
+        function pageScroll() {
+            var winScrollPosX = $(window).scrollTop();
+            $(".scroll").each(function() {
+                var eleTop = $(this).offset().top
+                var eleHeight = $(this).height();
+                var eleBottom = eleTop + eleHeight;
+                //console.log("eleHeight=" + eleHeight + " eleBottom=" + eleBottom + "eleTop=" + eleTop + "   winScrollPosX=" + winScrollPosX)
+                var eleIndex = parseInt($(".scroll").index($(this)));
+
+                if (eleTop <= winScrollPosX && eleBottom > winScrollPosX) {
+                    $("h2").css({
+                            "display": "inline"
+                        })
+                        //console.log("--->>eleTop=" + eleTop + "   == winScrollPosX" + winScrollPosX)
+
+                    //console.log("eleTop=" + eleTop + "   == winScrollPosX" + winScrollPosX)
+                    $("#headerTitle").text($(this).attr("data-title"));
+
+                    $("#sectionCount").text(eleIndex + 1 + " of " + $(".scroll").length)
+                    $("#sectionNavNext").attr("data-next", eleIndex + 1)
+                    $("#sectionNavPrev").attr("data-prev", eleIndex - 1)
+                    switch (eleIndex) {
+                        case 0:
+                            console.log("---->eleIndex" + eleIndex)
+                            $("#sectionNavPrev").css("display", "none")
+                            $("#sectionNavNext").css("display", "inline")
+                            break
+                        case ($(".scroll").length - 1):
+                            console.log("+++++>eleIndex" + eleIndex)
+                            $("#sectionNavPrev").css("display", "inline")
+                            $("#sectionNavNext").css("display", "none")
+                            break
+                        default:
+                            console.log("***>eleIndex" + eleIndex)
+                            $("#sectionNavNext").css("display", "inline")
+                            $("#sectionNavPrev").css("display", "inline")
+                    }
+                } else if ($(".scroll:first").offset().top > winScrollPosX) {
+                    $("h2").css({
+                            "display": "none"
+                        })
+                        //console.log("--->>eleTop=" + eleTop + "   == winScrollPosX" + winScrollPosX)
+                }
+
+
+
+                console.log($("#sectionNavNext").css("display") + $("#sectionNavPrev").css("display"))
+            })
+
+        }
+        $(window).scroll(function(event) {
+            pageScroll();
+        })
+
+    </script>
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                if ($(window).scrollTop() >= 1) {
+                    $("#newmenu").hide();
+                    $('.fixtop').addClass("flip");
+                } else {
+                    $("#newmenu").show();
+                }
+            });
+            $(window).on('resize', function() {
+                $w1 = $(window).width();
+                if ($w1 < 992) {
+                    $("#newmenu").hide();
+                }
+            });
+            $('#flip').click(function() {
+                $("#newmenu").slideToggle(5);
+                $('.fixtop').toggleClass("flip");
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

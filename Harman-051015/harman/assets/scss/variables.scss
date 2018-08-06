@@ -1,0 +1,54 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700,900,500);
+// light 300, normal 400, medium 500, bold 700, ultrabold 900 - ROBOTO FONT STYLES
+
+//FONT FAMILY
+$base-font-family: 'Roboto',sans-serif;
+
+//COLORS
+$very-light-grey: #f7f7f7;  //nyse bg color
+$dark-grey: #9b9b9b;	//nyse text color
+$very-dark-grey: #4a4a4a;	//body base text color
+$dark-cyan-lime-green: #049d4b;	// nyse green color
+$dark-blue: #006499;	//Hero title bg(50% opacity)  and Hero CTA bg color and News carousel bg gradient HIGH color and text color and News Published Date text color
+$dark-greyish-blue: #808285;	//Section title text color and Footer (Regional Sites) text color
+$black: #000000;	//black
+$white: #ffffff;	//white
+$dark-cyan: #2c8f9c;	//solution card CTA text color
+$vivid-blue: #14aae1;	//news desc bg color(89% opacity)
+$soft-cyan: #63d0df;	//news CTA bg color
+$soft-cyan2: #71e2e9;	//solution card background
+$moderate-cyan: #38bcce;       // solution card hover bg color
+$strong-blue: #007cbe;	//news carousel bg gradient LOW color
+$very-dark-blue: #003f60;	// Awards carousel text bg color(70% opacity)
+$very-dark-blue2: #014060;	//Awards carousel CTA bg color and Heritage CTA bg color(70% opacity)(learn more)
+$vivid-cyan: #28caff;	//Heritage CTA Text Hover color
+$very-dark-magenta: #2a292a;	//footer bg color
+$very-dark-greyish-magenta: #706e70;	//footer link hover state
+$light-grayish-red: #e5e4e4;             //hline - header horizontal line
+$very-dark-gray: #3b3b3b;	//Footer button hover bg color
+$very-dark-cyan: #003b49 ;	//Awards carousel CTA bg color and Heritage section CTA bg color (89% opacity)
+
+
+//FONT SIZE
+$font-48: 48px;			//Hero title font size, section title font size
+$font-44: 44px;			//Awards Carousel desc font size
+$font-36: 36px;			//Solution card title font size, News desc font size
+$font-24: 24px;			//Heritage desc font size
+$font-20: 20px;			//Hero Carousel CTA font size, News(ALL NEWS) CTA font size, Awards CTA font size, Heritage CTA font size
+$font-18: 18px;			//Solution Card desc font size and CTA font size, Footer (Select Language) font size, Footer(Regional Sites) and Right(Careers...) font size
+$font-16: 16px;	        //Body base font size
+$font-14: 14px;			//News Title and published date font size, Footer (City) font size
+
+
+
+// COMMON VARIABLES
+$animation-time: 0.3s;     // TRANSITION TIMING
+
+
+
+//PADDING
+
+
+
+
+//MARGIN

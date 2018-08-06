@@ -1,0 +1,35 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700,900,500);
+$base-font-family: 'Roboto',sans-serif;
+$base-font-size:16px;
+$base-font-color: #000000;
+
+$no-pad-rgt:0px;            // REMOVE PADDING RIGHT
+$animation-time: 0.3s;     // TRANSITION TIMING
+$pad-left-25: 25px; //Padding left 25px
+$no-pad-left:0px; // REMOVE PADDING LEFT
+$sect-title-size: 40px; //SECTION TITLE SIZE
+$sect-title-weight: 200; //SECTION TITLE WEIGHT
+
+/* H1 TITLE VALUE */
+$section-title: 44px;        // ALL SECTION TITLE FONT SIZE
+$section-card-title: 34px;        // SOLUTION SECTION'S CONTENT TITLE FONT SIZE
+
+
+
+/* COLOR VARIABLES */
+$white: #ffffff;                 // WHITE COLOR
+$black: #000000;                    // BLACK COLOR
+$soft-cyan:#63d0df;              // FOR HEADER SEARCH BACKGROUND
+$light-grayish-yellow: #f7f7f6;    // NYSE BACKGROUND
+$light-grayish-orange:#efeeec;       // LOGO NYSE ROW BORDER BOTTOM
+$dark-grayish-orange:#a5a19c;       // NYSE TEXT COLOR
+$lime-green: #00a254;                // NYSE VALUE UP AND DOWN
+$dark-blue: #006ca5;                // MAIN SUBMENU NORMAL BGCOLOR
+$very-dark-blue: #014060;             // LEFT MAIN MENU BACKGROUND
+$very-soft-cyan: #92dfe9;            // SOLUTION CARD BACKGROUND COLOR
+$dark-grayish-blue: #75767b;           // ALL SECTION TITLE TEXT COLOR
+$dark-cyan:#218590;                    // SOLUCTION TEXT LINK COLOR
+$vivid-blue: #1cbdf3;                // TEXT LINK HOVER COLOR
+$very-dark-grey: #2C2C2C;             //FOOTER BACKGROUND COLOR
+$light-grey: #cccccc;                 //FOOTER HOVER COLOR
+$pure-blue: #00a4e3;             //news description background color
